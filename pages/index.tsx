@@ -1,3 +1,4 @@
+import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import HeroSection from '../components/hero-section'
@@ -12,6 +13,22 @@ import Navigation from '../components/navigation'
 import ScrollProgress from '../components/scroll-progress'
 
 const Home: NextPage = () => {
+  const [activeSection, setActiveSection] = React.useState('home')
+  const [progress, setProgress] = React.useState(0)
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      const docHeight = document.body.offsetHeight
+      const winHeight = window.innerHeight
+      const scrollPercent = scrollTop / (docHeight - winHeight)
+      setProgress(scrollPercent * 100)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
     <div>
       <Head>
@@ -21,8 +38,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
-        <ScrollProgress />
-        <Navigation />
+        <ScrollProgress progress={progress} />
+        <Navigation activeSection={activeSection} />
         <HeroSection />
         <BusinessSection />
         <StructureSection />
