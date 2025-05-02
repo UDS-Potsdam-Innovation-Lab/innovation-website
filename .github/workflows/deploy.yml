@@ -46,7 +46,15 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+        run: |
+          if [ -f "pnpm-lock.yaml" ]; then
+            pnpm install --frozen-lockfile
+          else
+            pnpm install
+            git add pnpm-lock.yaml
+            git commit -m "Add pnpm-lock.yaml"
+            git push origin main
+          fi
 
       - name: Build with Next.js
         run: pnpm run build
