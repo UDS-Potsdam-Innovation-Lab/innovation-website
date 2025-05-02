@@ -18,11 +18,27 @@ const Home: NextPage = () => {
 
   React.useEffect(() => {
     const handleScroll = () => {
+      // Calculate scroll progress
       const scrollTop = window.scrollY
       const docHeight = document.body.offsetHeight
       const winHeight = window.innerHeight
       const scrollPercent = scrollTop / (docHeight - winHeight)
       setProgress(scrollPercent * 100)
+
+      // Update active section
+      const sections = ['ecosystem', 'portfolio', 'structure', 'business', 'invest']
+      const currentSection = sections.find(section => {
+        const element = document.getElementById(section)
+        if (element) {
+          const rect = element.getBoundingClientRect()
+          return rect.top <= 100 && rect.bottom >= 100
+        }
+        return false
+      })
+
+      if (currentSection) {
+        setActiveSection(currentSection)
+      }
     }
 
     window.addEventListener('scroll', handleScroll)
