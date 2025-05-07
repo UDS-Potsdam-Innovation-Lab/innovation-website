@@ -7,10 +7,14 @@ import StructureSection from '../components/structure-section'
 import EcosystemSection from '../components/ecosystem-section'
 import InvestSection from '../components/invest-section'
 import PortfolioSection from '../components/portfolio-section'
+import AboutUniversitySection from '../components/about-university-section'; 
 import ContactSection from '../components/contact-section'
 import Footer from '../components/footer-component'
 import Navigation from '../components/navigation'
 import ScrollProgress from '../components/scroll-progress'
+import InvestCommercialSection from '../components/invest-commercial-section'; 
+import InvestNonprofitSection from '../components/invest-nonprofit-section'; 
+import FoundationSection from '../components/foundation-section'; 
 
 const Home: NextPage = () => {
   const [activeSection, setActiveSection] = React.useState('home')
@@ -26,7 +30,7 @@ const Home: NextPage = () => {
       setProgress(scrollPercent * 100)
 
       // Update active section
-      const sections = ['ecosystem', 'portfolio', 'structure', 'business', 'invest']
+      const sections = ['ecosystem', 'portfolio', 'about-university', 'structure', 'business', 'invest']
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -62,6 +66,10 @@ const Home: NextPage = () => {
         <EcosystemSection />
         <InvestSection />
         <PortfolioSection />
+        <AboutUniversitySection /> 
+        <InvestCommercialSection />
+        <InvestNonprofitSection /> 
+        <FoundationSection /> 
         <ContactSection />
         <Footer />
       </main>

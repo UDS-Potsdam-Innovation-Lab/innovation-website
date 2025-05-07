@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 interface NavigationProps {
   activeSection: string;
@@ -18,10 +19,13 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
     <nav className="fixed top-0 left-0 w-full bg-white bg-opacity-95 z-40 shadow-sm">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <div className="flex items-center">
-            <div className="h-10 w-10 bg-orange-500 rounded"></div>
-            <div className="h-10 w-10 bg-blue-400 rounded ml-1"></div>
-          </div>
+          {/* Replaced the colored divs with the new logo image */}
+          <Image
+            src="/images/innovation_logo.png"
+            alt="German UDS Innovation Logo"
+            width={80} // Adjust this later
+            height={40} // Adjust this later
+          />
           <div>
             <h1 className="text-lg font-bold text-gray-900">German University</h1>
             <h2 className="text-sm font-bold text-gray-900">of Digital Science <span className="text-orange-500">Innovation</span></h2>
@@ -34,6 +38,9 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
           <a href="#structure" onClick={(e) => handleClick(e, 'structure')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'structure' ? 'text-orange-500' : ''}`}>Structure</a>
           <a href="#business" onClick={(e) => handleClick(e, 'business')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'business' ? 'text-orange-500' : ''}`}>Business Model</a>
           <a href="#invest" onClick={(e) => handleClick(e, 'invest')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'invest' ? 'text-orange-500' : ''}`}>Invest</a>
+          <a href="#invest-commercial" onClick={(e) => handleClick(e, 'invest-commercial')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'invest-commercial' ? 'text-orange-500' : ''}`}>Commercial Investment</a>
+          <a href="#invest-nonprofit" onClick={(e) => handleClick(e, 'invest-nonprofit')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'invest-nonprofit' ? 'text-orange-500' : ''}`}>Nonprofit Investment</a>
+          <a href="#about-university" onClick={(e) => handleClick(e, 'about-university')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'about-university' ? 'text-orange-500' : ''}`}>About UDS</a>
         </div>
         
         <div>
