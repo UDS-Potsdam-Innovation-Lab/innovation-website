@@ -7,10 +7,7 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <div className="flex items-center space-x-4 mb-6">
-              <div className="flex items-center">
-                <div className="h-8 w-8 bg-orange-500 rounded"></div>
-                <div className="h-8 w-8 bg-blue-400 rounded ml-1"></div>
-              </div>
+              <img src="/images/innovation_logo.png" alt="German UDS Innovation Logo" className="h-8 mr-2" />
               <div>
                 <h3 className="text-sm font-bold">German University</h3>
                 <h4 className="text-xs font-bold">of Digital Science <span className="text-orange-500">Innovation</span></h4>

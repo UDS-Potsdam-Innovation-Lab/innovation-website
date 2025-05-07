@@ -4,6 +4,7 @@
   "description": "Landing page for German UDS Innovation GmbH",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "mkdir -p public/images && cp -r images/* public/images/ || true",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
