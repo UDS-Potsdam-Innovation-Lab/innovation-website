@@ -3,43 +3,15 @@ import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import LanguageSwitcher from './language-switcher';
+import { useTranslation } from '../contexts/TranslationContext';
 
 interface NavigationProps {
   activeSection: string;
-  translations?: {
-    navigation: {
-      ecosystem: string;
-      portfolio: string;
-      structure: string;
-      business: string;
-      invest: string;
-      investCommercial: string;
-      investNonprofit: string;
-      aboutUniversity: string;
-      language: string;
-      investmentOpportunities: string;
-    };
-  };
 }
 
-// Default translations if not provided
-const defaultTranslations = {
-  navigation: {
-    ecosystem: "Ecosystem",
-    portfolio: "Portfolio",
-    structure: "Structure",
-    business: "Business Model",
-    invest: "Invest",
-    investCommercial: "Commercial Investment",
-    investNonprofit: "Nonprofit Investment",
-    aboutUniversity: "About UDS",
-    language: "Language",
-    investmentOpportunities: "Investment Opportunities"
-  }
-};
-
-const Navigation: React.FC<NavigationProps> = ({ activeSection, translations = defaultTranslations }) => {
+const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
   const { locale } = useRouter();
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -88,22 +60,22 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, translations = d
         {/* Desktop navigation */}
         <div className="hidden lg:flex space-x-6">
           <a href="#ecosystem" onClick={(e) => handleClick(e, 'ecosystem')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'ecosystem' ? 'text-orange-500' : ''}`}>
-            {translations.navigation.ecosystem}
+            {String(t('navigation.ecosystem'))}
           </a>
           <a href="#portfolio" onClick={(e) => handleClick(e, 'portfolio')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'portfolio' ? 'text-orange-500' : ''}`}>
-            {translations.navigation.portfolio}
+            {String(t('navigation.portfolio'))}
           </a>
           <a href="#structure" onClick={(e) => handleClick(e, 'structure')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'structure' ? 'text-orange-500' : ''}`}>
-            {translations.navigation.structure}
+            {String(t('navigation.structure'))}
           </a>
           <a href="#business" onClick={(e) => handleClick(e, 'business')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'business' ? 'text-orange-500' : ''}`}>
-            {translations.navigation.business}
+            {String(t('navigation.business'))}
           </a>
           <a href="#invest" onClick={(e) => handleClick(e, 'invest')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'invest' ? 'text-orange-500' : ''}`}>
-            {translations.navigation.invest}
+            {String(t('navigation.invest'))}
           </a>
           <a href="#about-university" onClick={(e) => handleClick(e, 'about-university')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'about-university' ? 'text-orange-500' : ''}`}>
-            {translations.navigation.aboutUniversity}
+            {String(t('navigation.aboutUniversity'))}
           </a>
           
           {/* Language switcher */}
@@ -113,7 +85,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, translations = d
         {/* CTA Button */}
         <div className="hidden lg:block">
           <button className="bg-orange-500 text-white px-6 py-2 rounded-br-xl shadow-md hover:bg-orange-600 transition-colors flex items-center space-x-2">
-            <span>{translations.navigation.investmentOpportunities}</span>
+            <span>{String(t('navigation.investmentOpportunities'))}</span>
             <ChevronRight size={16} />
           </button>
         </div>
@@ -123,33 +95,33 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection, translations = d
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-md z-50 p-4">
             <div className="flex flex-col space-y-3">
               <a href="#ecosystem" onClick={(e) => handleClick(e, 'ecosystem')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'ecosystem' ? 'text-orange-500' : ''}`}>
-                {translations.navigation.ecosystem}
+                {String(t('navigation.ecosystem'))}
               </a>
               <a href="#portfolio" onClick={(e) => handleClick(e, 'portfolio')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'portfolio' ? 'text-orange-500' : ''}`}>
-                {translations.navigation.portfolio}
+                {String(t('navigation.portfolio'))}
               </a>
               <a href="#structure" onClick={(e) => handleClick(e, 'structure')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'structure' ? 'text-orange-500' : ''}`}>
-                {translations.navigation.structure}
+                {String(t('navigation.structure'))}
               </a>
               <a href="#business" onClick={(e) => handleClick(e, 'business')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'business' ? 'text-orange-500' : ''}`}>
-                {translations.navigation.business}
+                {String(t('navigation.business'))}
               </a>
               <a href="#invest" onClick={(e) => handleClick(e, 'invest')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'invest' ? 'text-orange-500' : ''}`}>
-                {translations.navigation.invest}
+                {String(t('navigation.invest'))}
               </a>
               <a href="#about-university" onClick={(e) => handleClick(e, 'about-university')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'about-university' ? 'text-orange-500' : ''}`}>
-                {translations.navigation.aboutUniversity}
+                {String(t('navigation.aboutUniversity'))}
               </a>
               
               {/* Language switcher for mobile */}
               <div className="mt-4 border-t pt-4">
-                <p className="text-sm font-medium mb-2">{translations.navigation.language}</p>
+                <p className="text-sm font-medium mb-2">{String(t('navigation.language'))}</p>
                 <LanguageSwitcher />
               </div>
               
               {/* Mobile CTA */}
               <button className="mt-4 bg-orange-500 text-white px-6 py-2 rounded-br-xl shadow-md hover:bg-orange-600 transition-colors flex items-center space-x-2">
-                <span>{translations.navigation.investmentOpportunities}</span>
+                <span>{String(t('navigation.investmentOpportunities'))}</span>
                 <ChevronRight size={16} />
               </button>
             </div>

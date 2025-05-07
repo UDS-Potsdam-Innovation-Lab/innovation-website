@@ -54,6 +54,11 @@ export const TranslationProvider: React.FC<TranslationProviderProps> = ({ childr
         }
       }
       
+      // Ensure we always return a string for leaf values
+      if (typeof value !== 'object') {
+        return String(value);
+      }
+      
       return value;
     }
     
@@ -66,13 +71,14 @@ export const TranslationProvider: React.FC<TranslationProviderProps> = ({ childr
       
       // If it's not actually an object, return it anyway
       console.warn(`Translation key '${key}' is not an object but returnObjects was requested`);
-      return { [key]: objectResult };
+      return { [key]: String(objectResult) };
     }
     
     // Regular key lookup
-    return key in currentTranslations 
-      ? (currentTranslations as any)[key] 
-      : key; // Return the key as fallback
+    const result = key in currentTranslations ? (currentTranslations as any)[key] : key;
+    
+    // Ensure result is a string
+    return typeof result === 'object' ? JSON.stringify(result) : String(result);
   };
   
   return (

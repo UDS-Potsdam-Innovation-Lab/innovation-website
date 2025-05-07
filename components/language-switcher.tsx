@@ -8,9 +8,10 @@ interface LanguageSwitcherProps {
 
 const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) => {
   const router = useRouter();
-  const { pathname, asPath, query, locale } = router;
+  const { pathname, query, locale } = router;
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const [isChangingLocale, setIsChangingLocale] = useState(false);
 
   // Get current language
   const currentLocale = locale || 'en';
@@ -40,6 +41,25 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
     setIsOpen(!isOpen);
   };
 
+  // Handle language change
+  const handleLanguageChange = (langCode: string) => {
+    if (langCode === currentLocale || isChangingLocale) return;
+    
+    setIsChangingLocale(true);
+    setIsOpen(false);
+    
+    // Clean up any hash fragments to prevent issues
+    const path = pathname.split('#')[0];
+    
+    // Use push instead of replacing the URL to prevent redirection loops
+    router.push({ pathname: path, query }, undefined, { locale: langCode, scroll: false })
+      .finally(() => {
+        setTimeout(() => {
+          setIsChangingLocale(false);
+        }, 1000);
+      });
+  };
+
   return (
     <div ref={dropdownRef} className={`relative inline-block text-left ${className}`}>
       <div>
@@ -50,6 +70,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
           aria-expanded={isOpen}
           aria-haspopup="true"
           onClick={toggleDropdown}
+          disabled={isChangingLocale}
         >
           <span className="mr-1">
             {languages.find(lang => lang.code === currentLocale)?.flag}
@@ -62,7 +83,7 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
       </div>
 
       {/* Dropdown menu */}
-      {isOpen && (
+      {isOpen && !isChangingLocale && (
         <div
           className="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none z-50"
           role="menu"
@@ -71,25 +92,18 @@ const LanguageSwitcher: React.FC<LanguageSwitcherProps> = ({ className = '' }) =
         >
           <div className="py-1" role="none">
             {languages.map((lang) => (
-              <Link
+              <button
                 key={lang.code}
-                href={{ pathname, query }}
-                as={asPath}
-                locale={lang.code}
-                passHref
-                legacyBehavior
+                className={`flex items-center px-4 py-2 text-sm w-full text-left hover:bg-gray-100 cursor-pointer ${
+                  currentLocale === lang.code ? 'bg-gray-100 font-medium' : 'text-gray-700'
+                }`}
+                role="menuitem"
+                onClick={() => handleLanguageChange(lang.code)}
+                disabled={currentLocale === lang.code}
               >
-                <a
-                  className={`flex items-center px-4 py-2 text-sm hover:bg-gray-100 cursor-pointer ${
-                    currentLocale === lang.code ? 'bg-gray-100 font-medium' : 'text-gray-700'
-                  }`}
-                  role="menuitem"
-                  onClick={() => setIsOpen(false)}
-                >
-                  <span className="mr-2">{lang.flag}</span>
-                  {lang.name}
-                </a>
-              </Link>
+                <span className="mr-2">{lang.flag}</span>
+                {lang.name}
+              </button>
             ))}
           </div>
         </div>

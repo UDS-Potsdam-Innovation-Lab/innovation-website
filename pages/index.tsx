@@ -61,71 +61,19 @@ const Home: NextPage = () => {
 
       <main>
         <ScrollProgress progress={progress} />
-        <Navigation 
-          activeSection={activeSection} 
-          translations={{ 
-            navigation: {
-              ecosystem: t('navigation.ecosystem'),
-              portfolio: t('navigation.portfolio'),
-              structure: t('navigation.structure'),
-              business: t('navigation.business'),
-              invest: t('navigation.invest'),
-              investCommercial: t('navigation.investCommercial'),
-              investNonprofit: t('navigation.investNonprofit'),
-              aboutUniversity: t('navigation.aboutUniversity'),
-              language: t('navigation.language'),
-              investmentOpportunities: t('navigation.investmentOpportunities')
-            }
-          }} 
-        />
-        <HeroSection translations={{ 
-            title: t('heroSection.title'),
-            subtitle: t('heroSection.subtitle'),
-            exploreButton: t('heroSection.exploreButton'),
-            learnMoreButton: t('heroSection.learnMoreButton'),
-            nextGeneration: t('heroSection.nextGeneration'),
-            withoutBorders: t('heroSection.withoutBorders'),
-            quote: t('heroSection.quote')
-          }} />
+        <Navigation activeSection={activeSection} />
+        <HeroSection />
         <BusinessSection />
         <StructureSection />
         <EcosystemSection />
         <InvestSection />
         <PortfolioSection />
         <AboutUniversitySection /> 
-        <InvestCommercialSection translations={{
-            title: t('investCommercial.title'),
-            company: t('investCommercial.company'),
-            stakeholders: {
-              service: t('investCommercial.stakeholders.service'),
-              cloudhouse: t('investCommercial.stakeholders.cloudhouse'),
-              university: t('investCommercial.stakeholders.university')
-            },
-            uspTitle: t('investCommercial.uspTitle'),
-            uspDescription: t('investCommercial.uspDescription'),
-            keyPeopleTitle: t('investCommercial.keyPeopleTitle'),
-            keyPeopleDescription: t('investCommercial.keyPeopleDescription')
-          }} />
+        <InvestCommercialSection />
         <InvestNonprofitSection /> 
         <FoundationSection /> 
         <ContactSection />
-        <Footer translations={{
-            description: t('footer.description'),
-            quickLinks: t('footer.quickLinks'),
-            keyVerticals: t('footer.keyVerticals'),
-            verticals: {
-              entrepreneurship: t('footer.verticals.entrepreneurship'),
-              education: t('footer.verticals.education'),
-              ai: t('footer.verticals.ai'),
-              security: t('footer.verticals.security'),
-              management: t('footer.verticals.management')
-            },
-            investmentUpdates: t('footer.investmentUpdates'),
-            stayUpdated: t('footer.stayUpdated'),
-            emailPlaceholder: t('footer.emailPlaceholder'),
-            subscribe: t('footer.subscribe'),
-            rights: t('footer.rights')
-          }} />
+        <Footer />
       </main>
     </div>
   )

@@ -28,7 +28,7 @@ const nextConfig = {
   i18n: {
     locales: ['en', 'de'],
     defaultLocale: 'en',
-    localeDetection: true,
+    localeDetection: false, // Disable automatic locale detection to prevent redirection loops
   },
   images: {
     // For static export on GitHub Pages
