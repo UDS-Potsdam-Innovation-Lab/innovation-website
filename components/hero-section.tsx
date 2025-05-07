@@ -1,11 +1,9 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
-import { useRouter } from 'next/router';
-import { useTranslation } from '../contexts/TranslationContext';
+import { useLocale } from '../contexts/LocaleContext';
 
 const HeroSection: React.FC = () => {
-  const { locale } = useRouter();
-  const { t } = useTranslation();
+  const { locale, t } = useLocale();
   
   return (
     <section id="hero" className="pt-32 pb-20 px-6 bg-gradient-to-br from-blue-800 to-blue-900 text-white">

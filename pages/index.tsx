@@ -1,7 +1,7 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useTranslation } from '../contexts/TranslationContext'
+import { useLocale } from '../contexts/LocaleContext'
 import HeroSection from '../components/hero-section'
 import BusinessSection from '../components/business-section'
 import StructureSection from '../components/structure-section'
@@ -20,7 +20,7 @@ import FoundationSection from '../components/foundation-section';
 const Home: NextPage = () => {
   const [activeSection, setActiveSection] = React.useState('home')
   const [progress, setProgress] = React.useState(0)
-  const { t } = useTranslation();
+  const { locale, t } = useLocale();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -56,6 +56,8 @@ const Home: NextPage = () => {
       <Head>
         <title>German UDS Innovation GmbH</title>
         <meta name="description" content="German UDS Innovation GmbH - Innovation and Technology Solutions" />
+        <meta name="language" content={locale} />
+        <meta httpEquiv="Content-Language" content={locale} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -79,4 +81,6 @@ const Home: NextPage = () => {
   )
 }
 
-export default Home 
+export default Home
+
+// No getStaticProps needed since we're using client-side localization via localStorage 

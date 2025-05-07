@@ -1,3 +1,5 @@
+import { Locale } from '../contexts/LocaleContext';
+
 /**
  * Utility functions for handling localization in the application
  */
@@ -10,7 +12,7 @@
  * @param locale - The current locale
  * @returns The localized path or the original path if no localized version exists
  */
-export const getLocalizedImagePath = (path: string, locale: string | undefined): string => {
+export const getLocalizedImagePath = (path: string, locale: Locale | string | undefined): string => {
   if (!locale || locale === 'en') {
     return path; // Default locale (English) uses the original path
   }
@@ -55,4 +57,19 @@ export const logTranslationMissing = (
   if (translation === undefined) {
     console.warn(`Translation missing for key: ${translationKey}`);
   }
+};
+
+/**
+ * Generate alternate routes for HTML head
+ * Useful for SEO with hreflang tags
+ * 
+ * @param path - The current path (without locale)
+ * @returns Array of objects with locale and url
+ */
+export const getAlternateRoutes = (path: string) => {
+  const locales: Locale[] = ['en', 'de'];
+  return locales.map(locale => ({
+    locale,
+    url: `${path}`
+  }));
 };

@@ -1,17 +1,15 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 import LanguageSwitcher from './language-switcher';
-import { useTranslation } from '../contexts/TranslationContext';
+import { useLocale } from '../contexts/LocaleContext';
 
 interface NavigationProps {
   activeSection: string;
 }
 
 const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
-  const { locale } = useRouter();
-  const { t } = useTranslation();
+  const { locale, t } = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {

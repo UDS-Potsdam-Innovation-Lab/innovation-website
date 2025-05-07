@@ -1,12 +1,10 @@
 import React from "react";
 import ResponsiveImage from "./responsive-image";
-import { useRouter } from 'next/router';
-import { useTranslation } from '../contexts/TranslationContext';
+import { useLocale } from '../contexts/LocaleContext';
 import { getLocalizedImagePath } from '../utils/localization';
 
 const InvestCommercialSection: React.FC = () => {
-  const { locale } = useRouter();
-  const { t } = useTranslation();
+  const { locale, t } = useLocale();
   
   return (
     <section className="px-6 py-16 md:px-16 lg:px-24 bg-gray-50 text-gray-900 space-y-20">

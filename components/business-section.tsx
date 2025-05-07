@@ -1,8 +1,8 @@
 import React from 'react';
-import { useTranslation } from '../contexts/TranslationContext';
+import { useLocale } from '../contexts/LocaleContext';
 
 const BusinessSection: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useLocale();
   
   return (
     <section 

@@ -1,11 +1,10 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { useTranslation } from '../contexts/TranslationContext';
+import Link from 'next/link';
+import { useLocale } from '../contexts/LocaleContext';
 
 const Footer: React.FC = () => {
-  const { locale } = useRouter();
-  const { t } = useTranslation();
+  const { locale, t } = useLocale();
   
   // Get locale-specific logo if available
   const logoSrc = locale === 'de' 
@@ -89,9 +88,12 @@ const Footer: React.FC = () => {
             &copy; {new Date().getFullYear()} German University of Digital Science Innovation GmbH. {t('footer.rights')}
           </p>
           <div className="flex space-x-6">
-            <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm">Privacy Policy</a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm">Terms of Service</a>
-            <a href="#" className="text-gray-500 hover:text-white transition-colors text-sm">Imprint</a>
+            <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors text-sm">
+              {String(t('footer.privacy'))}
+            </Link>
+            <Link href="/imprint" className="text-gray-500 hover:text-white transition-colors text-sm">
+              {String(t('footer.imprint'))}
+            </Link>
           </div>
         </div>
       </div>

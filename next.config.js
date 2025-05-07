@@ -24,12 +24,8 @@ const nextConfig = {
   // Use a relative path prefix for GitHub Pages
   assetPrefix: process.env.NODE_ENV === 'production' ? '.' : undefined,
   reactStrictMode: true,
-  // Built-in i18n configuration
-  i18n: {
-    locales: ['en', 'de'],
-    defaultLocale: 'en',
-    localeDetection: false, // Disable automatic locale detection to prevent redirection loops
-  },
+  // Custom i18n solution instead of built-in i18n which doesn't work with static export
+  // We'll handle localization in our components manually
   images: {
     // For static export on GitHub Pages
     unoptimized: true,

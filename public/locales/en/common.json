@@ -114,5 +114,84 @@
       },
       "emailButton": "Send us an email"
     }
+  },
+  "common": {
+    "backToHome": "Back to Home"
+  },
+  "footer": {
+    "privacy": "Privacy Policy",
+    "imprint": "Imprint"
+  },
+  "imprint": {
+    "pageTitle": "Imprint",
+    "metaDescription": "Legal information about German UDS Innovation GmbH, including contact details and company registration information.",
+    "title": "Imprint",
+    "companyInfo": "Company Information",
+    "contact": "Contact Information",
+    "phone": "Phone",
+    "email": "Email",
+    "legalDetails": "Legal Details",
+    "management": "Management",
+    "registrationCourt": "Registration Court",
+    "registrationNumber": "Registration Number",
+    "vatId": "VAT ID",
+    "responsibility": "Responsibility for Content",
+    "responsibilityText": "The content of this website has been prepared with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the information provided. As a service provider, we are responsible for our own content on these pages in accordance with general laws. However, we are not obligated to monitor transferred or stored third-party information or to investigate circumstances that indicate illegal activity.",
+    "disputeResolution": "EU Dispute Resolution",
+    "disputeResolutionText": "The European Commission provides a platform for online dispute resolution (OS) which is available at https://ec.europa.eu/consumers/odr/. We are not obliged and not willing to participate in a dispute settlement procedure before a consumer arbitration board."
+  },
+  "privacy": {
+    "pageTitle": "Privacy Policy",
+    "metaDescription": "Information about how German UDS Innovation GmbH collects, uses, and protects your personal data.",
+    "title": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "introduction": {
+      "title": "Introduction",
+      "content": "German UDS Innovation GmbH ('we', 'us', or 'our') is committed to protecting the privacy of our users. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website. Please read this privacy policy carefully. If you do not agree with the terms of this privacy policy, please do not access the site."
+    },
+    "dataCollection": {
+      "title": "Information We Collect",
+      "content": "We collect information that you provide directly to us as well as information that is automatically collected when you visit our website.",
+      "categories": {
+        "title": "We may collect the following types of information:",
+        "item1": "Personal data (such as name, email address, and phone number) that you voluntarily provide when contacting us",
+        "item2": "Log data (including your IP address, browser type, operating system, referring web page, pages visited, and date/time of visit)",
+        "item3": "Device information (including device type and mobile network information)",
+        "item4": "Location information (if you enable location services)"
+      }
+    },
+    "cookies": {
+      "title": "Cookies and Web Beacons",
+      "content": "We use cookies and similar tracking technologies to track the activity on our Service and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent."
+    },
+    "dataUse": {
+      "title": "How We Use Your Information",
+      "content": "We may use the information we collect from you for various purposes, including to:",
+      "item1": "Provide, maintain, and improve our website and services",
+      "item2": "Respond to your inquiries, comments, or questions",
+      "item3": "Send you technical notices, updates, security alerts, and support and administrative messages"
+    },
+    "dataSharing": {
+      "title": "Sharing of Your Information",
+      "content": "We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties except as explicitly described in this Policy. This does not include trusted third parties who assist us in operating our website, conducting our business, or servicing you, so long as those parties agree to keep this information confidential."
+    },
+    "rights": {
+      "title": "Your Rights",
+      "content": "If you are a resident of the European Economic Area (EEA), you have certain data protection rights. We aim to take reasonable steps to allow you to correct, amend, delete, or limit the use of your Personal Data. You have the following rights:",
+      "item1": "The right to access, update or delete the information we have on you",
+      "item2": "The right of rectification - the right to have your information corrected if it is inaccurate or incomplete",
+      "item3": "The right to object to our processing of your Personal Data",
+      "item4": "The right of restriction - the right to request that we restrict the processing of your personal information",
+      "item5": "The right to data portability - the right to be provided with a copy of the information we have on you in a structured, machine-readable and commonly used format"
+    },
+    "dataProtectionOfficer": {
+      "title": "Data Protection Officer",
+      "name": "Data Protection Officer",
+      "email": "Email"
+    },
+    "changes": {
+      "title": "Changes to This Privacy Policy",
+      "content": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the 'Last Updated' date at the top of this Privacy Policy."
+    }
   }
 }

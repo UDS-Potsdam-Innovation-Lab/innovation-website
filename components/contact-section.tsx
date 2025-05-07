@@ -1,9 +1,9 @@
 import React from 'react';
 import { ChevronRight, Mail, Phone, MapPin } from 'lucide-react';
-import { useTranslation } from '../contexts/TranslationContext';
+import { useLocale } from '../contexts/LocaleContext';
 
 const ContactSection: React.FC = () => {
-  const { t } = useTranslation();
+  const { t } = useLocale();
   
   return (
     <section id="contact" className="py-20 px-6 bg-gray-100">

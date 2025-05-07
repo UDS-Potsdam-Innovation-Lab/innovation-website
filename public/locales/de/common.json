@@ -114,5 +114,84 @@
       },
       "emailButton": "Senden Sie uns eine E-Mail"
     }
+  },
+  "common": {
+    "backToHome": "Zurück zur Startseite"
+  },
+  "footer": {
+    "privacy": "Datenschutz",
+    "imprint": "Impressum"
+  },
+  "imprint": {
+    "pageTitle": "Impressum",
+    "metaDescription": "Rechtliche Informationen über German UDS Innovation GmbH, einschließlich Kontaktdaten und Unternehmensregistrierungsinformationen.",
+    "title": "Impressum",
+    "companyInfo": "Unternehmensinformationen",
+    "contact": "Kontaktinformationen",
+    "phone": "Telefon",
+    "email": "E-Mail",
+    "legalDetails": "Rechtliche Details",
+    "management": "Geschäftsführung",
+    "registrationCourt": "Registergericht",
+    "registrationNumber": "Handelsregisternummer",
+    "vatId": "Umsatzsteuer-ID",
+    "responsibility": "Verantwortlich für den Inhalt",
+    "responsibilityText": "Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.",
+    "disputeResolution": "EU-Streitschlichtung",
+    "disputeResolutionText": "Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, die Sie unter https://ec.europa.eu/consumers/odr/ finden. Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen."
+  },
+  "privacy": {
+    "pageTitle": "Datenschutzerklärung",
+    "metaDescription": "Informationen darüber, wie German UDS Innovation GmbH Ihre personenbezogenen Daten sammelt, verwendet und schützt.",
+    "title": "Datenschutzerklärung",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "introduction": {
+      "title": "Einleitung",
+      "content": "German UDS Innovation GmbH ('wir', 'uns' oder 'unser') ist bestrebt, die Privatsphäre unserer Nutzer zu schützen. Diese Datenschutzerklärung erläutert, wie wir Ihre Informationen sammeln, verwenden, offenlegen und schützen, wenn Sie unsere Website besuchen. Bitte lesen Sie diese Datenschutzerklärung sorgfältig durch. Wenn Sie mit den Bedingungen dieser Datenschutzerklärung nicht einverstanden sind, verwenden Sie bitte nicht unsere Website."
+    },
+    "dataCollection": {
+      "title": "Informationen, die wir sammeln",
+      "content": "Wir sammeln Informationen, die Sie uns direkt zur Verfügung stellen, sowie Informationen, die automatisch erfasst werden, wenn Sie unsere Website besuchen.",
+      "categories": {
+        "title": "Wir können folgende Arten von Informationen sammeln:",
+        "item1": "Persönliche Daten (wie Name, E-Mail-Adresse und Telefonnummer), die Sie freiwillig angeben, wenn Sie uns kontaktieren",
+        "item2": "Protokolldaten (einschließlich Ihrer IP-Adresse, Browsertyp, Betriebssystem, verweisende Webseite, besuchte Seiten und Datum/Uhrzeit des Besuchs)",
+        "item3": "Geräteinformationen (einschließlich Gerätetyp und Mobilfunknetzinformationen)",
+        "item4": "Standortinformationen (wenn Sie Standortdienste aktivieren)"
+      }
+    },
+    "cookies": {
+      "title": "Cookies und Web-Beacons",
+      "content": "Wir verwenden Cookies und ähnliche Tracking-Technologien, um die Aktivitäten auf unserem Service zu verfolgen und bestimmte Informationen zu speichern. Cookies sind Dateien mit einer kleinen Datenmenge, die möglicherweise eine anonyme eindeutige Kennung enthalten. Sie können Ihren Browser anweisen, alle Cookies abzulehnen oder anzuzeigen, wenn ein Cookie gesendet wird."
+    },
+    "dataUse": {
+      "title": "Wie wir Ihre Informationen verwenden",
+      "content": "Wir können die von Ihnen gesammelten Informationen für verschiedene Zwecke verwenden, unter anderem um:",
+      "item1": "Unsere Website und Dienste bereitzustellen, zu warten und zu verbessern",
+      "item2": "Auf Ihre Anfragen, Kommentare oder Fragen zu antworten",
+      "item3": "Ihnen technische Hinweise, Updates, Sicherheitsbenachrichtigungen sowie Support- und Verwaltungsnachrichten zu senden"
+    },
+    "dataSharing": {
+      "title": "Weitergabe Ihrer Informationen",
+      "content": "Wir verkaufen, handeln oder übertragen Ihre persönlich identifizierbaren Informationen nicht an Dritte, außer wie in dieser Richtlinie ausdrücklich beschrieben. Dies schließt vertrauenswürdige Dritte ein, die uns bei der Betreibung unserer Website, der Durchführung unseres Geschäfts oder der Betreuung Ihrer Person unterstützen, solange diese Parteien zustimmen, diese Informationen vertraulich zu behandeln."
+    },
+    "rights": {
+      "title": "Ihre Rechte",
+      "content": "Wenn Sie im Europäischen Wirtschaftsraum (EWR) ansässig sind, haben Sie bestimmte Datenschutzrechte. Wir bemühen uns, angemessene Maßnahmen zu ergreifen, die es Ihnen ermöglichen, Ihre personenbezogenen Daten zu korrigieren, zu ändern, zu löschen oder deren Verwendung einzuschränken. Sie haben folgende Rechte:",
+      "item1": "Das Recht auf Zugang, Aktualisierung oder Löschung der Informationen, die wir über Sie haben",
+      "item2": "Das Recht auf Berichtigung - das Recht, Ihre Informationen korrigieren zu lassen, wenn sie ungenau oder unvollständig sind",
+      "item3": "Das Recht, der Verarbeitung Ihrer personenbezogenen Daten zu widersprechen",
+      "item4": "Das Recht auf Einschränkung - das Recht zu verlangen, dass wir die Verarbeitung Ihrer personenbezogenen Daten einschränken",
+      "item5": "Das Recht auf Datenübertragbarkeit - das Recht, eine Kopie der Informationen, die wir über Sie haben, in einem strukturierten, maschinenlesbaren und allgemein verwendeten Format zu erhalten"
+    },
+    "dataProtectionOfficer": {
+      "title": "Datenschutzbeauftragter",
+      "name": "Datenschutzbeauftragter",
+      "email": "E-Mail"
+    },
+    "changes": {
+      "title": "Änderungen dieser Datenschutzerklärung",
+      "content": "Wir können unsere Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über Änderungen informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen und das Datum der \"Letzten Aktualisierung\" oben in dieser Datenschutzerklärung aktualisieren."
+    }
   }
 }
