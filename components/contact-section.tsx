@@ -1,34 +1,37 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Mail, Phone, MapPin } from 'lucide-react';
+import { useTranslation } from '../contexts/TranslationContext';
 
 const ContactSection: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <section id="contact" className="py-20 px-6 bg-gray-100">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16">
           <div>
             <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
-              Get In Touch
+              {String(t('contact.subtitle'))}
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Interested in Investing?
+              {String(t('contact.title'))}
             </h2>
             <p className="text-gray-600 mb-8">
-              Contact us to learn more about German UDS Innovation GmbH and discover how you can be part of our digital innovation ecosystem.
+              {String(t('contact.description'))}
             </p>
             
             <div className="bg-white p-8 rounded-br-xl shadow-lg">
               <div className="mb-8">
-                <h3 className="text-xl font-bold mb-4">Digital Innovator</h3>
+                <h3 className="text-xl font-bold mb-4">{String(t('contact.innovation.title'))}</h3>
                 <p className="text-gray-700 mb-4">
-                  As a catalyst, German UDS Innovation GmbH promotes sustainable technology transfer between science and industry and achieves attractive returns on investment.
+                  {String(t('contact.innovation.description'))}
                 </p>
               </div>
               
               <div>
-                <h3 className="text-xl font-bold mb-4">Mission</h3>
+                <h3 className="text-xl font-bold mb-4">{String(t('contact.mission.title'))}</h3>
                 <p className="text-gray-700 mb-4">
-                  Promote innovation through targeted participation. Create value for investors. Connect German University of Digital Science and business through integration.
+                  {String(t('contact.mission.description'))}
                 </p>
               </div>
             </div>
@@ -36,39 +39,47 @@ const ContactSection: React.FC = () => {
           
           <div className="relative">
             <div className="bg-white p-8 rounded-br-xl shadow-lg">
-              <h3 className="text-2xl font-bold mb-6">Send Us a Message</h3>
-              <form className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                  <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-br-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
+              <h3 className="text-2xl font-bold mb-6">{String(t('contact.connect.title'))}</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-100 p-3 rounded-br-lg">
+                    <Mail className="text-orange-500" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900">{String(t('contact.connect.email.title'))}</h4>
+                    <p className="text-gray-600">{String(t('contact.connect.email.value'))}</p>
+                  </div>
                 </div>
                 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input type="email" className="w-full px-4 py-2 border border-gray-300 rounded-br-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-100 p-3 rounded-br-lg">
+                    <Phone className="text-orange-500" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900">{String(t('contact.connect.phone.title'))}</h4>
+                    <p className="text-gray-600">{String(t('contact.connect.phone.value'))}</p>
+                  </div>
                 </div>
                 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Investment Interest</label>
-                  <select className="w-full px-4 py-2 border border-gray-300 rounded-br-md focus:outline-none focus:ring-2 focus:ring-orange-500">
-                    <option>Company Shares</option>
-                    <option>Capital Investment</option>
-                    <option>Joint Ventures</option>
-                    <option>Vertical Shareholding</option>
-                    <option>Other</option>
-                  </select>
+                <div className="flex items-start space-x-4">
+                  <div className="bg-orange-100 p-3 rounded-br-lg">
+                    <MapPin className="text-orange-500" size={24} />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-gray-900">{String(t('contact.connect.address.title'))}</h4>
+                    <p className="text-gray-600">{String(t('contact.connect.address.value'))}</p>
+                  </div>
                 </div>
                 
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                  <textarea rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-br-md focus:outline-none focus:ring-2 focus:ring-orange-500"></textarea>
-                </div>
-                
-                <button type="submit" className="w-full bg-orange-500 text-white py-3 rounded-br-md shadow-md hover:bg-orange-600 transition-colors flex items-center justify-center space-x-2">
-                  <span>Send Message</span>
+                <a 
+                  href="mailto:contact@germanudsinnovation.com" 
+                  className="mt-6 w-full bg-orange-500 text-white py-3 rounded-br-md shadow-md hover:bg-orange-600 transition-colors flex items-center justify-center space-x-2"
+                >
+                  <span>{String(t('contact.connect.emailButton'))}</span>
                   <ChevronRight size={18} />
-                </button>
-              </form>
+                </a>
+              </div>
             </div>
             
             <div className="absolute -top-4 -right-4 w-24 h-24 bg-orange-500 rounded-full opacity-20 blur-2xl"></div>

@@ -64,23 +64,23 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-6">{t('footer.investmentUpdates')}</h3>
+            <h3 className="text-lg font-bold mb-6">{String(t('footer.investmentUpdates'))}</h3>
             <p className="text-gray-400 text-sm mb-4">
-              {t('footer.stayUpdated')}
+              {String(t('footer.stayUpdated'))}
             </p>
-            <form className="space-y-3">
-              <input 
-                type="email" 
-                placeholder={t('footer.emailPlaceholder')} 
-                className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-br-md focus:outline-none focus:ring-2 focus:ring-orange-500 text-white" 
-              />
-              <button 
-                type="submit" 
-                className="w-full bg-orange-500 text-white py-2 rounded-br-md hover:bg-orange-600 transition-colors"
-              >
-                {t('footer.subscribe')}
-              </button>
-            </form>
+            <a 
+              href="mailto:invest@germanudsinnovation.com" 
+              className="block w-full bg-orange-500 text-white py-2 px-4 rounded-br-md hover:bg-orange-600 transition-colors text-center"
+            >
+              {String(t('footer.contactUs'))}
+            </a>
+            <div className="mt-4 text-sm text-gray-400">
+              <p>{String(t('footer.followUs'))}:</p>
+              <div className="flex space-x-4 mt-2">
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                <a href="#" className="text-gray-400 hover:text-white transition-colors">Twitter</a>
+              </div>
+            </div>
           </div>
         </div>
         

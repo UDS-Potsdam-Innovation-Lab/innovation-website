@@ -46,8 +46,73 @@
     },
     "investmentUpdates": "Investitions-Updates",
     "stayUpdated": "Bleiben Sie auf dem Laufenden über unsere neuesten Investitionsmöglichkeiten und Innovationen.",
-    "emailPlaceholder": "Ihre E-Mail-Adresse",
-    "subscribe": "Abonnieren",
+    "contactUs": "Kontaktieren Sie uns für Investitionsmöglichkeiten",
+    "followUs": "Folgen Sie uns in sozialen Medien",
     "rights": "Alle Rechte vorbehalten."
+  },
+  "business": {
+    "title": "Geschäftsmodell",
+    "subtitle": "Unser Ansatz",
+    "description": "Unser Kerngeschäft kombiniert strategische Investitionen mit Beratungsdienstleistungen und Innovationsnutzung.",
+    "card1": {
+      "title": "1. Investitionen",
+      "description": "Strategische Entwicklung von Unternehmen in Zusammenarbeit mit der Deutschen Universität für Digitale Wissenschaften"
+    },
+    "card2": {
+      "title": "2. Beratung und Dienstleistungen",
+      "description": "IT, Marketing, Vertrieb, Personal- und Projektentwicklung"
+    },
+    "card3": {
+      "title": "3. Innovation",
+      "description": "Forschung zu Markttransfer, Open Source"
+    },
+    "card4": {
+      "title": "4. Geplante vertikale Beteiligung",
+      "description": "Beteiligungsstruktur für Professoren und Forschungszentren"
+    },
+    "financialStrategy": {
+      "title": "Finanzstrategie",
+      "point1": {
+        "title": "Investitionsanforderungen",
+        "description": "Anfangsphase: Aufbau der administrativen Infrastruktur. Weiterentwicklung: Finanzierung neuer Investitionen und Vertikalen."
+      },
+      "point2": {
+        "title": "Einkommensquellen",
+        "description": "Dividenden aus Investitionen. Beratungshonorare. Staatliche Zuschüsse für Innovationsprojekte."
+      },
+      "point3": {
+        "title": "Risikomanagement",
+        "description": "Diversifiziertes Portfolio über Technologiesektoren. Transparente Berichterstattung an Investoren."
+      }
+    }
+  },
+  "contact": {
+    "title": "Interesse an Investitionen?",
+    "subtitle": "Kontaktieren Sie uns",
+    "description": "Kontaktieren Sie uns, um mehr über die German UDS Innovation GmbH zu erfahren und zu entdecken, wie Sie Teil unseres digitalen Innovationsökosystems werden können.",
+    "innovation": {
+      "title": "Digitaler Innovator",
+      "description": "Als Katalysator fördert die German UDS Innovation GmbH einen nachhaltigen Technologietransfer zwischen Wissenschaft und Industrie und erzielt attraktive Investitionsrenditen."
+    },
+    "mission": {
+      "title": "Mission",
+      "description": "Förderung von Innovation durch gezielte Beteiligung. Schaffung von Wert für Investoren. Verbindung der Deutschen Universität für Digitale Wissenschaften und Unternehmen durch Integration."
+    },
+    "connect": {
+      "title": "Verbinden Sie sich mit uns",
+      "email": {
+        "title": "E-Mail",
+        "value": "kontakt@germanudsinnovation.com"
+      },
+      "phone": {
+        "title": "Telefon",
+        "value": "+49 30 1234 5678"
+      },
+      "address": {
+        "title": "Adresse",
+        "value": "Innovations-Campus, Berlin, Deutschland"
+      },
+      "emailButton": "Senden Sie uns eine E-Mail"
+    }
   }
 }

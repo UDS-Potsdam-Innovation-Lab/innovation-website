@@ -46,8 +46,73 @@
     },
     "investmentUpdates": "Investment Updates",
     "stayUpdated": "Stay updated with our latest investment opportunities and innovations.",
-    "emailPlaceholder": "Your email address",
-    "subscribe": "Subscribe",
+    "contactUs": "Contact us for investment opportunities",
+    "followUs": "Follow us on social media",
     "rights": "All rights reserved."
+  },
+  "business": {
+    "title": "Business Model",
+    "subtitle": "Our Approach",
+    "description": "Our core business combines strategic investments with consulting services and innovation utilization.",
+    "card1": {
+      "title": "1. Investments",
+      "description": "Strategic development of companies in collaboration with the German University of Digital Science"
+    },
+    "card2": {
+      "title": "2. Consulting and Services",
+      "description": "IT, Marketing, Sales, Personnel and Project Development"
+    },
+    "card3": {
+      "title": "3. Innovation",
+      "description": "Research to market transfer, Open source"
+    },
+    "card4": {
+      "title": "4. Planned Vertical Shareholding",
+      "description": "Professor and Research Center involvement structure"
+    },
+    "financialStrategy": {
+      "title": "Financial Strategy",
+      "point1": {
+        "title": "Investment Requirements",
+        "description": "Initial phase: Build administrative infrastructure. Further development: Finance new investments and verticals."
+      },
+      "point2": {
+        "title": "Income Sources",
+        "description": "Dividends from investments. Consulting fees. Government grants for innovation projects."
+      },
+      "point3": {
+        "title": "Risk Management",
+        "description": "Diversified portfolio across technology sectors. Transparent reporting to investors."
+      }
+    }
+  },
+  "contact": {
+    "title": "Interested in Investing?",
+    "subtitle": "Get In Touch",
+    "description": "Contact us to learn more about German UDS Innovation GmbH and discover how you can be part of our digital innovation ecosystem.",
+    "innovation": {
+      "title": "Digital Innovator",
+      "description": "As a catalyst, German UDS Innovation GmbH promotes sustainable technology transfer between science and industry and achieves attractive returns on investment."
+    },
+    "mission": {
+      "title": "Mission",
+      "description": "Promote innovation through targeted participation. Create value for investors. Connect German University of Digital Science and business through integration."
+    },
+    "connect": {
+      "title": "Connect With Us",
+      "email": {
+        "title": "Email",
+        "value": "contact@germanudsinnovation.com"
+      },
+      "phone": {
+        "title": "Phone",
+        "value": "+49 30 1234 5678"
+      },
+      "address": {
+        "title": "Address",
+        "value": "Innovation Campus, Berlin, Germany"
+      },
+      "emailButton": "Send us an email"
+    }
   }
 }
