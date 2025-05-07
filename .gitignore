@@ -31,3 +31,5 @@ next-env.d.ts
 
 # private content
 /private/
+
+**/.claude/settings.local.json
