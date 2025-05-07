@@ -23,13 +23,11 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
           <Image
             src="/images/innovation_logo.png"
             alt="German UDS Innovation Logo"
-            width={80} // Adjust this later
-            height={40} // Adjust this later
+            width={160} // Adjust this later
+            height={80} // Adjust this later
+            className='mr-8'
           />
-          <div>
-            <h1 className="text-lg font-bold text-gray-900">German University</h1>
-            <h2 className="text-sm font-bold text-gray-900">of Digital Science <span className="text-orange-500">Innovation</span></h2>
-          </div>
+        
         </div>
         
         <div className="hidden lg:flex space-x-8">
