@@ -1,25 +1,30 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import { useRouter } from 'next/router';
+import { useTranslation } from '../contexts/TranslationContext';
 
 const HeroSection: React.FC = () => {
+  const { locale } = useRouter();
+  const { t } = useTranslation();
+  
   return (
     <section id="hero" className="pt-32 pb-20 px-6 bg-gradient-to-br from-blue-800 to-blue-900 text-white">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-              German UDS Innovation GmbH: Digital Innovation Ecosystem
+              {t('heroSection.title')}
             </h1>
             <p className="text-xl mb-8">
-              Our integrated ecosystem connects academic excellence with entrepreneurial practice through strategic investments and services.
+              {t('heroSection.subtitle')}
             </p>
             <div className="flex flex-wrap gap-4">
               <button className="bg-white text-blue-900 px-8 py-3 rounded-br-xl shadow-lg hover:bg-gray-100 transition-colors flex items-center space-x-2">
-                <span>Explore Investment Options</span>
+                <span>{t('heroSection.exploreButton')}</span>
                 <ChevronRight size={18} />
               </button>
               <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-br-xl hover:bg-white hover:text-blue-900 transition-colors">
-                Learn More
+                {t('heroSection.learnMoreButton')}
               </button>
             </div>
           </div>
@@ -30,12 +35,12 @@ const HeroSection: React.FC = () => {
                 <div className="h-12 w-12 bg-orange-500 rounded"></div>
                 <div className="h-12 w-12 bg-blue-400 rounded ml-1"></div>
                 <div className="ml-4">
-                  <h3 className="font-bold">Next-Generation Learning</h3>
-                  <p className="text-gray-600 text-sm">Without Borders</p>
+                  <h3 className="font-bold">{t('heroSection.nextGeneration')}</h3>
+                  <p className="text-gray-600 text-sm">{t('heroSection.withoutBorders')}</p>
                 </div>
               </div>
               <p className="text-gray-700 mb-6">
-                "Transforming university research into marketable digital products and business models through our vertical participation structure."
+                "{t('heroSection.quote')}"
               </p>
               <div className="flex justify-end">
                 <div className="flex -space-x-2">

@@ -1,6 +1,7 @@
 import React from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import { useTranslation } from '../contexts/TranslationContext'
 import HeroSection from '../components/hero-section'
 import BusinessSection from '../components/business-section'
 import StructureSection from '../components/structure-section'
@@ -19,6 +20,7 @@ import FoundationSection from '../components/foundation-section';
 const Home: NextPage = () => {
   const [activeSection, setActiveSection] = React.useState('home')
   const [progress, setProgress] = React.useState(0)
+  const { t } = useTranslation();
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -59,19 +61,71 @@ const Home: NextPage = () => {
 
       <main>
         <ScrollProgress progress={progress} />
-        <Navigation activeSection={activeSection} />
-        <HeroSection />
+        <Navigation 
+          activeSection={activeSection} 
+          translations={{ 
+            navigation: {
+              ecosystem: t('navigation.ecosystem'),
+              portfolio: t('navigation.portfolio'),
+              structure: t('navigation.structure'),
+              business: t('navigation.business'),
+              invest: t('navigation.invest'),
+              investCommercial: t('navigation.investCommercial'),
+              investNonprofit: t('navigation.investNonprofit'),
+              aboutUniversity: t('navigation.aboutUniversity'),
+              language: t('navigation.language'),
+              investmentOpportunities: t('navigation.investmentOpportunities')
+            }
+          }} 
+        />
+        <HeroSection translations={{ 
+            title: t('heroSection.title'),
+            subtitle: t('heroSection.subtitle'),
+            exploreButton: t('heroSection.exploreButton'),
+            learnMoreButton: t('heroSection.learnMoreButton'),
+            nextGeneration: t('heroSection.nextGeneration'),
+            withoutBorders: t('heroSection.withoutBorders'),
+            quote: t('heroSection.quote')
+          }} />
         <BusinessSection />
         <StructureSection />
         <EcosystemSection />
         <InvestSection />
         <PortfolioSection />
         <AboutUniversitySection /> 
-        <InvestCommercialSection />
+        <InvestCommercialSection translations={{
+            title: t('investCommercial.title'),
+            company: t('investCommercial.company'),
+            stakeholders: {
+              service: t('investCommercial.stakeholders.service'),
+              cloudhouse: t('investCommercial.stakeholders.cloudhouse'),
+              university: t('investCommercial.stakeholders.university')
+            },
+            uspTitle: t('investCommercial.uspTitle'),
+            uspDescription: t('investCommercial.uspDescription'),
+            keyPeopleTitle: t('investCommercial.keyPeopleTitle'),
+            keyPeopleDescription: t('investCommercial.keyPeopleDescription')
+          }} />
         <InvestNonprofitSection /> 
         <FoundationSection /> 
         <ContactSection />
-        <Footer />
+        <Footer translations={{
+            description: t('footer.description'),
+            quickLinks: t('footer.quickLinks'),
+            keyVerticals: t('footer.keyVerticals'),
+            verticals: {
+              entrepreneurship: t('footer.verticals.entrepreneurship'),
+              education: t('footer.verticals.education'),
+              ai: t('footer.verticals.ai'),
+              security: t('footer.verticals.security'),
+              management: t('footer.verticals.management')
+            },
+            investmentUpdates: t('footer.investmentUpdates'),
+            stayUpdated: t('footer.stayUpdated'),
+            emailPlaceholder: t('footer.emailPlaceholder'),
+            subscribe: t('footer.subscribe'),
+            rights: t('footer.rights')
+          }} />
       </main>
     </div>
   )

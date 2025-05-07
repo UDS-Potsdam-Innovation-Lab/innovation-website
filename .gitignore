@@ -33,3 +33,8 @@ next-env.d.ts
 /private/
 
 **/.claude/settings.local.json
+dev.log
+.gitignore
+__azurite_db_queue__.json
+node_modules/.bin/tsc
+node_modules/.bin/tsserver

@@ -1,0 +1,53 @@
+{
+  "navigation": {
+    "ecosystem": "Ökosystem",
+    "portfolio": "Portfolio",
+    "structure": "Struktur",
+    "business": "Geschäftsmodell",
+    "invest": "Investieren",
+    "investCommercial": "Kommerzielle Investitionen",
+    "investNonprofit": "Gemeinnützige Investitionen",
+    "aboutUniversity": "Über UDS",
+    "language": "Sprache",
+    "investmentOpportunities": "Investitionsmöglichkeiten"
+  },
+  "heroSection": {
+    "title": "German UDS Innovation GmbH: Digitales Innovations-Ökosystem",
+    "subtitle": "Unser integriertes Ökosystem verbindet akademische Exzellenz mit unternehmerischer Praxis durch strategische Investitionen und Dienstleistungen.",
+    "exploreButton": "Investitionsmöglichkeiten erkunden",
+    "learnMoreButton": "Mehr erfahren",
+    "nextGeneration": "Lernen der nächsten Generation",
+    "withoutBorders": "Ohne Grenzen",
+    "quote": "Transformation von Universitätsforschung in marktfähige digitale Produkte und Geschäftsmodelle durch unsere vertikale Beteiligungsstruktur."
+  },
+  "investCommercial": {
+    "title": "Unser Investitionsportfolio",
+    "company": "German UDS Innovation GmbH",
+    "stakeholders": {
+      "service": "100% Beteiligung an German UDS Service GmbH – verantwortlich für die IT-Infrastruktur für die Universität und externe Partner",
+      "cloudhouse": "20% Beteiligung an FB Cloudhouse GmbH – übernimmt administrative Aufgaben und Raumvermietung",
+      "university": "20% Beteiligung an German UDS gGmbH – garantiert kreative Mitwirkung an der Universität"
+    },
+    "uspTitle": "Vertikales Beteiligungs-Alleinstellungsmerkmal",
+    "uspDescription": "Unsere vertikale Struktur bindet Professoren und Forschungszentren direkt in neu gegründete Vertikalen ein. Dies transformiert Universitätsforschung in marktfähige digitale Produkte und Geschäftsmodelle.",
+    "keyPeopleTitle": "Schlüsselpersonen im Ökosystem",
+    "keyPeopleDescription": "Diese Professoren und Experten leiten Vertikalen und Forschungsinitiativen an der German UDS und verbinden Wissenschaft mit digitaler Innovation."
+  },
+  "footer": {
+    "description": "Unser integriertes Ökosystem verbindet akademische Exzellenz mit unternehmerischer Praxis durch strategische Investitionen und Dienstleistungen.",
+    "quickLinks": "Schnellzugriff",
+    "keyVerticals": "Schlüsselvertikalen",
+    "verticals": {
+      "entrepreneurship": "Digitales Unternehmertum",
+      "education": "Virtuelle Bildung",
+      "ai": "Künstliche Intelligenz",
+      "security": "Cybersicherheit",
+      "management": "Digitales Management"
+    },
+    "investmentUpdates": "Investitions-Updates",
+    "stayUpdated": "Bleiben Sie auf dem Laufenden über unsere neuesten Investitionsmöglichkeiten und Innovationen.",
+    "emailPlaceholder": "Ihre E-Mail-Adresse",
+    "subscribe": "Abonnieren",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

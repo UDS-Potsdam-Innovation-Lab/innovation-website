@@ -7,7 +7,8 @@
     "prebuild": "mkdir -p public/images && cp -r images/* public/images/ || true",
     "optimize-images": "node optimize-images.js",
     "resize-images": "node resize-images.js",
-    "build": "npm run optimize-images && npm run resize-images && next build",
+    "create-locale-dirs": "node scripts/create-locale-directories.js",
+    "build": "npm run optimize-images && npm run resize-images && npm run create-locale-dirs && next build",
     "start": "next start",
     "lint": "next lint"
   },

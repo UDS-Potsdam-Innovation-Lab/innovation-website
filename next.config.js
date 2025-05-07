@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 // Load image sizes if available
 let imageSizes = [400, 800, 1200, 1600];
 try {
@@ -23,6 +24,12 @@ const nextConfig = {
   // Use a relative path prefix for GitHub Pages
   assetPrefix: process.env.NODE_ENV === 'production' ? '.' : undefined,
   reactStrictMode: true,
+  // Built-in i18n configuration
+  i18n: {
+    locales: ['en', 'de'],
+    defaultLocale: 'en',
+    localeDetection: true,
+  },
   images: {
     // For static export on GitHub Pages
     unoptimized: true,
@@ -33,6 +40,8 @@ const nextConfig = {
     imageSizes: imageSizes,
     // For GitHub Pages static export
     path: process.env.NODE_ENV === 'production' ? '' : '/_next/image',
+    // Support locale-specific images
+    domains: ['localhost'],
   },
   // This is important for GitHub Pages to properly handle static assets
   trailingSlash: true,

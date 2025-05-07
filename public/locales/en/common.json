@@ -1,0 +1,53 @@
+{
+  "navigation": {
+    "ecosystem": "Ecosystem",
+    "portfolio": "Portfolio",
+    "structure": "Structure",
+    "business": "Business Model",
+    "invest": "Invest",
+    "investCommercial": "Commercial Investment",
+    "investNonprofit": "Nonprofit Investment",
+    "aboutUniversity": "About UDS",
+    "language": "Language",
+    "investmentOpportunities": "Investment Opportunities"
+  },
+  "heroSection": {
+    "title": "German UDS Innovation GmbH: Digital Innovation Ecosystem",
+    "subtitle": "Our integrated ecosystem connects academic excellence with entrepreneurial practice through strategic investments and services.",
+    "exploreButton": "Explore Investment Options",
+    "learnMoreButton": "Learn More",
+    "nextGeneration": "Next-Generation Learning",
+    "withoutBorders": "Without Borders",
+    "quote": "Transforming university research into marketable digital products and business models through our vertical participation structure."
+  },
+  "investCommercial": {
+    "title": "Our Investment Portfolio",
+    "company": "German UDS Innovation GmbH",
+    "stakeholders": {
+      "service": "100% stake in German UDS Service GmbH – responsible for the IT infrastructure for the university and external partners",
+      "cloudhouse": "20% stake in FB Cloudhouse GmbH – handles administrative tasks and space rental",
+      "university": "20% participation in German UDS gGmbH – guarantees creative involvement in the university"
+    },
+    "uspTitle": "Vertical Participation USP",
+    "uspDescription": "Our vertical structure directly involves professors and research centers in newly founded verticals. This transforms university research into marketable digital products and business models.",
+    "keyPeopleTitle": "Key People in the Ecosystem",
+    "keyPeopleDescription": "These professors and experts lead verticals and research initiatives at German UDS, bridging academia with digital innovation."
+  },
+  "footer": {
+    "description": "Our integrated ecosystem connects academic excellence with entrepreneurial practice through strategic investments and services.",
+    "quickLinks": "Quick Links",
+    "keyVerticals": "Key Verticals",
+    "verticals": {
+      "entrepreneurship": "Digital Entrepreneurship",
+      "education": "Virtual Education",
+      "ai": "Artificial Intelligence",
+      "security": "Cybersecurity",
+      "management": "Digital Management"
+    },
+    "investmentUpdates": "Investment Updates",
+    "stayUpdated": "Stay updated with our latest investment opportunities and innovations.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "rights": "All rights reserved."
+  }
+}
