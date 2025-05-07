@@ -6,7 +6,8 @@
     "dev": "next dev",
     "prebuild": "mkdir -p public/images && cp -r images/* public/images/ || true",
     "optimize-images": "node optimize-images.js",
-    "build": "npm run optimize-images && next build",
+    "resize-images": "node resize-images.js",
+    "build": "npm run optimize-images && npm run resize-images && next build",
     "start": "next start",
     "lint": "next lint"
   },

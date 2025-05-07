@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import ResponsiveImage from "./responsive-image";
 
 const InvestCommercialSection = () => {
   return (
@@ -16,12 +16,13 @@ const InvestCommercialSection = () => {
           </ul>
         </div>
         <div className="flex justify-center">
-          <Image
+          <ResponsiveImage
             src="/images/financial-support-commercial/investment_portfolio.png"
             alt="Investment Portfolio"
             width={500}
             height={400}
             className="rounded-xl shadow-md"
+            sizes="(max-width: 768px) 100vw, 500px"
           />
         </div>
       </div>
@@ -36,12 +37,13 @@ const InvestCommercialSection = () => {
           </p>
         </div>
         <div className="flex justify-center">
-          <Image
+          <ResponsiveImage
             src="/images/financial-support-commercial/usp.png"
             alt="USP Vertical Structure"
             width={500}
             height={400}
             className="rounded-xl shadow-md"
+            sizes="(max-width: 768px) 100vw, 500px"
           />
         </div>
       </div>
@@ -53,14 +55,14 @@ const InvestCommercialSection = () => {
           These professors and experts lead verticals and research initiatives at German UDS, bridging academia with digital innovation.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <Image src="/images/financial-support-commercial/mike.webp" alt="Prof. Dr. Mike Friedrichsen" width={200} height={200} className="rounded-full shadow" />
-          <Image src="/images/financial-support-commercial/tom.webp" alt="Prof. Dr. Thomas Staubitz" width={200} height={200} className="rounded-full shadow" />
-          <Image src="/images/financial-support-commercial/DiMitri.webp" alt="Prof. Dr. Daniele Di Mitri" width={200} height={200} className="rounded-full shadow" />
-          <Image src="/images/financial-support-commercial/Feiyu_Xu.webp" alt="Prof. Dr. Feiyu Xu" width={200} height={200} className="rounded-full shadow" />
-          <Image src="/images/financial-support-commercial/Felix.jpeg" alt="Prof. Dr. Felix Weitkämper" width={200} height={200} className="rounded-full shadow" />
-          <Image src="/images/financial-support-commercial/TimStuchtey.webp" alt="Prof. Dr. Tim Stuchtey" width={200} height={200} className="rounded-full shadow" />
-          <Image src="/images/financial-support-commercial/Georg.webp" alt="Prof. Dr. Georg Loscher" width={200} height={200} className="rounded-full shadow" />
-          <Image src="/images/financial-support-commercial/marco_bade.jpeg" alt="Prof. Dr. Marco Bade" width={200} height={200} className="rounded-full shadow" />
+          <ResponsiveImage src="/images/financial-support-commercial/mike.webp" alt="Prof. Dr. Mike Friedrichsen" width={200} height={200} className="rounded-full shadow" sizes="(max-width: 768px) 50vw, 200px" />
+          <ResponsiveImage src="/images/financial-support-commercial/tom.webp" alt="Prof. Dr. Thomas Staubitz" width={200} height={200} className="rounded-full shadow" sizes="(max-width: 768px) 50vw, 200px" />
+          <ResponsiveImage src="/images/financial-support-commercial/DiMitri.webp" alt="Prof. Dr. Daniele Di Mitri" width={200} height={200} className="rounded-full shadow" sizes="(max-width: 768px) 50vw, 200px" />
+          <ResponsiveImage src="/images/financial-support-commercial/Feiyu_Xu.webp" alt="Prof. Dr. Feiyu Xu" width={200} height={200} className="rounded-full shadow" sizes="(max-width: 768px) 50vw, 200px" />
+          <ResponsiveImage src="/images/financial-support-commercial/Felix.jpeg" alt="Prof. Dr. Felix Weitkämper" width={200} height={200} className="rounded-full shadow" sizes="(max-width: 768px) 50vw, 200px" />
+          <ResponsiveImage src="/images/financial-support-commercial/TimStuchtey.webp" alt="Prof. Dr. Tim Stuchtey" width={200} height={200} className="rounded-full shadow" sizes="(max-width: 768px) 50vw, 200px" />
+          <ResponsiveImage src="/images/financial-support-commercial/Georg.webp" alt="Prof. Dr. Georg Loscher" width={200} height={200} className="rounded-full shadow" sizes="(max-width: 768px) 50vw, 200px" />
+          <ResponsiveImage src="/images/financial-support-commercial/marco_bade.jpeg" alt="Prof. Dr. Marco Bade" width={200} height={200} className="rounded-full shadow" sizes="(max-width: 768px) 50vw, 200px" />
         </div>
       </div>
     </section>
