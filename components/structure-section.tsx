@@ -38,17 +38,17 @@ const StructureSection: React.FC = () => {
         const rand = Math.random();
         if (rand < 0.4) {
           // Near the left vertical line (approx 25% across)
-          this.x = canvas.width * 0.25 + (Math.random() * 2 - 1) * 30;
+          this.x = canvas ? canvas.width * 0.25 + (Math.random() * 2 - 1) * 30 : 0;
         } else if (rand < 0.7) {
           // Near the right vertical line (approx 75% across)
-          this.x = canvas.width * 0.75 + (Math.random() * 2 - 1) * 30;
+          this.x = canvas ? canvas.width * 0.75 + (Math.random() * 2 - 1) * 30: 0;
         } else {
           // Elsewhere
-          this.x = Math.random() * canvas.width;
+          this.x = canvas ? Math.random() * canvas.width : 0;
         }
         
         // Start from random positions, but mostly from the top
-        this.y = Math.random() < 0.9 ? Math.random() * (canvas.height * 0.1) : Math.random() * canvas.height;
+        this.y = canvas ? (Math.random() < 0.9 ? Math.random() * (canvas.height * 0.1) : Math.random() * canvas.height) : 0;
         
         // Vary the speed slightly to create natural flow
         this.speed = 0.5 + Math.random() * 0.8;
@@ -57,10 +57,10 @@ const StructureSection: React.FC = () => {
         this.size = 0.5 + Math.random() * 1.5;
         
         // Color based on position - orange/blue for the vertical lines, light blue for elsewhere
-        if (Math.abs(this.x - canvas.width * 0.25) < 10) {
+        if (canvas && Math.abs(this.x - canvas.width * 0.25) < 10) {
           // Left vertical line - orange
           this.color = `rgba(237, 137, 54, ${0.2 + Math.random() * 0.3})`;
-        } else if (Math.abs(this.x - canvas.width * 0.75) < 10) {
+        } else if (canvas && Math.abs(this.x - canvas.width * 0.75) < 10) {
           // Right vertical line - blue
           this.color = `rgba(59, 130, 246, ${0.2 + Math.random() * 0.3})`;
         } else {
@@ -77,7 +77,7 @@ const StructureSection: React.FC = () => {
         this.y += this.speed;
         
         // Reset position when particles go off-screen
-        if (this.y > canvas.height) {
+        if (canvas && this.y > canvas.height) {
           this.y = -10;
           // Randomize x position on reset for variety
           const rand = Math.random();
@@ -123,11 +123,11 @@ const StructureSection: React.FC = () => {
         
         if (leftToRight) {
           // Left to right connection (25% to 75%)
-          this.x = canvas.width * 0.25 + Math.random() * 10;
+          this.x = canvas ? canvas.width * 0.25 + Math.random() * 10 : 0;
           this.direction = 1;
         } else {
           // Right to left connection (75% to a vertical location)
-          this.x = canvas.width * 0.75 - Math.random() * 10;
+          this.x = canvas ? canvas.width * 0.75 - Math.random() * 10 : 0;
           this.direction = -1;
         }
         
@@ -135,7 +135,7 @@ const StructureSection: React.FC = () => {
         this.size = 0.5 + Math.random() * 1;
         
         // Determine color based on position
-        if (Math.abs(this.y - canvas.height * 0.25) < 10) {
+        if (canvas && Math.abs(this.y - canvas.height * 0.25) < 10) {
           // Upper horizontal line - orange
           this.color = `rgba(237, 137, 54, ${0.2 + Math.random() * 0.3})`;
         } else {
@@ -153,12 +153,12 @@ const StructureSection: React.FC = () => {
         
         // Reset when off screen
         if (
-          (this.direction > 0 && this.x > canvas.width * 0.75) ||
-          (this.direction < 0 && this.x < canvas.width * 0.25)
+          (canvas && this.direction > 0 && this.x > canvas.width * 0.75) ||
+          (canvas && this.direction < 0 && this.x < canvas.width * 0.25)
         ) {
-          if (this.direction > 0) {
+          if (canvas && this.direction > 0) {
             this.x = canvas.width * 0.25;
-          } else {
+          } else if (canvas) {
             this.x = canvas.width * 0.75;
           }
         }
