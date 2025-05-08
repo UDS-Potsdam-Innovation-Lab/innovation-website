@@ -48,7 +48,9 @@
     "stayUpdated": "Bleiben Sie auf dem Laufenden über unsere neuesten Investitionsmöglichkeiten und Innovationen.",
     "contactUs": "Kontaktieren Sie uns für Investitionsmöglichkeiten",
     "followUs": "Folgen Sie uns in sozialen Medien",
-    "rights": "Alle Rechte vorbehalten."
+    "rights": "Alle Rechte vorbehalten.",
+    "privacy": "Datenschutz",
+    "imprint": "Impressum"
   },
   "business": {
     "title": "Geschäftsmodell",
@@ -117,10 +119,6 @@
   },
   "common": {
     "backToHome": "Zurück zur Startseite"
-  },
-  "footer": {
-    "privacy": "Datenschutz",
-    "imprint": "Impressum"
   },
   "imprint": {
     "pageTitle": "Impressum",

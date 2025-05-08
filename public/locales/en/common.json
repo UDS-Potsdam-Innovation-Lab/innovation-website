@@ -48,7 +48,9 @@
     "stayUpdated": "Stay updated with our latest investment opportunities and innovations.",
     "contactUs": "Contact us for investment opportunities",
     "followUs": "Follow us on social media",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "imprint": "Imprint"
   },
   "business": {
     "title": "Business Model",
@@ -117,10 +119,6 @@
   },
   "common": {
     "backToHome": "Back to Home"
-  },
-  "footer": {
-    "privacy": "Privacy Policy",
-    "imprint": "Imprint"
   },
   "imprint": {
     "pageTitle": "Imprint",
