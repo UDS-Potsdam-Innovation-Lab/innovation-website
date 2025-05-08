@@ -15,7 +15,7 @@ import Navigation from '../components/navigation'
 import ScrollProgress from '../components/scroll-progress'
 import InvestCommercialSection from '../components/invest-commercial-section'; 
 import InvestNonprofitSection from '../components/invest-nonprofit-section'; 
-import FoundationSection from '../components/foundation-section'; 
+
 
 const Home: NextPage = () => {
   const [activeSection, setActiveSection] = React.useState('home')
@@ -73,7 +73,6 @@ const Home: NextPage = () => {
         <AboutUniversitySection /> 
         <InvestCommercialSection />
         <InvestNonprofitSection /> 
-        <FoundationSection /> 
         <ContactSection />
         <Footer />
       </main>
