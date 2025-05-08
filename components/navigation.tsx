@@ -27,7 +27,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
     : "/images/innovation_logo.png";
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white bg-opacity-95 z-40 shadow-sm">
+    <nav className="fixed top-0 left-0 w-full bg-white bg-opacity-75 backdrop-blur z-40 shadow-sm">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <Image
@@ -90,7 +90,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
         
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 bg-white shadow-md z-50 p-4">
+          <div className="lg:hidden absolute top-full left-0 right-0 bg-white bg-opacity-85 backdrop-blur shadow-md z-50 p-4">
             <div className="flex flex-col space-y-3">
               <a href="#ecosystem" onClick={(e) => handleClick(e, 'ecosystem')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'ecosystem' ? 'text-orange-500' : ''}`}>
                 {String(t('navigation.ecosystem'))}
