@@ -9,12 +9,9 @@ const InvestSection: React.FC = () => {
           <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
             Investment Opportunities
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6 relative inline-block">
+
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Investor Value Proposition
-            <span className="absolute w-full h-1 bg-orange-300 bottom-0 left-0" style={{ 
-              animation: 'valueRise 3s ease-in-out infinite',
-              transformOrigin: 'center'
-            }}></span>
           </h2>
           <p className="text-gray-600">
             Join us in shaping the digital future through strategic investments in innovation.
