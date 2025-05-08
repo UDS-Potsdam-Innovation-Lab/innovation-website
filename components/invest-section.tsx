@@ -9,8 +9,12 @@ const InvestSection: React.FC = () => {
           <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
             Investment Opportunities
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6 relative inline-block">
             Investor Value Proposition
+            <span className="absolute w-full h-1 bg-orange-300 bottom-0 left-0" style={{ 
+              animation: 'valueRise 3s ease-in-out infinite',
+              transformOrigin: 'center'
+            }}></span>
           </h2>
           <p className="text-gray-600">
             Join us in shaping the digital future through strategic investments in innovation.
@@ -18,7 +22,11 @@ const InvestSection: React.FC = () => {
         </div>
         
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-white p-8 rounded-br-xl shadow-md hover:shadow-xl transition-shadow">
+          <div className="bg-white p-8 rounded-br-xl shadow-md hover:shadow-xl transition-shadow" style={{
+            transform: 'translateY(0)',
+            transition: 'transform 0.3s ease-in-out'
+          }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
             <div className="flex items-start mb-6">
               <div className="bg-orange-100 w-12 h-12 rounded-br-lg flex items-center justify-center text-orange-600 mr-4">
                 <Building size={24} />
@@ -44,7 +52,11 @@ const InvestSection: React.FC = () => {
             </div>
           </div>
           
-          <div className="bg-white p-8 rounded-br-xl shadow-md hover:shadow-xl transition-shadow">
+          <div className="bg-white p-8 rounded-br-xl shadow-md hover:shadow-xl transition-shadow" style={{
+            transform: 'translateY(0)',
+            transition: 'transform 0.3s ease-in-out'
+          }} onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+             onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}>
             <div className="flex items-start mb-6">
               <div className="bg-orange-100 w-12 h-12 rounded-br-lg flex items-center justify-center text-orange-600 mr-4">
                 <Sparkles size={24} />
@@ -72,10 +84,18 @@ const InvestSection: React.FC = () => {
         </div>
         
         <div className="mt-16 max-w-4xl mx-auto">
-          <div className="bg-white p-8 rounded-br-xl shadow-lg">
-            <h3 className="text-2xl font-bold text-center text-orange-500 mb-8">Key Investment Opportunities</h3>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gray-50 p-6 rounded-br-xl">
+          <div className="bg-white p-8 rounded-br-xl shadow-lg growth-bg">
+            <h3 className="text-2xl font-bold text-center text-orange-500 mb-8 relative z-10">Key Investment Opportunities</h3>
+            <div className="grid md:grid-cols-2 gap-8 relative z-10">
+              <div className="bg-gray-50 p-6 rounded-br-xl" style={{
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              }} onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.03)';
+                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+              }} onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}>
                 <div className="flex items-center mb-4">
                   <div className="bg-orange-100 w-10 h-10 rounded-br-lg flex items-center justify-center text-orange-600 mr-3">
                     <Building size={20} />
@@ -87,7 +107,15 @@ const InvestSection: React.FC = () => {
                 </p>
               </div>
               
-              <div className="bg-gray-50 p-6 rounded-br-xl">
+              <div className="bg-gray-50 p-6 rounded-br-xl" style={{
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              }} onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.03)';
+                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+              }} onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}>
                 <div className="flex items-center mb-4">
                   <div className="bg-orange-100 w-10 h-10 rounded-br-lg flex items-center justify-center text-orange-600 mr-3">
                     <Globe size={20} />
@@ -99,7 +127,15 @@ const InvestSection: React.FC = () => {
                 </p>
               </div>
               
-              <div className="bg-gray-50 p-6 rounded-br-xl">
+              <div className="bg-gray-50 p-6 rounded-br-xl" style={{
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              }} onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.03)';
+                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+              }} onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}>
                 <div className="flex items-center mb-4">
                   <div className="bg-orange-100 w-10 h-10 rounded-br-lg flex items-center justify-center text-orange-600 mr-3">
                     <Users size={20} />
@@ -111,7 +147,15 @@ const InvestSection: React.FC = () => {
                 </p>
               </div>
               
-              <div className="bg-gray-50 p-6 rounded-br-xl">
+              <div className="bg-gray-50 p-6 rounded-br-xl" style={{
+                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
+              }} onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'scale(1.03)';
+                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
+              }} onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'scale(1)';
+                e.currentTarget.style.boxShadow = 'none';
+              }}>
                 <div className="flex items-center mb-4">
                   <div className="bg-orange-100 w-10 h-10 rounded-br-lg flex items-center justify-center text-orange-600 mr-3">
                     <BarChart4 size={20} />
@@ -124,7 +168,7 @@ const InvestSection: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-8 text-center">
+            <div className="mt-8 text-center relative z-10">
               <button className="bg-orange-500 text-white px-8 py-3 rounded-br-xl shadow-lg hover:bg-orange-600 transition-colors">
                 Contact Our Investment Team
               </button>

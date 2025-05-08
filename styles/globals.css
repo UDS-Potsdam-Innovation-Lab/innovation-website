@@ -69,3 +69,48 @@ a {
 .rounded-md {
   border-radius: 0.375rem;
 }
+
+/* Growth animation for value proposition section */
+@keyframes gradientGrow {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.05;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 0.15;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.05;
+  }
+}
+
+@keyframes valueRise {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.growth-bg {
+  position: relative;
+  overflow: hidden;
+}
+
+.growth-bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ff8a00 0%, #e58c00 25%, #fba700 50%, #ff8a00 75%, #e58c00 100%);
+  background-size: 400% 400%;
+  opacity: 0.05;
+  z-index: 0;
+  animation: gradientGrow 15s ease infinite;
+  pointer-events: none;
+}
