@@ -16,49 +16,58 @@ const Footer: React.FC = () => {
       <div className="container mx-auto">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <div className="flex items-center space-x-4 mb-6">
-              <Image
-                src={logoSrc}
-                alt="German UDS Innovation Logo"
-                width={32}
-                height={32}
-                className="mr-2"
-                onError={(e) => {
-                  // Fallback to default logo if locale-specific one doesn't exist
-                  const target = e.target as HTMLImageElement;
-                  target.onerror = null;
-                  target.src = '/images/innovation_logo.png';
+          <div className="flex items-center space-x-4 mb-6">
+              <a
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-              />
-              <div>
-                <h3 className="text-sm font-bold">German University</h3>
-                <h4 className="text-xs font-bold">of Digital Science <span className="text-orange-500">Innovation</span></h4>
-              </div>
-            </div>
+                className="flex items-center space-x-4 cursor-pointer group"
+              >
+                <Image
+                  src={logoSrc}
+                  alt="German UDS Innovation Logo"
+                  width={96}
+                  height={96}
+                  className="mr-2 transform transition-transform duration-200 group-hover:scale-110"
+                  onError={(e) => {
+                    // Fallback to default logo if locale-specific one doesn't exist
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null;
+                    target.src = '/images/innovation_logo.png';
+                  }}
+                />
+                <div>
+                  <h3 className="text-xl font-bold">German University</h3>
+                  <h4 className="text-lg font-bold">of Digital Science <span className="text-orange-500">Innovation</span></h4>
+                </div>
+              </a>
+          </div>
             <p className="text-gray-400 text-sm mb-6">
-              {t('footer.description')}
+              {String(t('footer.description'))}
             </p>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-6">{t('footer.quickLinks')}</h3>
+            <h3 className="text-lg font-bold mb-6">{String(t('footer.quickLinks'))}</h3>
             <ul className="space-y-3">
-              <li><a href="#ecosystem" className="text-gray-400 hover:text-white transition-colors">{t('navigation.ecosystem')}</a></li>
-              <li><a href="#portfolio" className="text-gray-400 hover:text-white transition-colors">{t('navigation.portfolio')}</a></li>
-              <li><a href="#structure" className="text-gray-400 hover:text-white transition-colors">{t('navigation.structure')}</a></li>
-              <li><a href="#business" className="text-gray-400 hover:text-white transition-colors">{t('navigation.business')}</a></li>
-              <li><a href="#invest" className="text-gray-400 hover:text-white transition-colors">{t('navigation.invest')}</a></li>
+              <li><a href="#ecosystem" className="text-gray-400 hover:text-white transition-colors">{String(t('navigation.ecosystem'))}</a></li>
+              <li><a href="#portfolio" className="text-gray-400 hover:text-white transition-colors">{String(t('navigation.portfolio'))}</a></li>
+              <li><a href="#structure" className="text-gray-400 hover:text-white transition-colors">{String(t('navigation.structure'))}</a></li>
+              <li><a href="#business" className="text-gray-400 hover:text-white transition-colors">{String(t('navigation.business'))}</a></li>
+              <li><a href="#invest" className="text-gray-400 hover:text-white transition-colors">{String(t('navigation.invest'))}</a></li>
             </ul>
           </div>
           
           <div>
-            <h3 className="text-lg font-bold mb-6">{t('footer.keyVerticals')}</h3>
+          <h3 className="text-lg font-bold mb-6">{String(t('footer.keyVerticals'))}</h3>
             <ul className="space-y-3 text-gray-400">
-              <li>{t('footer.verticals.entrepreneurship')}</li>
-              <li>{t('footer.verticals.education')}</li>
-              <li>{t('footer.verticals.ai')}</li>
-              <li>{t('footer.verticals.security')}</li>
-              <li>{t('footer.verticals.management')}</li>
+            <li>{String(t('footer.verticals.entrepreneurship'))}</li>
+            <li>{String(t('footer.verticals.education'))}</li>
+            <li>{String(t('footer.verticals.ai'))}</li>
+            <li>{String(t('footer.verticals.security'))}</li>
+            <li>{String(t('footer.verticals.management'))}</li>
             </ul>
           </div>
           
@@ -85,7 +94,7 @@ const Footer: React.FC = () => {
         
         <div className="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-500 text-sm mb-4 md:mb-0">
-            &copy; {new Date().getFullYear()} German University of Digital Science Innovation GmbH. {t('footer.rights')}
+            &copy; {new Date().getFullYear()} German University of Digital Science Innovation GmbH. {String(t('footer.rights'))}
           </p>
           <div className="flex space-x-6">
             <Link href="/privacy" className="text-gray-500 hover:text-white transition-colors text-sm">
