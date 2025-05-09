@@ -30,19 +30,28 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
     <nav className="fixed top-0 left-0 w-full bg-white bg-opacity-75 backdrop-blur z-40 shadow-sm">
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-4">
-          <Image
-            src={logoSrc}
-            alt="German UDS Innovation Logo"
-            width={160}
-            height={80}
-            className='mr-8'
-            onError={(e) => {
-              // Fallback to default logo if locale-specific one doesn't exist
-              const target = e.target as HTMLImageElement;
-              target.onerror = null;
-              target.src = '/images/innovation_logo.png';
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-          />
+            className="block mr-8"
+          >
+            <Image
+              src={logoSrc}
+              alt="German UDS Innovation Logo"
+              width={160}
+              height={80}
+              className=""
+              onError={(e) => {
+                // Fallback to default logo if locale-specific one doesn't exist
+                const target = e.target as HTMLImageElement;
+                target.onerror = null;
+                target.src = '/images/innovation_logo.png';
+              }}
+            />
+          </a>
         </div>
         
         {/* Mobile menu button */}
