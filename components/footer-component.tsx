@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                     // Fallback to default logo if locale-specific one doesn't exist
                     const target = e.target as HTMLImageElement;
                     target.onerror = null;
-                    target.src = '/images/innovation_logo.png';
+                    target.src = '/images/innovation_logo_foot.png';
                   }}
                 />
                 <div>
