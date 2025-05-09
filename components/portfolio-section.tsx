@@ -1,5 +1,6 @@
 import React from 'react';
 import { Building, Globe, Award } from 'lucide-react';
+import ResponsiveImage from './responsive-image';
 
 const PortfolioSection: React.FC = () => {
   return (
@@ -47,35 +48,28 @@ const PortfolioSection: React.FC = () => {
               20% participation in German UDS gGmbH (guarantee of creative involvement in the German University of Digital Science)
             </p>
           </div>
-        </div>
-        
-        <div className="mt-16 mx-auto max-w-4xl">
-          <div className="bg-white p-6 rounded-br-xl shadow-lg">
-            <h3 className="text-xl font-bold text-orange-500 mb-6 text-center">Our Investment Structure</h3>
-            <div className="relative h-96">
-              <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-orange-100 p-6 rounded-br-xl w-64 text-center">
-                <h4 className="font-bold text-orange-500">German UDS Innovation GmbH</h4>
-              </div>
-              
-              <div className="absolute top-3/4 left-1/4 transform -translate-x-1/2 -translate-y-1/2 bg-blue-100 p-3 rounded-br-xl w-48 text-center">
-                <h5 className="font-semibold text-blue-700">German UDS Service GmbH</h5>
-                <p className="text-xs text-blue-700">100% Stake</p>
-              </div>
-              
-              <div className="absolute top-3/4 left-3/4 transform -translate-x-1/2 -translate-y-1/2 bg-blue-100 p-3 rounded-br-xl w-48 text-center">
-                <h5 className="font-semibold text-blue-700">FB Cloudhouse GmbH</h5>
-                <p className="text-xs text-blue-700">20% Stake</p>
-              </div>
-              
-              <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-100 p-3 rounded-br-xl w-48 text-center">
-                <h5 className="font-semibold text-blue-700">German UDS gGmbH</h5>
-                <p className="text-xs text-blue-700">20% Stake</p>
-              </div>
-              
-              <div className="absolute top-1/2 left-1/4 h-32 w-px bg-gray-300"></div>
-              <div className="absolute top-1/2 left-3/4 h-32 w-px bg-gray-300"></div>
-              <div className="absolute top-1/4 left-1/2 h-32 w-px bg-gray-300"></div>
-            </div>
+        </div>  
+        {/* New images below the main portfolio grid */}
+        <div className="flex flex-col gap-8 mt-16">
+          <div className="flex justify-center">
+            <ResponsiveImage
+              src="/images/financial-support-commercial/investment_portfolio.png"
+              alt="Investment Portfolio"
+              width={500}
+              height={400}
+              className="rounded-xl shadow-md"
+              sizes="(max-width: 768px) 100vw, 500px"
+            />
+          </div>
+          <div className="flex justify-center">
+            <ResponsiveImage
+              src="/images/financial-support-commercial/usp.png"
+              alt="USP Vertical Structure"
+              width={500}
+              height={400}
+              className="rounded-xl shadow-md"
+              sizes="(max-width: 768px) 100vw, 500px"
+            />
           </div>
         </div>
       </div>
