@@ -28,64 +28,56 @@ const InvestNonprofitSection = () => {
         />
       </div>
 
-      {/* Innovation & Ecosystem */}
-      <div>
-        <h2 className="text-3xl font-bold mb-6">Foundation Role in Driving Innovation</h2>
-        <p className="mb-4">
-          The German UDS Foundation is a public-benefit organization. Donations directly fund research, professorships,
-          scholarships, and the digital infrastructure for open global education.
-        </p>
-        <p>
-          German UDS gGmbH is the nonprofit operator responsible for budgets, contracts, staffing, and administration
-          of the university.
-        </p>
-      </div>
-
-      {/* Shareholding Structure */}
-      <div className="flex justify-center">
-        <Image
-          src="/images/financial-support-non-profit/shareholding_structures.png"
-          alt="Shareholding Structures"
-          width={600}
-          height={400}
-          className="rounded-xl shadow-md"
-        />
-      </div>
-
-      {/* Nonprofit Participation Models */}
-      <div>
-        <h2 className="text-3xl font-bold mb-6">Ways to Support</h2>
-        <ul className="list-disc list-inside space-y-3">
-          <li>Donations or contributions to the German UDS Foundation</li>
-          <li>Scholarship sponsorships for deserving students</li>
-          <li>Capital acquisition (min. 1%, max. 5% per party)</li>
-          <li>Operational support for digital learning and infrastructure</li>
-        </ul>
-      </div>
-
       {/* Market & Media */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
-        <Image
-          src="/images/financial-support-non-profit/brochure.png"
-          alt="Brochure"
-          width={300}
-          height={200}
-          className="rounded-md"
-        />
-        <Image
-          src="/images/financial-support-non-profit/sci_report.png"
-          alt="Scientific Report"
-          width={300}
-          height={200}
-          className="rounded-md"
-        />
-        <Image
-          src="/images/financial-support-non-profit/podcast.png"
-          alt="Podcast"
-          width={300}
-          height={200}
-          className="rounded-md"
-        />
+        {/* Brochure */}
+        <a
+          href="https://german-uds.de/cta"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center"
+        >
+          <div className="font-bold text-lg mb-2 text-center">Brochure</div>
+          <Image
+            src="/images/financial-support-non-profit/brochure.png"
+            alt="Brochure"
+            width={300}
+            height={200}
+            className="rounded-md"
+          />
+        </a>
+        {/* Scientific Reports */}
+        <a
+          href="https://german-uds.de/scientific-reports"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center"
+        >
+          <div className="font-bold text-lg mb-2 text-center">Scientific Reports</div>
+          <Image
+            src="/images/financial-support-non-profit/sci_report.png"
+            alt="Scientific Report"
+            width={300}
+            height={200}
+            className="rounded-md"
+          />
+        </a>
+        {/* Podcasts */}
+        <a
+          href="https://german-uds.de/podcasts"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex flex-col items-center"
+        >
+          <div className="font-bold text-lg mb-2 text-center">Podcasts</div>
+          <Image
+            src="/images/financial-support-non-profit/podcast.png"
+            alt="Podcast"
+            width={300}
+            height={200}
+            className="rounded-md"
+          />
+        </a>
       </div>
     </section>
   );
