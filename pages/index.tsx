@@ -13,7 +13,6 @@ import ContactSection from '../components/contact-section'
 import Footer from '../components/footer-component'
 import Navigation from '../components/navigation'
 import ScrollProgress from '../components/scroll-progress'
-import InvestCommercialSection from '../components/invest-commercial-section'; 
 import InvestNonprofitSection from '../components/invest-nonprofit-section'; 
 
 
@@ -71,7 +70,6 @@ const Home: NextPage = () => {
         <InvestSection />
         <PortfolioSection />
         <AboutUniversitySection /> 
-        <InvestCommercialSection />
         <InvestNonprofitSection /> 
         <ContactSection />
         <Footer />
