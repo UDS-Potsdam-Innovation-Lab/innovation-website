@@ -19,19 +19,18 @@ try {
 }
 
 const nextConfig = {
-  output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
-  basePath: process.env.NODE_ENV === 'production' ? '' : undefined,
+  output: 'export',
+  basePath: '',
   // Use a relative path prefix for GitHub Pages
-  assetPrefix: process.env.NODE_ENV === 'production' ? '.' : undefined,
+  assetPrefix: '.',
   reactStrictMode: true,
   // Custom i18n solution instead of built-in i18n which doesn't work with static export
   // We'll handle localization in our components manually
   images: {
-    unoptimized: false,
+    unoptimized: true, // Set to true for static export
     formats: ['image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: imageSizes,
-    path: '',
     domains: ['localhost'],
   },
   // This is important for GitHub Pages to properly handle static assets
