@@ -91,10 +91,14 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
         
         {/* CTA Button */}
         <div className="hidden lg:block">
-          <button className="bg-orange-500 text-white px-6 py-2 rounded-br-xl shadow-md hover:bg-orange-600 transition-colors flex items-center space-x-2">
+          <a
+            href="#contact"
+            onClick={(e) => handleClick(e, 'contact')}
+            className="bg-orange-500 text-white px-6 py-2 rounded-br-xl shadow-md hover:bg-orange-600 transition-colors flex items-center space-x-2 inline-block"
+          >
             <span>{String(t('navigation.investmentOpportunities'))}</span>
             <ChevronRight size={16} />
-          </button>
+          </a>
         </div>
         
         {/* Mobile Navigation */}
@@ -127,10 +131,14 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
               </div>
               
               {/* Mobile CTA */}
-              <button className="mt-4 bg-orange-500 text-white px-6 py-2 rounded-br-xl shadow-md hover:bg-orange-600 transition-colors flex items-center space-x-2">
+              <a
+                href="#contact"
+                onClick={(e) => handleClick(e, 'contact')}
+                className="mt-4 bg-orange-500 text-white px-6 py-2 rounded-br-xl shadow-md hover:bg-orange-600 transition-colors flex items-center space-x-2"
+              >
                 <span>{String(t('navigation.investmentOpportunities'))}</span>
                 <ChevronRight size={16} />
-              </button>
+              </a>
             </div>
           </div>
         )}
