@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { Users, Globe, LightbulbIcon, Book, Sparkles, PiggyBank, Building } from 'lucide-react';
 
 const StructureSection: React.FC = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -233,137 +232,153 @@ const StructureSection: React.FC = () => {
       />
       
       <div className="container mx-auto relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-8">
           <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
             Our Unique Approach
           </div>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-2">
             Vertical Participation Structure
           </h2>
-          <p className="text-gray-600">
-            Our vertical structure directly involves professors and research centers in newly founded verticals.
-            This transforms university research into marketable digital products and business models.
-          </p>
-        </div>
-        
-        <div className="grid lg:grid-cols-2 gap-8">
-          <div className="bg-white/75 p-8 rounded-br-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-bold text-orange-500 mb-6">Key Topics for Verticals</h3>
-            <ul className="space-y-4">
-              <li className="flex items-start hover:bg-blue-50 p-2 rounded-br-lg transition-colors duration-300">
-                <div className="bg-blue-100 rounded-br-lg w-8 h-8 flex items-center justify-center text-blue-600 mr-3 flex-shrink-0 mt-1">
-                  <Users size={16} />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Digital Entrepreneurship College</h4>
-                  <p className="text-gray-600 text-sm">Prof. Dr. Marco Bade</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start hover:bg-blue-50 p-2 rounded-br-lg transition-colors duration-300">
-                <div className="bg-blue-100 rounded-br-lg w-8 h-8 flex items-center justify-center text-blue-600 mr-3 flex-shrink-0 mt-1">
-                  <Globe size={16} />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Digital Education and Internet Technologies</h4>
-                  <p className="text-gray-600 text-sm">Prof. Dr. Christoph Meinel / Prof. Dr. Thomas Staubitz</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start hover:bg-blue-50 p-2 rounded-br-lg transition-colors duration-300">
-                <div className="bg-blue-100 rounded-br-lg w-8 h-8 flex items-center justify-center text-blue-600 mr-3 flex-shrink-0 mt-1">
-                  <LightbulbIcon size={16} />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Virtual Education and Digital Reality</h4>
-                  <p className="text-gray-600 text-sm">Prof. Dr. Mike Friedrichsen</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start hover:bg-blue-50 p-2 rounded-br-lg transition-colors duration-300">
-                <div className="bg-blue-100 rounded-br-lg w-8 h-8 flex items-center justify-center text-blue-600 mr-3 flex-shrink-0 mt-1">
-                  <Book size={16} />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Multimodal Learning Technologies</h4>
-                  <p className="text-gray-600 text-sm">Prof. Dr. Daniele Di Mitri</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start hover:bg-blue-50 p-2 rounded-br-lg transition-colors duration-300">
-                <div className="bg-blue-100 rounded-br-lg w-8 h-8 flex items-center justify-center text-blue-600 mr-3 flex-shrink-0 mt-1">
-                  <Sparkles size={16} />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Artificial Intelligence</h4>
-                  <p className="text-gray-600 text-sm">Prof. Dr. Feiyu Xu / Prof. Dr. Felix Weitkämper</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start hover:bg-blue-50 p-2 rounded-br-lg transition-colors duration-300">
-                <div className="bg-blue-100 rounded-br-lg w-8 h-8 flex items-center justify-center text-blue-600 mr-3 flex-shrink-0 mt-1">
-                  <PiggyBank size={16} />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Cybersecurity</h4>
-                  <p className="text-gray-600 text-sm">Prof. Dr. Stuchtey</p>
-                </div>
-              </li>
-              
-              <li className="flex items-start hover:bg-blue-50 p-2 rounded-br-lg transition-colors duration-300">
-                <div className="bg-blue-100 rounded-br-lg w-8 h-8 flex items-center justify-center text-blue-600 mr-3 flex-shrink-0 mt-1">
-                  <Building size={16} />
-                </div>
-                <div>
-                  <h4 className="font-semibold">Digital Management and New Work</h4>
-                  <p className="text-gray-600 text-sm">Prof. Dr. Georg Loscher</p>
-                </div>
-              </li>
-            </ul>
+          <div className="text-gray-700 text-base sm:text-lg font-medium mb-4 max-w-2xl mx-auto">
+            Our vertical structure directly involves professors and research centers in newly founded verticals. This transforms university research into marketable digital products and business models.
           </div>
-          
-          <div className="bg-white/75 p-8 rounded-br-xl shadow-lg flex items-center hover:shadow-xl transition-shadow duration-300">
-            <div className="w-full">
-              <h3 className="text-xl font-bold text-orange-500 mb-6">Vertical Structure</h3>
-              <p className="text-gray-700 mb-6">
-                Our unique structure allows for direct involvement of professors and research centers in newly founded verticals.
-              </p>
-              
-              <div className="relative mt-12 pb-8">
-                <div className="absolute top-0 left-1/4 transform -translate-x-1/2 bg-orange-100 p-3 rounded-br-xl w-40 text-center hover:bg-orange-200 transition-colors duration-300">
-                  <h5 className="font-semibold text-orange-500">German UDS Innovation GmbH</h5>
-                </div>
+        </div>
+
+        {/* Vertical true-backbone structure */}
+        <div className="w-full flex flex-col items-center relative z-10">
+          {/* Vertical backbone from top to bottom */}
+          <div className="absolute left-8 sm:left-1/2 top-0 bottom-0 w-1 bg-blue-300 -translate-x-1/2 z-0 pointer-events-none" style={{height: '100%'}}></div>
+
+          {/* Root node */}
+          <div className="relative flex flex-col items-start z-10 mb-3" style={{marginLeft: '1rem'}}>
+            <div className="border-2 border-blue-500 bg-blue-50 px-6 py-3 rounded-md font-bold text-xl text-blue-800 shadow-lg">
+              German University of Digital Science
+            </div>
+          </div>
+
+          {/* Department rows, spaced down the backbone, with horizontal branch */}
+          <div className="flex flex-col gap-10 w-full max-w-4xl relative z-10">
+            {[
+              {
+                department: "Digital Entrepreneurship College",
+                professors: [
+                  {
+                    name: "Prof. Dr. Marco Bade",
+                    img: "/images/financial-support-commercial/marco_bade.jpeg",
+                    link: "https://german-uds.de/marco_bade"
+                  }
+                ]
+              },
+              {
+                department: "Digital Education and Internet Technologies",
+                professors: [
+                  {
+                    name: "Prof. Dr. Christoph Meinel",
+                    img: "/images/financial-support-commercial/meinel.jpeg",
+                    link: "https://german-uds.de/christoph_meinel"
+                  },
+                  {
+                    name: "Prof. Dr. Thomas Staubitz",
+                    img: "/images/financial-support-commercial/tom.webp",
+                    link: "https://german-uds.de/thomas_staubitz"
+                  },
+                ]
+              },
+              {
+                department: "Virtual Education and Digital Reality",
+                professors: [
+                  {
+                    name: "Prof. Dr. Mike Friedrichsen",
+                    img: "/images/financial-support-commercial/mike.webp",
+                    link: "https://german-uds.de/mike_friedrichsen"
+                  }
+                ]
+              },
+              {
+                department: "Multimodal Learning Technologies",
+                professors: [
+                  {
+                    name: "Prof. Dr. Daniele Di Mitri",
+                    img: "/images/financial-support-commercial/DiMitri.webp",
+                    link: "https://german-uds.de/daniele_di_mitri"
+                  }
+                ]
+              },
+              {
+                department: "Artificial Intelligence",
+                professors: [
+                  {
+                    name: "Prof. Dr. Feiyu Xu",
+                    img: "/images/financial-support-commercial/Feiyu_Xu.webp",
+                    link: "https://german-uds.de/feiyu_xu"
+                  },
+                  {
+                    name: "Prof. Dr. Felix Weitkämper",
+                    img: "/images/financial-support-commercial/Felix.jpeg",
+                    link: "https://german-uds.de/felix_weitkaemper"
+                  }
+                ]
+              },
+              {
+                department: "Cybersecurity",
+                professors: [
+                  {
+                    name: "Prof. Dr. Tim Stuchtey",
+                    img: "/images/financial-support-commercial/TimStuchtey.webp",
+                    link: "https://german-uds.de/tim_stuchtey"
+                  }
+                ]
+              },
+              {
+                department: "Digital Management and Work",
+                professors: [
+                  {
+                    name: "Prof. Dr. Georg Loscher",
+                    img: "/images/financial-support-commercial/Georg.webp",
+                    link: "https://german-uds.de/georg_loscher"
+                  }
+                ]
+              }
+            ].map((vertical, i) => (
+              <div key={vertical.department} className="relative flex items-center min-h-[110px] sm:min-h-[130px]">
+                {/* Intersection on backbone */}
+                <div className="absolute left-8 sm:left-1/2 top-1/2 w-4 h-4 bg-blue-100 border-2 border-blue-400 rounded-full -translate-x-1/2 -translate-y-1/2 z-10"></div>
                 
-                <div className="absolute top-24 left-3/4 transform -translate-x-1/2 bg-blue-100 p-3 rounded-br-xl w-40 text-center hover:bg-blue-200 transition-colors duration-300">
-                  <h5 className="font-semibold text-blue-700">German University of Digital Science</h5>
-                </div>
-                
-                <div className="absolute top-48 left-1/4 transform -translate-x-1/2 bg-blue-100 p-2 rounded-br-xl w-32 text-center hover:bg-blue-200 transition-colors duration-300">
-                  <h5 className="font-semibold text-blue-700 text-sm">Vertical 1</h5>
-                </div>
-                
-                <div className="absolute top-72 left-1/4 transform -translate-x-1/2 bg-blue-100 p-2 rounded-br-xl w-32 text-center hover:bg-blue-200 transition-colors duration-300">
-                  <h5 className="font-semibold text-blue-700 text-sm">Vertical n</h5>
-                </div>
-                
-                <div className="absolute top-0 left-1/4 h-72 w-px bg-orange-300"></div>
-                <div className="absolute top-24 left-1/4 w-48 h-px bg-orange-300"></div>
-                
-                <div className="absolute top-48 left-3/4 w-16 h-px bg-blue-300"></div>
-                <div className="absolute top-72 left-3/4 w-16 h-px bg-blue-300"></div>
-                
-                <div className="absolute top-48 right-16 text-xs text-gray-600">
-                  <div className="flex items-center space-x-2">
-                    <div className="w-4 h-4 bg-gray-800 rounded-full"></div>
-                    <span>Professors</span>
+                {/* Horizontal branch for department to the spine */}
+                <div className="absolute left-8 sm:left-1/2 top-1/2 h-1 bg-blue-300 z-10" style={{width:'40px', marginLeft:'0'}}></div>
+
+                {/* Department name left of backbone */}
+                <div className="flex-1 flex justify-end pr-4">
+                  <div className="px-3 py-2 rounded font-bold bg-blue-100 text-blue-700 border-2 border-blue-300 shadow whitespace-nowrap text-xs sm:text-base">
+                    {vertical.department}
                   </div>
-                  <div className="flex items-center space-x-2 mt-1">
-                    <div className="w-3 h-3 bg-gray-800 rounded-full"></div>
-                    <span>Students</span>
-                  </div>
+                </div>
+                {/* Space for the vertical line and node */}
+                <div style={{width:'48px'}} className="shrink-0"></div>
+                {/* Professors right of backbone */}
+                <div className="flex flex-row items-center gap-4 flex-1">
+                  {vertical.professors.map((prof) => (
+                    <div key={prof.name} className="flex flex-col items-center w-[90px] mx-1">
+                      <a href={prof.link} target="_blank" rel="noopener noreferrer">
+                        <img
+                          src={prof.img}
+                          alt={prof.name}
+                          className="w-16 h-16 sm:w-20 sm:h-20 rounded-full object-cover border-2 border-blue-200 shadow"
+                        />
+                      </a>
+                      <a
+                        href={prof.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-2 text-xs sm:text-sm font-semibold text-blue-700 hover:text-blue-900 text-center leading-tight"
+                      >
+                        {prof.name}
+                      </a>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
