@@ -54,9 +54,6 @@ jobs:
           cp -r images/* public/images/ || true
           echo "Images copied to public directory"
           
-      - name: Optimize images
-        run: node optimize-images.js
-        
       - name: Build with Next.js
         run: pnpm run build
         
@@ -80,4 +77,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4 
+        uses: actions/deploy-pages@v4
