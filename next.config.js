@@ -27,16 +27,11 @@ const nextConfig = {
   // Custom i18n solution instead of built-in i18n which doesn't work with static export
   // We'll handle localization in our components manually
   images: {
-    // For static export on GitHub Pages
-    unoptimized: true,
-    // Support WebP format for better compression
+    unoptimized: false,
     formats: ['image/webp'],
-    // Responsive image sizes from our manifest or defaults
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: imageSizes,
-    // For GitHub Pages static export
-    path: process.env.NODE_ENV === 'production' ? '' : '/_next/image',
-    // Support locale-specific images
+    path: '',
     domains: ['localhost'],
   },
   // This is important for GitHub Pages to properly handle static assets
