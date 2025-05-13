@@ -79,8 +79,8 @@ const Footer: React.FC = () => {
             <div className="mt-4 text-sm text-gray-400">
               <p>{String(t('footer.followUs'))}:</p>
               <div className="flex space-x-4 mt-2">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">Twitter</a>
+                <a href="https://www.linkedin.com/company/german-uds/" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                <a href="https://www.instagram.com/german_uds/" className="text-gray-400 hover:text-white transition-colors">Instagram</a>
               </div>
             </div>
           </div>
