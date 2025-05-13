@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useLocale } from '../contexts/LocaleContext';
+import { Linkedin, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const { locale, t } = useLocale();
@@ -79,8 +80,22 @@ const Footer: React.FC = () => {
             <div className="mt-4 text-sm text-gray-400">
               <p>{String(t('footer.followUs'))}:</p>
               <div className="flex space-x-4 mt-2">
-                <a href="https://www.linkedin.com/company/german-uds/" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a>
-                <a href="https://www.instagram.com/german_uds/" className="text-gray-400 hover:text-white transition-colors">Instagram</a>
+                <a 
+                  href="https://www.linkedin.com/company/german-uds/" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin size={20} />
+                </a>
+                <a 
+                  href="https://www.instagram.com/german_uds/" 
+                  className="text-gray-400 hover:text-white transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Instagram size={20} />
+                </a>
               </div>
             </div>
           </div>
