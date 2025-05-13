@@ -7,9 +7,7 @@ const Footer: React.FC = () => {
   const { locale, t } = useLocale();
   
   // Get locale-specific logo if available
-  const logoSrc = locale === 'de' 
-    ? "/images/de/innovation_logo.png" 
-    : "/images/innovation_logo.png";
+  const logoSrc = "/images/innovation_logo_foot.png";
     
   return (
     <footer className="bg-gray-900 text-white py-12 px-6">
@@ -38,10 +36,6 @@ const Footer: React.FC = () => {
                     target.src = '/images/innovation_logo_foot.png';
                   }}
                 />
-                <div>
-                  <h3 className="text-xl font-bold">German University</h3>
-                  <h4 className="text-lg font-bold">of Digital Science <span className="text-orange-500">Innovation</span></h4>
-                </div>
               </a>
           </div>
             <p className="text-gray-400 text-sm mb-6">
