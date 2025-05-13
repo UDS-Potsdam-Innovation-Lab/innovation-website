@@ -108,11 +108,11 @@
       },
       "phone": {
         "title": "Telefon",
-        "value": "+49 30 1234 5678"
+        "value": "+49 (0) 331 968 920 20"
       },
       "address": {
         "title": "Adresse",
-        "value": "Innovations-Campus, Berlin, Deutschland"
+        "value": "Marlene-Dietrich-Allee 14, 14482 Potsdam, Deutschland"
       },
       "emailButton": "Senden Sie uns eine E-Mail"
     }
@@ -140,56 +140,88 @@
   },
   "privacy": {
     "pageTitle": "Datenschutzerklärung",
-    "metaDescription": "Informationen darüber, wie German UDS Innovation GmbH Ihre personenbezogenen Daten sammelt, verwendet und schützt.",
+    "metaDescription": "Informationen darüber, wie die German UDS Innovation GmbH personenbezogene Daten erhebt, verwendet und schützt.",
     "title": "Datenschutzerklärung",
-    "lastUpdated": "Zuletzt aktualisiert",
+    "lastUpdated": "Zuletzt aktualisiert: 13. Mai 2025",
     "introduction": {
       "title": "Einleitung",
-      "content": "German UDS Innovation GmbH ('wir', 'uns' oder 'unser') ist bestrebt, die Privatsphäre unserer Nutzer zu schützen. Diese Datenschutzerklärung erläutert, wie wir Ihre Informationen sammeln, verwenden, offenlegen und schützen, wenn Sie unsere Website besuchen. Bitte lesen Sie diese Datenschutzerklärung sorgfältig durch. Wenn Sie mit den Bedingungen dieser Datenschutzerklärung nicht einverstanden sind, verwenden Sie bitte nicht unsere Website."
+      "content": "Die German UDS Innovation GmbH („wir“, „uns“ oder „unser“) respektiert Ihre Privatsphäre und verpflichtet sich, Ihre personenbezogenen Daten zu schützen. Diese Datenschutzerklärung erklärt, wie wir personenbezogene Daten erheben, verarbeiten und verwenden, wenn Sie unsere Website besuchen oder mit uns interagieren. Wir halten uns an die Anforderungen der EU-Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG)."
+    },
+    "dataController": {
+      "title": "Verantwortliche Stelle und Kontaktinformationen",
+      "content": "German UDS Innovation GmbH\nMarlene-Dietrich-Allee 14\n14482 Potsdam, Germany\nEmail: privacy@germanudsinnovation.com"
     },
     "dataCollection": {
-      "title": "Informationen, die wir sammeln",
-      "content": "Wir sammeln Informationen, die Sie uns direkt zur Verfügung stellen, sowie Informationen, die automatisch erfasst werden, wenn Sie unsere Website besuchen.",
+      "title": "Welche Daten wir erheben",
+      "content": "Wir erfassen sowohl personenbezogene als auch technische Informationen, wenn Sie mit unserer Website interagieren.",
       "categories": {
-        "title": "Wir können folgende Arten von Informationen sammeln:",
-        "item1": "Persönliche Daten (wie Name, E-Mail-Adresse und Telefonnummer), die Sie freiwillig angeben, wenn Sie uns kontaktieren",
-        "item2": "Protokolldaten (einschließlich Ihrer IP-Adresse, Browsertyp, Betriebssystem, verweisende Webseite, besuchte Seiten und Datum/Uhrzeit des Besuchs)",
-        "item3": "Geräteinformationen (einschließlich Gerätetyp und Mobilfunknetzinformationen)",
-        "item4": "Standortinformationen (wenn Sie Standortdienste aktivieren)"
+        "title": "Dazu gehören unter anderem:",
+        "item1": "Personenbezogene Daten (wie Name, E-Mail-Adresse und Telefonnummer), die Sie uns freiwillig mitteilen",
+        "item2": "IP-Adresse, Browsertyp, Betriebssystem, Referrer-URL, besuchte Seiten und Zugriffszeitpunkt",
+        "item3": "Geräteinformationen wie Typ, Modell und Mobilfunknetz",
+        "item4": "Standortdaten, sofern Sie dies aktiv freigeben"
       }
+    },
+    "hosting": {
+    "title": "Hosting",
+      "content": "Unsere Website wird über GitHub Pages gehostet. GitHub Inc. kann technische Daten wie IP-Adressen und Browser-Metadaten gemäß seiner eigenen Datenschutzrichtlinien verarbeiten. Weitere Informationen finden Sie unter: https://docs.github.com/en/site-policy/privacy-policies/github-privacy-statement"
     },
     "cookies": {
       "title": "Cookies und Web-Beacons",
-      "content": "Wir verwenden Cookies und ähnliche Tracking-Technologien, um die Aktivitäten auf unserem Service zu verfolgen und bestimmte Informationen zu speichern. Cookies sind Dateien mit einer kleinen Datenmenge, die möglicherweise eine anonyme eindeutige Kennung enthalten. Sie können Ihren Browser anweisen, alle Cookies abzulehnen oder anzuzeigen, wenn ein Cookie gesendet wird."
+      "content": "Wir verwenden Cookies und ähnliche Tracking-Technologien, um die Funktionalität der Website zu gewährleisten, Analysen zu erstellen und Ihre Nutzererfahrung zu verbessern. Dazu gehören Session-Cookies, dauerhafte Cookies und Cookies von Drittanbietern. Sie können die Verwendung von Cookies in Ihren Browsereinstellungen steuern. Das Deaktivieren von Cookies kann die Funktionalität der Website einschränken."
     },
     "dataUse": {
       "title": "Wie wir Ihre Informationen verwenden",
-      "content": "Wir können die von Ihnen gesammelten Informationen für verschiedene Zwecke verwenden, unter anderem um:",
-      "item1": "Unsere Website und Dienste bereitzustellen, zu warten und zu verbessern",
-      "item2": "Auf Ihre Anfragen, Kommentare oder Fragen zu antworten",
-      "item3": "Ihnen technische Hinweise, Updates, Sicherheitsbenachrichtigungen sowie Support- und Verwaltungsnachrichten zu senden"
+      "content": "Wir verwenden Ihre personenbezogenen Daten zu folgenden Zwecken:",
+      "item1": "Betrieb und Wartung unserer Website",
+      "item2": "Beantwortung Ihrer Anfragen und Kontaktaufnahmen",
+      "item3": "Versand von wichtigen Mitteilungen, Aktualisierungen und administrativen Nachrichten",
+      "item4": "Sicherstellung der Sicherheit und Verhinderung von Missbrauch",
+      "item5": "Einhaltung gesetzlicher Vorschriften"
+    },
+    "legalBasis": {
+      "title": "Rechtsgrundlagen der Verarbeitung",
+      "content": "Wir verarbeiten Ihre Daten gemäß Art. 6 DSGVO: (a) mit Ihrer Einwilligung, (b) zur Vertragserfüllung, (c) zur Erfüllung rechtlicher Verpflichtungen oder (f) auf Grundlage unseres berechtigten Interesses. Sie können Ihre Einwilligung jederzeit widerrufen."
     },
     "dataSharing": {
-      "title": "Weitergabe Ihrer Informationen",
-      "content": "Wir verkaufen, handeln oder übertragen Ihre persönlich identifizierbaren Informationen nicht an Dritte, außer wie in dieser Richtlinie ausdrücklich beschrieben. Dies schließt vertrauenswürdige Dritte ein, die uns bei der Betreibung unserer Website, der Durchführung unseres Geschäfts oder der Betreuung Ihrer Person unterstützen, solange diese Parteien zustimmen, diese Informationen vertraulich zu behandeln."
+      "title": "Weitergabe Ihrer Daten",
+      "content": "Wir verkaufen oder vermieten Ihre personenbezogenen Daten nicht. Eine Weitergabe erfolgt nur an vertrauenswürdige Dienstleister (z. B. Hosting, Analyse), die diese Daten weisungsgebunden verarbeiten. Eine Weitergabe kann auch erfolgen, wenn dies gesetzlich vorgeschrieben ist oder zum Schutz unserer Rechte notwendig ist."
+    },
+    "dataRetention": {
+      "title": "Speicherdauer und Löschung",
+      "content": "Wir speichern Ihre personenbezogenen Daten nur so lange, wie dies für die angegebenen Zwecke oder zur Erfüllung gesetzlicher Aufbewahrungspflichten erforderlich ist. Danach werden die Daten sicher gelöscht oder anonymisiert."
     },
     "rights": {
       "title": "Ihre Rechte",
-      "content": "Wenn Sie im Europäischen Wirtschaftsraum (EWR) ansässig sind, haben Sie bestimmte Datenschutzrechte. Wir bemühen uns, angemessene Maßnahmen zu ergreifen, die es Ihnen ermöglichen, Ihre personenbezogenen Daten zu korrigieren, zu ändern, zu löschen oder deren Verwendung einzuschränken. Sie haben folgende Rechte:",
-      "item1": "Das Recht auf Zugang, Aktualisierung oder Löschung der Informationen, die wir über Sie haben",
-      "item2": "Das Recht auf Berichtigung - das Recht, Ihre Informationen korrigieren zu lassen, wenn sie ungenau oder unvollständig sind",
-      "item3": "Das Recht, der Verarbeitung Ihrer personenbezogenen Daten zu widersprechen",
-      "item4": "Das Recht auf Einschränkung - das Recht zu verlangen, dass wir die Verarbeitung Ihrer personenbezogenen Daten einschränken",
-      "item5": "Das Recht auf Datenübertragbarkeit - das Recht, eine Kopie der Informationen, die wir über Sie haben, in einem strukturierten, maschinenlesbaren und allgemein verwendeten Format zu erhalten"
+      "content": "Sie haben gemäß der DSGVO folgende Rechte in Bezug auf Ihre personenbezogenen Daten:",
+      "item1": "Auskunft über Ihre gespeicherten Daten",
+      "item2": "Berichtigung unrichtiger oder unvollständiger Daten",
+      "item3": "Löschung Ihrer Daten („Recht auf Vergessenwerden“)",
+      "item4": "Einschränkung der Verarbeitung unter bestimmten Bedingungen",
+      "item5": "Widerspruch gegen die Verarbeitung aufgrund berechtigter Interessen",
+      "item6": "Datenübertragbarkeit Ihrer Daten in einem strukturierten, gängigen Format",
+      "item7": "Widerruf Ihrer Einwilligung mit Wirkung für die Zukunft"
+    },
+    "security": {
+      "title": "Datensicherheit",
+      "content": "Wir setzen technische und organisatorische Sicherheitsmaßnahmen, einschließlich SSL-Verschlüsselung (HTTPS), ein, um Ihre Daten vor unbefugtem Zugriff und Missbrauch zu schützen."
+    },
+    "analytics": {
+      "title": "Webanalyse",
+      "content": "Wir können Google Analytics verwenden, um aggregierte Statistiken über die Nutzung unserer Website zu erheben. Daten können dabei auf Server außerhalb der EU übertragen werden, basierend auf Standardvertragsklauseln. Sie können der Nutzung widersprechen, indem Sie Cookies deaktivieren oder das Google Analytics Opt-out-Add-on verwenden."
+    },
+    "authority": {
+      "title": "Aufsichtsbehörde",
+      "content": "Sie haben das Recht, sich bei einer Datenschutzaufsichtsbehörde zu beschweren. In Deutschland finden Sie eine Liste unter www.bfdi.bund.de."
     },
     "dataProtectionOfficer": {
       "title": "Datenschutzbeauftragter",
       "name": "Datenschutzbeauftragter",
-      "email": "E-Mail"
+      "email": "privacy@germanudsinnovation.com"
     },
     "changes": {
       "title": "Änderungen dieser Datenschutzerklärung",
-      "content": "Wir können unsere Datenschutzerklärung von Zeit zu Zeit aktualisieren. Wir werden Sie über Änderungen informieren, indem wir die neue Datenschutzerklärung auf dieser Seite veröffentlichen und das Datum der \"Letzten Aktualisierung\" oben in dieser Datenschutzerklärung aktualisieren."
+      "content": "Wir behalten uns vor, diese Datenschutzerklärung bei rechtlichen, technischen oder organisatorischen Änderungen zu aktualisieren. Die aktualisierte Version wird auf dieser Seite veröffentlicht und ist ab dem Zeitpunkt der Veröffentlichung gültig."
     }
   }
 }
