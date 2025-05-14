@@ -54,6 +54,10 @@ class MyDocument extends Document<MyDocumentProps> {
             <meta key={`og-locale-${altLocale}`} property="og:locale:alternate" content={altLocale} />
           ))}
           
+          {/* Teams/Outlook fallback meta tags */}
+          <meta name="image" content={`${origin}/images/innovation_logo.png`} />
+          <meta name="thumbnail" content={`${origin}/images/innovation_logo.png`} />
+          
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:url" content={origin} />
