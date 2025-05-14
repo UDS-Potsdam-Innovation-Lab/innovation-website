@@ -11,6 +11,39 @@
     "language": "Language",
     "investmentOpportunities": "Investment Opportunities"
   },
+  "invest": {
+    "title": "Investment Opportunities",
+    "subtitle": "Investor Value Proposition",
+    "description": "Join us in shaping the digital future through strategic investments in innovation.",
+    "feature1": {
+      "title": "Digital University Investment",
+      "description": "Access to an exclusive ecosystem combining academic innovation with entrepreneurial expertise."
+    },
+    "feature2": {
+      "title": "CloudHouse Concept",
+      "description": "Modern innovation hub promoting startups and serving as a platform for data management."
+    },
+    "feature3": {
+      "title": "Academic Excellence",
+      "description": "Access to a network of renowned professors and researchers in digital science."
+    },
+    "feature4": {
+      "title": "Growth Potential",
+      "description": "Strategic position in the growing digital education and innovation market."
+    },
+    "opportunities": {
+      "title": "Key Investment Opportunities",
+      "option1": {
+        "title": "Company Shares",
+        "description": "Financial participation in the development and success of the German UDS organization. This participation opens up the right to have a say in strategic decisions and active involvement."
+      },
+      "option2": {
+        "title": "Innovation Projects",
+        "description": "Support groundbreaking research and development projects in digital education and technology. Benefit from the university's expertise and network."
+      }
+    },
+    "contactButton": "Contact Our Investment Team"
+  },
   "heroSection": {
     "title": "German UDS Innovation GmbH: Digital Innovation Ecosystem",
     "subtitle": "Our integrated ecosystem connects academic excellence with entrepreneurial practice through strategic investments and services.",

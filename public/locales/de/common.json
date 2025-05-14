@@ -11,6 +11,39 @@
     "language": "Sprache",
     "investmentOpportunities": "Investitionsmöglichkeiten"
   },
+  "invest": {
+    "title": "Investitionsmöglichkeiten",
+    "subtitle": "Wertangebot für Investoren",
+    "description": "Gestalten Sie mit uns die digitale Zukunft durch strategische Investitionen in Innovation.",
+    "feature1": {
+      "title": "Investition in die digitale Universität",
+      "description": "Zugang zu einem exklusiven Ökosystem, das akademische Innovation mit unternehmerischem Fachwissen verbindet."
+    },
+    "feature2": {
+      "title": "CloudHouse-Konzept",
+      "description": "Moderner Innovationshub zur Förderung von Startups und als Plattform für Datenmanagement."
+    },
+    "feature3": {
+      "title": "Akademische Exzellenz",
+      "description": "Zugang zu einem Netzwerk renommierter Professoren und Forscher im Bereich der digitalen Wissenschaft."
+    },
+    "feature4": {
+      "title": "Wachstumspotenzial",
+      "description": "Strategische Position im wachsenden Markt für digitale Bildung und Innovation."
+    },
+    "opportunities": {
+      "title": "Wichtige Investitionsmöglichkeiten",
+      "option1": {
+        "title": "Unternehmensanteile",
+        "description": "Finanzielle Beteiligung an der Entwicklung und dem Erfolg der German UDS Organisation. Diese Beteiligung eröffnet das Recht zur Mitsprache bei strategischen Entscheidungen und aktiver Mitwirkung."
+      },
+      "option2": {
+        "title": "Innovationsprojekte",
+        "description": "Unterstützen Sie bahnbrechende Forschungs- und Entwicklungsprojekte in digitaler Bildung und Technologie. Profitieren Sie vom Fachwissen und Netzwerk der Universität."
+      }
+    },
+    "contactButton": "Kontaktieren Sie unser Investmentteam"
+  },
   "heroSection": {
     "title": "German UDS Innovation GmbH: Digitales Innovations-Ökosystem",
     "subtitle": "Unser integriertes Ökosystem verbindet akademische Exzellenz mit unternehmerischer Praxis durch strategische Investitionen und Dienstleistungen.",
