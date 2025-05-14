@@ -5,6 +5,18 @@ import { useLocale } from '../contexts/LocaleContext';
 const HeroSection: React.FC = () => {
   const { locale, t } = useLocale();
   
+  const scrollToPortfolio = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const portfolioSection = document.getElementById('portfolio');
+    if (portfolioSection) {
+      const offset = portfolioSection.offsetTop;
+      window.scrollTo({
+        top: offset,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   return (
     <section id="hero" className="relative pt-24 md:pt-32 pb-16 md:pb-20 px-4 md:px-6 bg-gradient-to-br from-blue-800 to-blue-900 text-white overflow-hidden">
       <div className="container mx-auto">
@@ -19,10 +31,7 @@ const HeroSection: React.FC = () => {
             <div className="flex flex-wrap gap-4">
               <a 
                 href="#portfolio" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
-                }}
+                onClick={scrollToPortfolio}
                 className="bg-white text-blue-900 px-6 md:px-8 py-2.5 md:py-3 rounded-br-xl shadow-lg hover:bg-gray-100 transition-colors flex items-center space-x-2 text-sm md:text-base"
               >
                 <span>{String(t('heroSection.exploreButton'))}</span>
