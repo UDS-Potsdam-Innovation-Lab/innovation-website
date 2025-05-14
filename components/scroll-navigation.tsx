@@ -1,0 +1,94 @@
+import React, { useState, useEffect } from 'react';
+import { ChevronUp, ChevronDown } from 'lucide-react';
+
+const ScrollNavigation = () => {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+  const [currentSection, setCurrentSection] = useState<string | null>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show button when scrolled past 300px
+      setShowScrollButton(window.scrollY > 300);
+
+      // Find current section
+      const sections = document.querySelectorAll('section[id]');
+      let current: string | null = null;
+
+      sections.forEach((section) => {
+        const sectionTop = (section as HTMLElement).offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+          current = section.id;
+        }
+      });
+
+      setCurrentSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
+  const scrollToNextSection = () => {
+    if (!currentSection) return;
+
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const currentIndex = sections.findIndex(section => section.id === currentSection);
+    
+    if (currentIndex < sections.length - 1) {
+      sections[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToPreviousSection = () => {
+    if (!currentSection) return;
+
+    const sections = Array.from(document.querySelectorAll('section[id]'));
+    const currentIndex = sections.findIndex(section => section.id === currentSection);
+    
+    if (currentIndex > 0) {
+      sections[currentIndex - 1].scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <>
+      {showScrollButton && (
+        <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-2">
+          <button
+            onClick={scrollToPreviousSection}
+            className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            aria-label="Scroll to previous section"
+            disabled={!currentSection || currentSection === 'hero'}
+          >
+            <ChevronUp size={24} />
+          </button>
+          <button
+            onClick={scrollToTop}
+            className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300"
+            aria-label="Scroll to top"
+          >
+            <ChevronUp size={24} />
+          </button>
+          <button
+            onClick={scrollToNextSection}
+            className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            aria-label="Scroll to next section"
+            disabled={!currentSection || currentSection === 'contact'}
+          >
+            <ChevronDown size={24} />
+          </button>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default ScrollNavigation; 
