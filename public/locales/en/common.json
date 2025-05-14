@@ -435,6 +435,9 @@
   "error": {
     "title": "Error",
     "description": "An error has occurred.",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "goBack": "Go Back",
+    "notFound": "The page you're looking for can't be found.",
+    "serverError": "Sorry, something went wrong on our end. Please try again later."
   }
 }

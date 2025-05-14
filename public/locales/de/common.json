@@ -435,6 +435,9 @@
   "error": {
     "title": "Fehler",
     "description": "Ein Fehler ist aufgetreten.",
-    "backToHome": "Zurück zur Startseite"
+    "backToHome": "Zurück zur Startseite",
+    "goBack": "Zurück",
+    "notFound": "Die gesuchte Seite wurde nicht gefunden.",
+    "serverError": "Entschuldigung, auf unserer Seite ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
   }
 }
