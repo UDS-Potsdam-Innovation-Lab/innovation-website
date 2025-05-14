@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import EnhancedImage from "./enhanced-image";
 
 const AboutUniversitySection = () => {
   return (
@@ -41,7 +41,7 @@ const AboutUniversitySection = () => {
             </div>
           </div>
           <div className="flex justify-center">
-            <Image
+            <EnhancedImage
               src="/images/university-pitch/avatar.png"
               alt="AI-supported Avatar"
               width={400}
@@ -54,7 +54,7 @@ const AboutUniversitySection = () => {
         {/* Higher Education Transformation */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="flex justify-center order-last md:order-first">
-            <Image
+            <EnhancedImage
               src="/images/university-pitch/higher_education_model.png"
               alt="Higher Education Transformation Model"
               width={500}
@@ -88,7 +88,7 @@ const AboutUniversitySection = () => {
             </ul>
           </div>
           <div className="flex justify-center">
-            <Image
+            <EnhancedImage
               src="/images/university-pitch/learning_ecosystem.png"
               alt="Learning Ecosystem Diagram"
               width={500}
@@ -101,7 +101,7 @@ const AboutUniversitySection = () => {
         {/* Student Journey */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="flex justify-center order-last md:order-first">
-            <Image
+            <EnhancedImage
               src="/images/university-pitch/user_journey.png"
               alt="German UDS User Journey"
               width={500}
@@ -133,7 +133,7 @@ const AboutUniversitySection = () => {
             </p>
           </div>
           <div className="flex justify-center">
-            <Image
+            <EnhancedImage
               src="/images/university-pitch/cloudhouse_opening.png"
               alt="CloudHouse Opening"
               width={500}

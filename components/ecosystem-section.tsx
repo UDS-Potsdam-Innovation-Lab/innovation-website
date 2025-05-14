@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import EnhancedImage from './enhanced-image';
 
 const EcosystemSection: React.FC = () => {
   return (
@@ -7,7 +8,13 @@ const EcosystemSection: React.FC = () => {
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <img src="/images/institutions_overview.png" alt="Digital Innovation Ecosystem" className="rounded-br-xl shadow-lg transform hover:scale-105 transition-transform duration-500" />
+            <EnhancedImage
+              src="/images/institutions_overview.png"
+              alt="Digital Innovation Ecosystem"
+              width={600}
+              height={400}
+              className="rounded-br-xl shadow-lg"
+            />
           </div>
           <div className="order-1 lg:order-2">
             <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
