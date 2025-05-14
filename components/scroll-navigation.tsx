@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
+import { useLocale } from '../contexts/LocaleContext';
 
 const ScrollNavigation = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const [currentSection, setCurrentSection] = useState<string | null>(null);
+  const { t } = useLocale();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -72,10 +74,11 @@ const ScrollNavigation = () => {
           </button>
           <button
             onClick={scrollToTop}
-            className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300"
-            aria-label="Scroll to top"
+            className="bg-orange-500 text-white px-4 py-2 rounded-br-xl shadow-lg hover:bg-orange-600 transition-colors duration-300 flex items-center space-x-2"
+            aria-label="Take me up"
           >
-            <ChevronUp size={24} />
+            <span className="text-sm font-medium">Take me up</span>
+            <ChevronUp size={20} />
           </button>
           <button
             onClick={scrollToNextSection}
