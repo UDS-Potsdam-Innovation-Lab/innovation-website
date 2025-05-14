@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       setProgress(scrollPercent * 100)
 
       // Update active section
-      const sections = ['ecosystem', 'portfolio', 'about-university', 'structure', 'business', 'invest']
+      const sections = ['about-university', 'ecosystem', 'structure', 'business', 'portfolio', 'invest']
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -64,13 +64,13 @@ const Home: NextPage = () => {
         <ScrollProgress progress={progress} />
         <Navigation activeSection={activeSection} />
         <HeroSection />
-        <BusinessSection />
-        <StructureSection />
+        <AboutUniversitySection />
         <EcosystemSection />
-        <InvestSection />
+        <StructureSection />
+        <BusinessSection />
         <PortfolioSection />
-        <AboutUniversitySection /> 
-        <InvestNonprofitSection /> 
+        <InvestSection />
+        <InvestNonprofitSection />
         <ContactSection />
         <Footer />
       </main>
