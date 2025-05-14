@@ -47,9 +47,9 @@ const EnhancedImage: React.FC<EnhancedImageProps> = ({
               src={src}
               alt={alt}
               className="rounded-lg shadow-2xl"
-              width={1200}
-              height={800}
-              style={{ objectFit: 'contain' }}
+              width={1500}
+              height={1000}
+              style={{ objectFit: 'contain', transform: 'scale(1.25)' }}
               {...props}
             />
             <button
