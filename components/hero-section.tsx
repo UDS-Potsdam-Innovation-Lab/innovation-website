@@ -19,6 +19,10 @@ const HeroSection: React.FC = () => {
             <div className="flex flex-wrap gap-4">
               <a 
                 href="#portfolio" 
+                onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' });
+                }}
                 className="bg-white text-blue-900 px-6 md:px-8 py-2.5 md:py-3 rounded-br-xl shadow-lg hover:bg-gray-100 transition-colors flex items-center space-x-2 text-sm md:text-base"
               >
                 <span>{String(t('heroSection.exploreButton'))}</span>
