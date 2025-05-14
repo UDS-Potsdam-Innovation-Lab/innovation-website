@@ -72,7 +72,13 @@ class MyDocument extends Document<MyDocumentProps> {
           
           {/* Theme color and favicon */}
           <meta name="theme-color" content="#1e3a8a" />
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" type="image/png" href="/images/favicon.png" />
+          
+          {/* Extra tags for maximum sharing compatibility (Teams, etc.) */}
+          <link rel="image_src" href={`${origin}/images/innovation_logo.jpeg`} />
+          <meta property="og:image" content={`${origin}/images/innovation_logo.jpeg`} />
+          <meta name="image" content={`${origin}/images/innovation_logo.jpeg`} />
+          <meta name="thumbnail" content={`${origin}/images/innovation_logo.jpeg`} />
         </Head>
         <body>
           <Main />
