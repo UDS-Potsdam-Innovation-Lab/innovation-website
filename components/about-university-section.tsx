@@ -12,30 +12,30 @@ const AboutUniversitySection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="space-y-12">
             <div>
-              <h2 className="text-3xl font-bold mb-4">{t('university.empowering.title')}</h2>
+              <h2 className="text-3xl font-bold mb-4">{String(t('university.empowering.title'))}</h2>
               <p>
-                {t('university.empowering.description')}
+                {String(t('university.empowering.description'))}
               </p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-4">{t('university.degrees.title')}</h2>
+              <h2 className="text-3xl font-bold mb-4">{String(t('university.degrees.title'))}</h2>
               <p>
-                {t('university.degrees.description')}
+                {String(t('university.degrees.description'))}
               </p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-4">{t('university.learning.title')}</h2>
+              <h2 className="text-3xl font-bold mb-4">{String(t('university.learning.title'))}</h2>
               <p>
-                {t('university.learning.description')}
+                {String(t('university.learning.description'))}
               </p>
             </div>
 
             <div>
-              <h2 className="text-3xl font-bold mb-4">{t('university.micro.title')}</h2>
+              <h2 className="text-3xl font-bold mb-4">{String(t('university.micro.title'))}</h2>
               <p>
-                {t('university.micro.description')}
+                {String(t('university.micro.description'))}
               </p>
             </div>
           </div>
@@ -62,27 +62,37 @@ const AboutUniversitySection = () => {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold mb-6">{t('university.transforming.title')}</h2>
-            <ul className="list-disc list-inside space-y-4 text-lg">
-              {t('university.transforming.points', { returnObjects: true }).map((point, idx) => (
-                <li key={idx}>{point}</li>
-              ))}
-            </ul>
+            <h2 className="text-3xl font-bold mb-6">{String(t('university.transforming.title'))}</h2>
+            {(() => {
+              const points = t('university.transforming.points', { returnObjects: true });
+              return (
+                <ul className="list-disc list-inside space-y-4 text-lg">
+                  {Array.isArray(points) ? points.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  )) : null}
+                </ul>
+              );
+            })()}
           </div>
         </div>
 
         {/* Learning Ecosystem */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-6">{t('university.ecosystem.title')}</h2>
+            <h2 className="text-3xl font-bold mb-6">{String(t('university.ecosystem.title'))}</h2>
             <p className="mb-4">
-              {t('university.ecosystem.description')}
+              {String(t('university.ecosystem.description'))}
             </p>
-            <ul className="list-disc list-inside space-y-3">
-              {t('university.ecosystem.points', { returnObjects: true }).map((point, idx) => (
-                <li key={idx}>{point}</li>
-              ))}
-            </ul>
+            {(() => {
+              const points = t('university.ecosystem.points', { returnObjects: true });
+              return (
+                <ul className="list-disc list-inside space-y-3">
+                  {Array.isArray(points) ? points.map((point, idx) => (
+                    <li key={idx}>{point}</li>
+                  )) : null}
+                </ul>
+              );
+            })()}
           </div>
           <div className="flex justify-center">
             <EnhancedImage
@@ -107,9 +117,9 @@ const AboutUniversitySection = () => {
             />
           </div>
           <div>
-            <h2 className="text-3xl font-bold mb-6">{t('university.journey.title')}</h2>
+            <h2 className="text-3xl font-bold mb-6">{String(t('university.journey.title'))}</h2>
             <p>
-              {t('university.journey.description')}
+              {String(t('university.journey.description'))}
             </p>
           </div>
         </div>
@@ -117,12 +127,12 @@ const AboutUniversitySection = () => {
         {/* CloudHouse Innovation Hub */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
-            <h2 className="text-3xl font-bold mb-6">{t('university.cloudhouse.title')}</h2>
+            <h2 className="text-3xl font-bold mb-6">{String(t('university.cloudhouse.title'))}</h2>
             <p className="mb-4">
-              {t('university.cloudhouse.description')}
+              {String(t('university.cloudhouse.description'))}
             </p>
             <p>
-              {t('university.cloudhouse.additional')}
+              {String(t('university.cloudhouse.additional'))}
             </p>
           </div>
           <div className="flex justify-center">

@@ -105,13 +105,13 @@ const StructureSection: React.FC = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
-            {t('structure.title')}
+            {String(t('structure.title'))}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            {t('structure.subtitle')}
+            {String(t('structure.subtitle'))}
           </h2>
           <p className="text-gray-700 text-lg">
-            {t('structure.description')}
+            {String(t('structure.description'))}
           </p>
         </div>
 
@@ -121,7 +121,7 @@ const StructureSection: React.FC = () => {
           <div className="flex justify-center mb-16">
             <div className="bg-blue-600 text-white px-8 py-4 rounded-xl shadow-lg flex items-center space-x-3 relative z-10">
               <Building2 size={24} />
-              <span className="text-xl font-bold">{t('structure.departments.title')}</span>
+              <span className="text-xl font-bold">{String(t('structure.departments.title'))}</span>
             </div>
           </div>
 
@@ -165,7 +165,7 @@ const StructureSection: React.FC = () => {
                       <Users className="text-blue-600" size={20} />
                     </div>
                     <h3 className="text-lg font-semibold text-gray-800">
-                      {translationKey ? t(translationKey) : dept.department}
+                      {translationKey ? String(t(translationKey)) : dept.department}
                     </h3>
                   </div>
 
