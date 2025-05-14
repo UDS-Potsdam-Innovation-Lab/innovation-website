@@ -58,11 +58,56 @@ const Footer: React.FC = () => {
           <div>
           <h3 className="text-lg font-bold mb-6">{String(t('footer.keyVerticals'))}</h3>
             <ul className="space-y-3 text-gray-400">
-            <li>{String(t('footer.verticals.entrepreneurship'))}</li>
-            <li>{String(t('footer.verticals.education'))}</li>
-            <li>{String(t('footer.verticals.ai'))}</li>
-            <li>{String(t('footer.verticals.security'))}</li>
-            <li>{String(t('footer.verticals.management'))}</li>
+              <li>
+                <a 
+                  href="https://german-uds.de/college-for-entrepreneurship" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {String(t('footer.verticals.entrepreneurship'))}
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://german-uds.de/researchcenters/extended-reality" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {String(t('footer.verticals.education'))}
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://german-uds.de/researchcenters/artificial-intelligence" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {String(t('footer.verticals.ai'))}
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://german-uds.de/researchcenters/cybersecurity" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {String(t('footer.verticals.security'))}
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://german-uds.de/researchcenters/digital-transformations" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors"
+                >
+                  {String(t('footer.verticals.management'))}
+                </a>
+              </li>
             </ul>
           </div>
           
