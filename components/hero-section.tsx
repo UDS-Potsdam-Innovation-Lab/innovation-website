@@ -24,9 +24,6 @@ const HeroSection: React.FC = () => {
                 <span>{String(t('heroSection.exploreButton'))}</span>
                 <ChevronRight size={18} />
               </a>
-              <button className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-br-xl hover:bg-white hover:text-blue-900 transition-colors">
-                {String(t('heroSection.learnMoreButton'))}
-              </button>
             </div>
           </div>
           <div className="relative">

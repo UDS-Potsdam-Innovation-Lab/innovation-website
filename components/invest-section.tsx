@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building, Globe, Users, BarChart4, Sparkles } from 'lucide-react';
+import { Building, Globe, Users, BarChart4, Sparkles, ChevronRight } from 'lucide-react';
 
 const InvestSection: React.FC = () => {
   return (
@@ -165,10 +165,14 @@ const InvestSection: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-8 text-center relative z-10">
-              <button className="bg-orange-500 text-white px-8 py-3 rounded-br-xl shadow-lg hover:bg-orange-600 transition-colors">
-                Contact Our Investment Team
-              </button>
+            <div className="mt-8 text-center">
+              <a 
+                href="mailto:contact@germanudsinnovation.com"
+                className="bg-orange-500 text-white px-8 py-3 rounded-br-xl shadow-lg hover:bg-orange-600 transition-colors inline-flex items-center space-x-2"
+              >
+                <span>Contact Our Investment Team</span>
+                <ChevronRight size={18} />
+              </a>
             </div>
           </div>
         </div>

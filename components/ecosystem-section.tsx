@@ -33,13 +33,6 @@ const EcosystemSection: React.FC = () => {
                 Act as a catalyst for technology transfer between science and industry.
               </p>
             </div>
-            
-            <div className="mt-8">
-              <button className="bg-orange-500 text-white px-6 py-3 rounded-br-xl shadow-md hover:bg-orange-600 transition-colors flex items-center space-x-2">
-                <span>Learn About Our Strategy</span>
-                <ChevronRight size={18} />
-              </button>
-            </div>
           </div>
         </div>
       </div>
