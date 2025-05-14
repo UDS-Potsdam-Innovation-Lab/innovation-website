@@ -169,31 +169,30 @@ const StructureSection: React.FC = () => {
                     </h3>
                   </div>
 
-                  {/* Professors */}
-                  <div className="space-y-4">
-                    {dept.professors.map((prof) => (
-                      <a
-                        key={prof.name}
-                        href={prof.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-blue-50 transition-colors"
-                      >
-                        <div className="relative w-12 h-12">
-                          <Image
-                            src={prof.img}
-                            alt={prof.name}
-                            fill
-                            className="rounded-full object-cover"
-                          />
-                        </div>
-                        <div>
-                          <p className="text-sm font-medium text-gray-900">{prof.name}</p>
-                          <p className="text-xs text-gray-500">{t('structure.departments.departmentHead')}</p>
-                        </div>
-                      </a>
-                    ))}
-                  </div>
+                {/* Professors */}
+                <div className="space-y-4">
+                  {dept.professors.map((prof) => (
+                    <a
+                      key={prof.name}
+                      href={prof.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-blue-50 transition-colors"
+                    >
+                      <div className="relative w-12 h-12">
+                        <Image
+                          src={prof.img}
+                          alt={prof.name}
+                          fill
+                          className="rounded-full object-cover"
+                        />
+                      </div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-900">{prof.name}</p>
+                      </div>
+                    </a>
+                  ))}
+                </div>
 
                   {/* Connection Indicator */}
                   <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">

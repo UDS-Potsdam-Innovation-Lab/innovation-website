@@ -1,14 +1,15 @@
-import Document, { Html, Head, Main, NextScript, DocumentProps } from 'next/document';
-import { DocumentContext, DocumentInitialProps } from 'next/document';
+import React from 'react';
+import Document, { Html, Head, Main, NextScript, DocumentContext, DocumentInitialProps } from 'next/document';
 
-interface MyDocumentProps extends DocumentProps {
+interface MyDocumentProps extends DocumentInitialProps {
   locale: string;
 }
 
 class MyDocument extends Document<MyDocumentProps> {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps & { locale: string }> {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps, locale: ctx.locale || 'en' };
+    const locale = ctx.locale || 'en';
+    return { ...initialProps, locale };
   }
 
   render() {
@@ -37,13 +38,37 @@ class MyDocument extends Document<MyDocumentProps> {
           
           {/* SEO and Open Graph */}
           <meta name="description" content="German UDS Innovation GmbH - Digital Innovation Ecosystem connecting academic excellence with entrepreneurial practice." />
+          
+          {/* Open Graph / Facebook */}
+          <meta property="og:type" content="website" />
+          <meta property="og:url" content={origin} />
           <meta property="og:title" content="German UDS Innovation GmbH" />
           <meta property="og:description" content="Digital Innovation Ecosystem - Connecting academic excellence with entrepreneurial practice through strategic investments and services." />
-          <meta property="og:type" content="website" />
+          <meta property="og:image" content={`${origin}/images/innovation_logo.png`} />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
+          <meta property="og:image:alt" content="German UDS Innovation GmbH Logo" />
+          <meta property="og:site_name" content="German UDS Innovation GmbH" />
           <meta property="og:locale" content={locale} />
           {alternateLocales.map(altLocale => (
             <meta key={`og-locale-${altLocale}`} property="og:locale:alternate" content={altLocale} />
           ))}
+          
+          {/* Teams/Outlook fallback meta tags */}
+          <meta name="image" content={`${origin}/images/innovation_logo.png`} />
+          <meta name="thumbnail" content={`${origin}/images/innovation_logo.png`} />
+          
+          {/* Twitter */}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:url" content={origin} />
+          <meta name="twitter:title" content="German UDS Innovation GmbH" />
+          <meta name="twitter:description" content="Digital Innovation Ecosystem - Connecting academic excellence with entrepreneurial practice through strategic investments and services." />
+          <meta name="twitter:image" content={`${origin}/images/innovation_logo.png`} />
+          <meta name="twitter:image:alt" content="German UDS Innovation GmbH Logo" />
+          
+          {/* Microsoft Teams specific */}
+          <meta name="msapplication-TileImage" content={`${origin}/images/innovation_logo.png`} />
+          <meta name="msapplication-TileColor" content="#1e3a8a" />
           
           {/* Theme color and favicon */}
           <meta name="theme-color" content="#1e3a8a" />

@@ -65,23 +65,23 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
         </button>
         
         {/* Desktop navigation */}
-        <div className="hidden lg:flex space-x-6">
-          <a href="#about-university" onClick={(e) => handleClick(e, 'about-university')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'about-university' ? 'text-orange-500' : ''}`}>
+        <div className="hidden lg:flex items-center space-x-8">
+          <a href="#about-university" onClick={(e) => handleClick(e, 'about-university')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'about-university' ? 'text-orange-500' : ''}`}>
             {String(t('navigation.aboutUniversity'))}
           </a>
-          <a href="#ecosystem" onClick={(e) => handleClick(e, 'ecosystem')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'ecosystem' ? 'text-orange-500' : ''}`}>
+          <a href="#ecosystem" onClick={(e) => handleClick(e, 'ecosystem')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'ecosystem' ? 'text-orange-500' : ''}`}>
             {String(t('navigation.ecosystem'))}
           </a>
-          <a href="#structure" onClick={(e) => handleClick(e, 'structure')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'structure' ? 'text-orange-500' : ''}`}>
+          <a href="#structure" onClick={(e) => handleClick(e, 'structure')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'structure' ? 'text-orange-500' : ''}`}>
             {String(t('navigation.structure'))}
           </a>
-          <a href="#business" onClick={(e) => handleClick(e, 'business')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'business' ? 'text-orange-500' : ''}`}>
+          <a href="#business" onClick={(e) => handleClick(e, 'business')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'business' ? 'text-orange-500' : ''}`}>
             {String(t('navigation.business'))}
           </a>
-          <a href="#portfolio" onClick={(e) => handleClick(e, 'portfolio')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'portfolio' ? 'text-orange-500' : ''}`}>
+          <a href="#portfolio" onClick={(e) => handleClick(e, 'portfolio')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'portfolio' ? 'text-orange-500' : ''}`}>
             {String(t('navigation.portfolio'))}
           </a>
-          <a href="#invest" onClick={(e) => handleClick(e, 'invest')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'invest' ? 'text-orange-500' : ''}`}>
+          <a href="#invest" onClick={(e) => handleClick(e, 'invest')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'invest' ? 'text-orange-500' : ''}`}>
             {String(t('navigation.invest'))}
           </a>
           
@@ -104,23 +104,23 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white bg-opacity-85 backdrop-blur shadow-md z-50 p-4">
-            <div className="flex flex-col space-y-3">
-              <a href="#about-university" onClick={(e) => handleClick(e, 'about-university')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'about-university' ? 'text-orange-500' : ''}`}>
+            <div className="flex flex-col space-y-4">
+              <a href="#about-university" onClick={(e) => handleClick(e, 'about-university')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'about-university' ? 'text-orange-500' : ''}`}>
                 {String(t('navigation.aboutUniversity'))}
               </a>
-              <a href="#ecosystem" onClick={(e) => handleClick(e, 'ecosystem')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'ecosystem' ? 'text-orange-500' : ''}`}>
+              <a href="#ecosystem" onClick={(e) => handleClick(e, 'ecosystem')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'ecosystem' ? 'text-orange-500' : ''}`}>
                 {String(t('navigation.ecosystem'))}
               </a>
-              <a href="#structure" onClick={(e) => handleClick(e, 'structure')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'structure' ? 'text-orange-500' : ''}`}>
+              <a href="#structure" onClick={(e) => handleClick(e, 'structure')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'structure' ? 'text-orange-500' : ''}`}>
                 {String(t('navigation.structure'))}
               </a>
-              <a href="#business" onClick={(e) => handleClick(e, 'business')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'business' ? 'text-orange-500' : ''}`}>
+              <a href="#business" onClick={(e) => handleClick(e, 'business')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'business' ? 'text-orange-500' : ''}`}>
                 {String(t('navigation.business'))}
               </a>
-              <a href="#portfolio" onClick={(e) => handleClick(e, 'portfolio')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'portfolio' ? 'text-orange-500' : ''}`}>
+              <a href="#portfolio" onClick={(e) => handleClick(e, 'portfolio')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'portfolio' ? 'text-orange-500' : ''}`}>
                 {String(t('navigation.portfolio'))}
               </a>
-              <a href="#invest" onClick={(e) => handleClick(e, 'invest')} className={`text-sm font-medium hover:text-orange-500 transition-colors ${activeSection === 'invest' ? 'text-orange-500' : ''}`}>
+              <a href="#invest" onClick={(e) => handleClick(e, 'invest')} className={`text-base font-medium hover:text-orange-500 transition-colors ${activeSection === 'invest' ? 'text-orange-500' : ''}`}>
                 {String(t('navigation.invest'))}
               </a>
               
