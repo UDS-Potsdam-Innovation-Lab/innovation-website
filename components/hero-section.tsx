@@ -5,11 +5,11 @@ import { useLocale } from '../contexts/LocaleContext';
 const HeroSection: React.FC = () => {
   const { locale, t } = useLocale();
   
-  const scrollToPortfolio = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const scrollToPortfolio = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     const portfolioSection = document.getElementById('portfolio');
     if (portfolioSection) {
-      const headerOffset = 80; // Adjust this value based on your header height
+      const headerOffset = 80;
       const elementPosition = portfolioSection.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -32,14 +32,13 @@ const HeroSection: React.FC = () => {
               {String(t('heroSection.subtitle'))}
             </p>
             <div className="flex flex-wrap gap-4">
-              <a 
-                href="#portfolio" 
+              <button 
                 onClick={scrollToPortfolio}
-                className="bg-white text-blue-900 px-6 md:px-8 py-2.5 md:py-3 rounded-br-xl shadow-lg hover:bg-gray-100 transition-colors flex items-center space-x-2 text-sm md:text-base"
+                className="bg-white text-blue-900 px-6 md:px-8 py-2.5 md:py-3 rounded-br-xl shadow-lg hover:bg-gray-100 transition-colors flex items-center space-x-2 text-sm md:text-base cursor-pointer relative z-10"
               >
                 <span>{String(t('heroSection.exploreButton'))}</span>
                 <ChevronRight size={18} />
-              </a>
+              </button>
             </div>
           </div>
           <div className="relative hidden lg:block">
