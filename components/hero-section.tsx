@@ -9,9 +9,12 @@ const HeroSection: React.FC = () => {
     e.preventDefault();
     const portfolioSection = document.getElementById('portfolio');
     if (portfolioSection) {
-      const offset = portfolioSection.offsetTop;
+      const headerOffset = 80; // Adjust this value based on your header height
+      const elementPosition = portfolioSection.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
       window.scrollTo({
-        top: offset,
+        top: offsetPosition,
         behavior: 'smooth'
       });
     }
