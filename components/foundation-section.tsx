@@ -1,18 +1,20 @@
 import React from "react";
 import Image from "next/image";
+import { useLocale } from "../contexts/LocaleContext";
 
 const FoundationSection = () => {
+  const { t } = useLocale();
+
   return (
     <section className="px-6 py-16 md:px-16 lg:px-24 bg-gray-100 text-gray-900 space-y-20">
       {/* Why the Foundation Exists */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 className="text-3xl font-bold mb-4">Why the German UDS Foundation Exists</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('foundation.why.title')}</h2>
           <ul className="list-disc list-inside space-y-3">
-            <li>Promotes and finances German University of Digital Science</li>
-            <li>Shapes digital civil society</li>
-            <li>Integrates digital science into research and society</li>
-            <li>Pioneers innovative digitalization strategies</li>
+            {t('foundation.why.points', { returnObjects: true }).map((point, idx) => (
+              <li key={idx}>{point}</li>
+            ))}
           </ul>
         </div>
         <div className="flex justify-center">
@@ -28,12 +30,11 @@ const FoundationSection = () => {
 
       {/* Guiding Principles */}
       <div>
-        <h2 className="text-3xl font-bold mb-6">Guiding Principles</h2>
+        <h2 className="text-3xl font-bold mb-6">{t('foundation.guiding.title')}</h2>
         <ul className="list-disc list-inside space-y-3">
-          <li>Shape the digital future</li>
-          <li>Establish Digital Science as an innovative research approach</li>
-          <li>Promote young talent in digital fields</li>
-          <li>Support development of future-oriented educational skills</li>
+          {t('foundation.guiding.points', { returnObjects: true }).map((point, idx) => (
+            <li key={idx}>{point}</li>
+          ))}
         </ul>
       </div>
 
@@ -50,12 +51,11 @@ const FoundationSection = () => {
 
       {/* Foundation Purpose */}
       <div>
-        <h2 className="text-3xl font-bold mb-6">Purpose of the Foundation</h2>
+        <h2 className="text-3xl font-bold mb-6">{t('foundation.purpose.title')}</h2>
         <ul className="list-disc list-inside space-y-3">
-          <li>Support German UDS in development and operation</li>
-          <li>Promote global cooperation in education and research</li>
-          <li>Fund visionary projects like the Virtual Campus</li>
-          <li>Boost open digital platforms like German-UDS.Academy</li>
+          {t('foundation.purpose.points', { returnObjects: true }).map((point, idx) => (
+            <li key={idx}>{point}</li>
+          ))}
         </ul>
       </div>
 
@@ -71,19 +71,18 @@ const FoundationSection = () => {
           />
         </div>
         <div>
-          <h2 className="text-3xl font-bold mb-4">How You Can Support Us</h2>
+          <h2 className="text-3xl font-bold mb-4">{t('foundation.support.title')}</h2>
           <ul className="list-disc list-inside space-y-3">
-            <li>Donations</li>
-            <li>Endowments</li>
-            <li>Contributions</li>
-            <li>Project-specific funding (with tax benefits)</li>
+            {t('foundation.support.points', { returnObjects: true }).map((point, idx) => (
+              <li key={idx}>{point}</li>
+            ))}
           </ul>
         </div>
       </div>
 
       {/* Foundation Leadership */}
       <div>
-        <h2 className="text-3xl font-bold mb-6">Foundation Leadership</h2>
+        <h2 className="text-3xl font-bold mb-6">{t('foundation.leadership.title')}</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <Image src="/images/foundation-pitch/mike_f.jpg" alt="Prof. Dr. Mike Friedrichsen" width={200} height={200} className="rounded-full shadow" />
           <Image src="/images/foundation-pitch/ch_m.jpg" alt="Prof. Dr. Christoph Meinel" width={200} height={200} className="rounded-full shadow" />

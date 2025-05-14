@@ -1,8 +1,11 @@
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import EnhancedImage from './enhanced-image';
+import { useLocale } from '../contexts/LocaleContext';
 
 const EcosystemSection: React.FC = () => {
+  const { t } = useLocale();
+
   return (
     <section id="ecosystem" className="py-20 px-6">
       <div className="container mx-auto">
@@ -18,26 +21,23 @@ const EcosystemSection: React.FC = () => {
           </div>
           <div className="order-1 lg:order-2">
             <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
-              Our Digital Innovation Ecosystem
+              {t('ecosystem.title')}
             </div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-              Connecting Academic Excellence with Entrepreneurial Practice
+              {t('ecosystem.subtitle')}
             </h2>
-            
+
             <div className="mb-8">
-              <h3 className="text-xl font-semibold text-orange-500 mb-3">Purpose</h3>
+              <h3 className="text-xl font-semibold text-orange-500 mb-3">{t('ecosystem.purpose.title')}</h3>
               <p className="text-gray-700 mb-4">
-                As a catalyst, German UDS Innovation GmbH promotes sustainable technology 
-                transfer between science and industry and achieves attractive returns on investment. 
-                Our integrated ecosystem connects academic excellence with entrepreneurial practice.
+                {t('ecosystem.purpose.description')}
               </p>
             </div>
-            
+
             <div>
-              <h3 className="text-xl font-semibold text-orange-500 mb-3">Vision</h3>
+              <h3 className="text-xl font-semibold text-orange-500 mb-3">{t('ecosystem.vision.title')}</h3>
               <p className="text-gray-700 mb-4">
-                Establish a successful investment company in digital innovations. 
-                Act as a catalyst for technology transfer between science and industry.
+                {t('ecosystem.vision.description')}
               </p>
             </div>
           </div>

@@ -145,7 +145,7 @@
     "lastUpdated": "Zuletzt aktualisiert: 13. Mai 2025",
     "introduction": {
       "title": "Einleitung",
-      "content": "Die German UDS Innovation GmbH („wir“, „uns“ oder „unser“) respektiert Ihre Privatsphäre und verpflichtet sich, Ihre personenbezogenen Daten zu schützen. Diese Datenschutzerklärung erklärt, wie wir personenbezogene Daten erheben, verarbeiten und verwenden, wenn Sie unsere Website besuchen oder mit uns interagieren. Wir halten uns an die Anforderungen der EU-Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG)."
+      "content": "Die German UDS Innovation GmbH (\"wir\", \"uns\" oder \"unser\") respektiert Ihre Privatsphäre und verpflichtet sich, Ihre personenbezogenen Daten zu schützen. Diese Datenschutzerklärung erklärt, wie wir personenbezogene Daten erheben, verarbeiten und verwenden, wenn Sie unsere Website besuchen oder mit uns interagieren. Wir halten uns an die Anforderungen der EU-Datenschutz-Grundverordnung (DSGVO) und des Bundesdatenschutzgesetzes (BDSG)."
     },
     "dataController": {
       "title": "Verantwortliche Stelle und Kontaktinformationen",
@@ -185,7 +185,7 @@
     },
     "dataSharing": {
       "title": "Weitergabe Ihrer Daten",
-      "content": "Wir verkaufen oder vermieten Ihre personenbezogenen Daten nicht. Eine Weitergabe erfolgt nur an vertrauenswürdige Dienstleister (z. B. Hosting, Analyse), die diese Daten weisungsgebunden verarbeiten. Eine Weitergabe kann auch erfolgen, wenn dies gesetzlich vorgeschrieben ist oder zum Schutz unserer Rechte notwendig ist."
+      "content": "Wir verkaufen oder vermieten Ihre personenbezogenen Daten nicht. Eine Weitergabe erfolgt nur an vertrauenswürdige Dienstleister (z. B. Hosting, Analyse), die diese Daten weisungsgebunden verarbeiten. Eine Weitergabe kann auch erfolgen, wenn dies gesetzlich vorgeschrieben ist oder zum Schutz unserer Rechte notwendig ist."
     },
     "dataRetention": {
       "title": "Speicherdauer und Löschung",
@@ -196,7 +196,7 @@
       "content": "Sie haben gemäß der DSGVO folgende Rechte in Bezug auf Ihre personenbezogenen Daten:",
       "item1": "Auskunft über Ihre gespeicherten Daten",
       "item2": "Berichtigung unrichtiger oder unvollständiger Daten",
-      "item3": "Löschung Ihrer Daten („Recht auf Vergessenwerden“)",
+      "item3": "Löschung Ihrer Daten (\"Recht auf Vergessenwerden\")",
       "item4": "Einschränkung der Verarbeitung unter bestimmten Bedingungen",
       "item5": "Widerspruch gegen die Verarbeitung aufgrund berechtigter Interessen",
       "item6": "Datenübertragbarkeit Ihrer Daten in einem strukturierten, gängigen Format",
@@ -223,5 +223,185 @@
       "title": "Änderungen dieser Datenschutzerklärung",
       "content": "Wir behalten uns vor, diese Datenschutzerklärung bei rechtlichen, technischen oder organisatorischen Änderungen zu aktualisieren. Die aktualisierte Version wird auf dieser Seite veröffentlicht und ist ab dem Zeitpunkt der Veröffentlichung gültig."
     }
+  },
+  "ecosystem": {
+    "title": "Unser digitales Innovations-Ökosystem",
+    "subtitle": "Integrierte Struktur",
+    "description": "Unser einzigartiges vertikales Beteiligungsmodell verbindet Forschung, Bildung und Wirtschaft.",
+    "purpose": {
+      "title": "Zweck",
+      "description": "Als Katalysator fördert die German UDS Innovation GmbH einen nachhaltigen Technologietransfer zwischen Wissenschaft und Industrie und erzielt attraktive Investitionsrenditen. Unser integriertes Ökosystem verbindet akademische Exzellenz mit unternehmerischer Praxis."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "Etablierung eines erfolgreichen Investmentunternehmens im Bereich digitaler Innovationen. Agieren als Katalysator für den Technologietransfer zwischen Wissenschaft und Industrie."
+    }
+  },
+  "portfolio": {
+    "title": "Unser Portfolio",
+    "subtitle": "Strategische Beteiligungen",
+    "description": "Unser vielfältiges Beteiligungsportfolio spiegelt unser Engagement für Innovation und Wachstum im digitalen Bildungssektor wider.",
+    "service": {
+      "title": "German UDS Service GmbH",
+      "description": "100% Beteiligung, verantwortlich für die IT-Infrastruktur - sowohl für die Universität als auch für externe Geschäftspartner."
+    },
+    "cloudhouse": {
+      "title": "FB Cloudhouse GmbH",
+      "description": "20% Beteiligung an der FB Cloudhouse GmbH, die administrative Aufgaben und die Vermietung von Räumlichkeiten für die Universität und Dritte übernimmt."
+    },
+    "university": {
+      "title": "German UDS gGmbH",
+      "description": "20% Beteiligung an der German UDS gGmbH (Garantie der kreativen Mitwirkung an der Deutschen Universität für Digitale Wissenschaften)"
+    }
+  },
+  "structure": {
+    "title": "Unser einzigartiger Ansatz",
+    "subtitle": "Vertikale Beteiligungsstruktur",
+    "description": "Unsere vertikale Struktur bindet Professoren und Forschungszentren direkt in neu gegründete Vertikalen ein und transformiert Universitätsforschung in marktfähige digitale Produkte und Geschäftsmodelle.",
+    "departments": {
+      "title": "Deutsche Universität für Digitale Wissenschaften",
+      "entrepreneurship": "Digital Entrepreneurship College",
+      "education": "Digitale Bildung und Internet-Technologien",
+      "virtual": "Virtuelle Bildung und digitale Realität",
+      "multimodal": "Multimodale Lerntechnologien",
+      "ai": "Künstliche Intelligenz",
+      "security": "Cybersicherheit",
+      "management": "Digitales Management und Arbeit",
+      "departmentHead": "Abteilungsleiter"
+    }
+  },
+  "foundation": {
+    "title": "Die Stiftung",
+    "subtitle": "Nonprofit-Förderung",
+    "description": "Unsere Stiftung unterstützt digitale Bildung und Forschung.",
+    "why": {
+      "title": "Warum die German UDS Stiftung existiert",
+      "points": [
+        "Fördert und finanziert die Deutsche Universität für Digitale Wissenschaften",
+        "Gestaltet die digitale Zivilgesellschaft",
+        "Integriert digitale Wissenschaft in Forschung und Gesellschaft",
+        "Entwickelt innovative Digitalisierungsstrategien"
+      ]
+    },
+    "guiding": {
+      "title": "Leitprinzipien",
+      "points": [
+        "Die digitale Zukunft gestalten",
+        "Digitale Wissenschaft als innovativen Forschungsansatz etablieren",
+        "Junge Talente im digitalen Bereich fördern",
+        "Entwicklung zukunftsorientierter Bildungskompetenzen unterstützen"
+      ]
+    },
+    "purpose": {
+      "title": "Zweck der Stiftung",
+      "points": [
+        "Unterstützung der German UDS bei Entwicklung und Betrieb",
+        "Förderung globaler Zusammenarbeit in Bildung und Forschung",
+        "Finanzierung visionärer Projekte wie des Virtual Campus",
+        "Förderung offener digitaler Plattformen wie German-UDS.Academy"
+      ]
+    },
+    "support": {
+      "title": "Wie Sie uns unterstützen können",
+      "points": [
+        "Spenden",
+        "Stiftungen",
+        "Beiträge",
+        "Projektspezifische Finanzierung (mit steuerlichen Vorteilen)"
+      ]
+    },
+    "leadership": {
+      "title": "Stiftungsleitung"
+    },
+    "coreBeliefs": {
+      "title": "Unsere Grundüberzeugungen",
+      "description": "Wir glauben an die Kraft der Bildung und Innovation, um positive gesellschaftliche Veränderungen zu bewirken."
+    },
+    "mission": {
+      "title": "Stiftungsziele",
+      "description": "Die Stiftung fördert Bildung, Forschung und Innovation im digitalen Bereich."
+    }
+  },
+  "university": {
+    "title": "Deutsche Universität für Digitale Wissenschaften",
+    "subtitle": "Bildungsmodell der Zukunft",
+    "description": "Unser innovativer Ansatz für Hochschulbildung im digitalen Zeitalter.",
+    "empowering": {
+      "title": "Förderung globaler Talente",
+      "description": "Die German UDS widmet sich der Förderung von Einzelpersonen, damit diese ihr volles Potenzial entfalten können, indem sie Zugang zu erstklassiger Bildung und Ressourcen erhalten."
+    },
+    "degrees": {
+      "title": "Erstklassige Universitätsabschlüsse",
+      "description": "Die German UDS bietet hochwertige, digital innovative Abschlüsse an, die weltweit anerkannt sind und den Absolventen einen Wettbewerbsvorteil verschaffen."
+    },
+    "learning": {
+      "title": "Effizientes lebenslanges Lernen",
+      "description": "Die Universität bietet flexible und zugängliche Lernformate an, die auf die sich ändernden Bedürfnisse von Einzelpersonen während ihrer gesamten Karriere zugeschnitten sind."
+    },
+    "micro": {
+      "title": "Mikro-Studienprogramme",
+      "description": "Eine Reihe von Mikro-Studienprogrammen, die auf die speziellen Bedürfnisse von Personen zugeschnitten sind, die eine Spezialisierung in Bereichen der Digitalisierung anstreben."
+    },
+    "transforming": {
+      "title": "Transformation der Hochschulbildung",
+      "points": [
+        "Die Hochschulbildung hinkt anderen Branchen bei der technologischen Adaption hinterher.",
+        "Der Markt für Online-Bildung wird bis 2027 voraussichtlich 1 Billion Dollar erreichen.",
+        "Synchrone und asynchrone Lernformate werden zunehmend bevorzugt.",
+        "Personalisiertes, kompetenzbasiertes Lernen ist für die Zukunftsfähigkeit unerlässlich."
+      ]
+    },
+    "ecosystem": {
+      "title": "Das Lernökosystem",
+      "description": "Die German UDS unterstützt vielfältige Lernende durch formale und informelle Formate, einschließlich Online-, Blended- und Präsenzoptionen – alle im Einklang mit dem Common Micro Credential Framework.",
+      "points": [
+        "Kompatibel mit dem European MOOC Consortium (EMC-CMF)",
+        "Konzipiert für lebenslanges Lernen und Berufstätige",
+        "Unterstützt modulare Mikro-Zertifikate in verschiedenen Disziplinen"
+      ]
+    },
+    "journey": {
+      "title": "Studierendenerfahrung mit UDS",
+      "description": "Von der ersten Kontaktaufnahme bis hin zum Campus-Management und der Evaluation rationalisiert German UDS digitales Lernen durch LMS, LTI-Integration, Proctoring und modulare Abschlüsse."
+    },
+    "cloudhouse": {
+      "title": "Das CloudHouse: Unser Innovationszentrum",
+      "description": "Das CloudHouse befindet sich in der Media City Babelsberg und ist ein Hightech-Campus mit Laboren, einem Datenzentrum und modernsten Veranstaltungsräumen, die für Zusammenarbeit und hybrides Lernen konzipiert sind.",
+      "additional": "Es repräsentiert unser Engagement für die Schaffung eines Ökosystems, das Innovation, Gemeinschaft und Bildung der nächsten Generation fördert."
+    },
+    "model": {
+      "title": "Hochschulmodell",
+      "description": "Ein zukunftsorientiertes Bildungsmodell, das akademische Exzellenz mit praktischer Anwendung verbindet."
+    }
+  },
+  "investNonprofit": {
+    "title": "Gemeinnützige Investitionsmöglichkeiten",
+    "subtitle": "Förderung von Bildung und Forschung",
+    "description": "Unterstützen Sie unsere Stiftung und helfen Sie, digitale Bildung und Forschung zu fördern.",
+    "overview": {
+      "title": "Deutsche Universität für Digitale Wissenschaften: Ein Überblick",
+      "points": [
+        "Staatliche Anerkennung durch das Brandenburgische Ministerium für Wissenschaft, Forschung und Kultur",
+        "Sechs akkreditierte Master-/MBA-Programme und umfangreiche Mikro-Studienangebote",
+        "Virtuelle Klassenzimmer, Echtzeit-Zusammenarbeit und praxisnahes Projektlernen",
+        "100% digital, englischsprachig, ortsunabhängige Bildung",
+        "Erschwingliche Studiengebühren: 7.500 € pro Jahr",
+        "Ein Treiber für Innovation und Wettbewerbsfähigkeit für Deutschlands digitale Wirtschaft"
+      ]
+    },
+    "media": {
+      "brochure": "Broschüre",
+      "reports": "Wissenschaftliche Berichte",
+      "podcasts": "Podcasts"
+    },
+    "options": {
+      "title": "Investitionsmöglichkeiten",
+      "description": "Verschiedene Möglichkeiten, um unsere gemeinnützigen Initiativen zu unterstützen."
+    }
+  },
+  "error": {
+    "title": "Fehler",
+    "description": "Ein Fehler ist aufgetreten.",
+    "backToHome": "Zurück zur Startseite"
   }
 }

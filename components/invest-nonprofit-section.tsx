@@ -1,19 +1,19 @@
 import React from "react";
 import EnhancedImage from "./enhanced-image";
+import { useLocale } from "../contexts/LocaleContext";
 
 const InvestNonprofitSection = () => {
+  const { t } = useLocale();
+
   return (
     <section className="px-6 py-16 md:px-16 lg:px-24 bg-white text-gray-900 space-y-20">
       {/* Overview */}
       <div>
-        <h2 className="text-3xl font-bold mb-6">German University of Digital Science: An Overview</h2>
+        <h2 className="text-3xl font-bold mb-6">{t('investNonprofit.overview.title')}</h2>
         <ul className="list-disc list-inside space-y-3">
-          <li>State recognition by the Brandenburg Ministry of Science, Research, and Culture</li>
-          <li>Six accredited Master's/MBA programs and extensive micro-degree offerings</li>
-          <li>Virtual classrooms, real-time collaboration, and hands-on project learning</li>
-          <li>100% digital, English-medium, location-independent education</li>
-          <li>Affordable tuition: €7,500 per year</li>
-          <li>A driver of innovation and competitiveness for Germany's digital economy</li>
+          {t('investNonprofit.overview.points', { returnObjects: true }).map((point, idx) => (
+            <li key={idx}>{point}</li>
+          ))}
         </ul>
       </div>
 
@@ -37,7 +37,7 @@ const InvestNonprofitSection = () => {
           rel="noopener noreferrer"
           className="flex flex-col items-center"
         >
-          <div className="font-bold text-lg mb-2 text-center">Brochure</div>
+          <div className="font-bold text-lg mb-2 text-center">{t('investNonprofit.media.brochure')}</div>
           <EnhancedImage
             src="/images/financial-support-non-profit/brochure.png"
             alt="Brochure"
@@ -53,7 +53,7 @@ const InvestNonprofitSection = () => {
           rel="noopener noreferrer"
           className="flex flex-col items-center"
         >
-          <div className="font-bold text-lg mb-2 text-center">Scientific Reports</div>
+          <div className="font-bold text-lg mb-2 text-center">{t('investNonprofit.media.reports')}</div>
           <EnhancedImage
             src="/images/financial-support-non-profit/sci_report.png"
             alt="Scientific Report"
@@ -69,7 +69,7 @@ const InvestNonprofitSection = () => {
           rel="noopener noreferrer"
           className="flex flex-col items-center"
         >
-          <div className="font-bold text-lg mb-2 text-center">Podcasts</div>
+          <div className="font-bold text-lg mb-2 text-center">{t('investNonprofit.media.podcasts')}</div>
           <EnhancedImage
             src="/images/financial-support-non-profit/podcast.png"
             alt="Podcast"

@@ -1,8 +1,22 @@
 import React from 'react';
 import Image from 'next/image';
 import { ChevronDown, Users, Building2 } from 'lucide-react';
+import { useLocale } from '../contexts/LocaleContext';
 
 const StructureSection: React.FC = () => {
+  const { t } = useLocale();
+
+  const getDepartmentKey = (department: string) => {
+    if (department === "Digital Entrepreneurship College") return "entrepreneurship";
+    if (department === "Digital Education and Internet Technologies") return "education";
+    if (department === "Virtual Education and Digital Reality") return "virtual";
+    if (department === "Multimodal Learning Technologies") return "multimodal";
+    if (department === "Artificial Intelligence") return "ai";
+    if (department === "Cybersecurity") return "security";
+    if (department === "Digital Management and Work") return "management";
+    return "";
+  };
+
   const departments = [
     {
       department: "Digital Entrepreneurship College",
@@ -91,14 +105,13 @@ const StructureSection: React.FC = () => {
       <div className="container mx-auto">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
-            Our Unique Approach
+            {t('structure.title')}
           </div>
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            Vertical Participation Structure
+            {t('structure.subtitle')}
           </h2>
           <p className="text-gray-700 text-lg">
-            Our vertical structure directly involves professors and research centers in newly founded verticals, 
-            transforming university research into marketable digital products and business models.
+            {t('structure.description')}
           </p>
         </div>
 
@@ -108,7 +121,7 @@ const StructureSection: React.FC = () => {
           <div className="flex justify-center mb-16">
             <div className="bg-blue-600 text-white px-8 py-4 rounded-xl shadow-lg flex items-center space-x-3 relative z-10">
               <Building2 size={24} />
-              <span className="text-xl font-bold">German University of Digital Science</span>
+              <span className="text-xl font-bold">{t('structure.departments.title')}</span>
             </div>
           </div>
 
@@ -133,57 +146,64 @@ const StructureSection: React.FC = () => {
 
           {/* Departments Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
-            {departments.map((dept, index) => (
-              <div 
-                key={dept.department}
-                className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl relative"
-                style={{
-                  marginTop: '2rem',
-                  borderTop: '3px solid #3B82F6',
-                }}
-              >
-                {/* Department Header */}
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="bg-blue-100 p-2 rounded-lg">
-                    <Users className="text-blue-600" size={20} />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-800">{dept.department}</h3>
-                </div>
+            {departments.map((dept, index) => {
+              const departmentKey = getDepartmentKey(dept.department);
+              const translationKey = departmentKey ? `structure.departments.${departmentKey}` : '';
 
-                {/* Professors */}
-                <div className="space-y-4">
-                  {dept.professors.map((prof) => (
-                    <a
-                      key={prof.name}
-                      href={prof.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-blue-50 transition-colors"
-                    >
-                      <div className="relative w-12 h-12">
-                        <Image
-                          src={prof.img}
-                          alt={prof.name}
-                          fill
-                          className="rounded-full object-cover"
-                        />
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium text-gray-900">{prof.name}</p>
-                        <p className="text-xs text-gray-500">Department Head</p>
-                      </div>
-                    </a>
-                  ))}
-                </div>
+              return (
+                <div
+                  key={dept.department}
+                  className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl relative"
+                  style={{
+                    marginTop: '2rem',
+                    borderTop: '3px solid #3B82F6',
+                  }}
+                >
+                  {/* Department Header */}
+                  <div className="flex items-center space-x-3 mb-4">
+                    <div className="bg-blue-100 p-2 rounded-lg">
+                      <Users className="text-blue-600" size={20} />
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-800">
+                      {translationKey ? t(translationKey) : dept.department}
+                    </h3>
+                  </div>
 
-                {/* Connection Indicator */}
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                    <ChevronDown className="text-white" size={16} />
+                  {/* Professors */}
+                  <div className="space-y-4">
+                    {dept.professors.map((prof) => (
+                      <a
+                        key={prof.name}
+                        href={prof.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center space-x-3 p-2 rounded-lg hover:bg-blue-50 transition-colors"
+                      >
+                        <div className="relative w-12 h-12">
+                          <Image
+                            src={prof.img}
+                            alt={prof.name}
+                            fill
+                            className="rounded-full object-cover"
+                          />
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-900">{prof.name}</p>
+                          <p className="text-xs text-gray-500">{t('structure.departments.departmentHead')}</p>
+                        </div>
+                      </a>
+                    ))}
+                  </div>
+
+                  {/* Connection Indicator */}
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                      <ChevronDown className="text-white" size={16} />
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </div>

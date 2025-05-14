@@ -223,5 +223,185 @@
       "title": "Changes to This Privacy Policy",
       "content": "We reserve the right to update this Privacy Policy to reflect changes in legal, technical, or business developments. The updated policy will be published on this page and becomes effective immediately upon posting."
     }
+  },
+  "ecosystem": {
+    "title": "Our Digital Innovation Ecosystem",
+    "subtitle": "Integrated Structure",
+    "description": "Our unique vertical participation model connects research, education, and business.",
+    "purpose": {
+      "title": "Purpose",
+      "description": "As a catalyst, German UDS Innovation GmbH promotes sustainable technology transfer between science and industry and achieves attractive returns on investment. Our integrated ecosystem connects academic excellence with entrepreneurial practice."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "Establish a successful investment company in digital innovations. Act as a catalyst for technology transfer between science and industry."
+    }
+  },
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Strategic Investments",
+    "description": "Our diverse portfolio of investments reflects our commitment to innovation and growth in the digital education sector.",
+    "service": {
+      "title": "German UDS Service GmbH",
+      "description": "100% stake responsible for the IT infrastructure - both for the university and for external business partners."
+    },
+    "cloudhouse": {
+      "title": "FB Cloudhouse GmbH",
+      "description": "20% stake in FB Cloudhouse GmbH handling administrative tasks and rental of space for the university and third parties."
+    },
+    "university": {
+      "title": "German UDS gGmbH",
+      "description": "20% participation in German UDS gGmbH (guarantee of creative involvement in the German University of Digital Science)"
+    }
+  },
+  "structure": {
+    "title": "Our Unique Approach",
+    "subtitle": "Vertical Participation Structure",
+    "description": "Our vertical structure directly involves professors and research centers in newly founded verticals, transforming university research into marketable digital products and business models.",
+    "departments": {
+      "title": "German University of Digital Science",
+      "entrepreneurship": "Digital Entrepreneurship College",
+      "education": "Digital Education and Internet Technologies",
+      "virtual": "Virtual Education and Digital Reality",
+      "multimodal": "Multimodal Learning Technologies",
+      "ai": "Artificial Intelligence",
+      "security": "Cybersecurity",
+      "management": "Digital Management and Work",
+      "departmentHead": "Department Head"
+    }
+  },
+  "foundation": {
+    "title": "The Foundation",
+    "subtitle": "Nonprofit Support",
+    "description": "Our foundation supports digital education and research.",
+    "why": {
+      "title": "Why the German UDS Foundation Exists",
+      "points": [
+        "Promotes and finances German University of Digital Science",
+        "Shapes digital civil society",
+        "Integrates digital science into research and society",
+        "Pioneers innovative digitalization strategies"
+      ]
+    },
+    "guiding": {
+      "title": "Guiding Principles",
+      "points": [
+        "Shape the digital future",
+        "Establish Digital Science as an innovative research approach",
+        "Promote young talent in digital fields",
+        "Support development of future-oriented educational skills"
+      ]
+    },
+    "purpose": {
+      "title": "Purpose of the Foundation",
+      "points": [
+        "Support German UDS in development and operation",
+        "Promote global cooperation in education and research",
+        "Fund visionary projects like the Virtual Campus",
+        "Boost open digital platforms like German-UDS.Academy"
+      ]
+    },
+    "support": {
+      "title": "How You Can Support Us",
+      "points": [
+        "Donations",
+        "Endowments",
+        "Contributions",
+        "Project-specific funding (with tax benefits)"
+      ]
+    },
+    "leadership": {
+      "title": "Foundation Leadership"
+    },
+    "coreBeliefs": {
+      "title": "Our Core Beliefs",
+      "description": "We believe in the power of education and innovation to drive positive societal change."
+    },
+    "mission": {
+      "title": "Foundation Goals",
+      "description": "The foundation promotes education, research, and innovation in the digital domain."
+    }
+  },
+  "university": {
+    "title": "German University of Digital Science",
+    "subtitle": "Future Education Model",
+    "description": "Our innovative approach to higher education in the digital age.",
+    "empowering": {
+      "title": "Empowering Global Talents",
+      "description": "The German UDS is dedicated to empowering individuals to achieve their full potential by providing access to world-class education and resources."
+    },
+    "degrees": {
+      "title": "World-Class University Degrees",
+      "description": "The German UDS offers high-quality, digitally innovative degrees that are recognized globally and provide graduates with a competitive advantage."
+    },
+    "learning": {
+      "title": "Efficient Lifelong Learning",
+      "description": "The university offers flexible and accessible learning formats that cater to the evolving needs of individuals throughout their careers."
+    },
+    "micro": {
+      "title": "Micro Degree Programs",
+      "description": "A range of micro-degree programs designed to meet the specific needs of individuals seeking specialization in areas of digitalization."
+    },
+    "transforming": {
+      "title": "Transforming Higher Education",
+      "points": [
+        "Higher education lags behind other industries in technological adoption.",
+        "Online education market is projected to reach $1 trillion by 2027.",
+        "Synchronous and asynchronous learning formats are increasingly preferred.",
+        "Personalized, competency-based learning is essential for future readiness."
+      ]
+    },
+    "ecosystem": {
+      "title": "The Learning Ecosystem",
+      "description": "The German UDS supports diverse learners through formal and informal formats, including online, blended, and in-person options — all aligned with the Common Micro Credential Framework.",
+      "points": [
+        "Compatible with the European MOOC Consortium (EMC-CMF)",
+        "Designed for lifelong learners and professionals",
+        "Supports modular micro-credentials across disciplines"
+      ]
+    },
+    "journey": {
+      "title": "Student Journey with UDS",
+      "description": "From initial contact to campus management and evaluation, German UDS streamlines digital learning through LMS, LTI integration, proctoring, and modular degrees."
+    },
+    "cloudhouse": {
+      "title": "The CloudHouse: Our Innovation Hub",
+      "description": "Located in Media City Babelsberg, CloudHouse is a high-tech campus featuring labs, a data center, and state-of-the-art event spaces designed for collaboration and hybrid learning.",
+      "additional": "It represents our commitment to creating an ecosystem that fosters innovation, community, and next-generation education."
+    },
+    "model": {
+      "title": "Higher Education Model",
+      "description": "A future-oriented education model combining academic excellence with practical application."
+    }
+  },
+  "investNonprofit": {
+    "title": "Nonprofit Investment Opportunities",
+    "subtitle": "Supporting Education and Research",
+    "description": "Support our foundation and help promote digital education and research.",
+    "overview": {
+      "title": "German University of Digital Science: An Overview",
+      "points": [
+        "State recognition by the Brandenburg Ministry of Science, Research, and Culture",
+        "Six accredited Master's/MBA programs and extensive micro-degree offerings",
+        "Virtual classrooms, real-time collaboration, and hands-on project learning",
+        "100% digital, English-medium, location-independent education",
+        "Affordable tuition: €7,500 per year",
+        "A driver of innovation and competitiveness for Germany's digital economy"
+      ]
+    },
+    "media": {
+      "brochure": "Brochure",
+      "reports": "Scientific Reports",
+      "podcasts": "Podcasts"
+    },
+    "options": {
+      "title": "Investment Options",
+      "description": "Various ways to support our nonprofit initiatives."
+    }
+  },
+  "error": {
+    "title": "Error",
+    "description": "An error has occurred.",
+    "backToHome": "Back to Home"
   }
 }
