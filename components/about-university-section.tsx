@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const AboutUniversitySection = () => {
   return (
-      <section id="about-university" className="px-6 py-12 md:px-16 lg:px-24 bg-white text-gray-900">
+    <section id="about-university" className="px-6 py-12 md:px-16 lg:px-24 bg-white text-gray-900">
       <div className="max-w-6xl mx-auto space-y-20">
         {/* Vision & Mission */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
@@ -14,16 +14,16 @@ const AboutUniversitySection = () => {
               providing access to world-class education and resources.
             </p>
 
-            <h2 className="text-3xl font-bold mb-6">Efficient Lifelong Learning</h2>
-            <p className="mb-6">
-              The university offers flexible and accessible learning formats that cater to the evolving
-              needs of individuals throughout their careers.
-            </p>
-
             <h2 className="text-3xl font-bold mb-6">World-Class University Degrees</h2>
             <p className="mb-6">
               The German UDS offers high-quality, digitally innovative degrees that are recognized
               globally and provide graduates with a competitive advantage.
+            </p>
+
+            <h2 className="text-3xl font-bold mb-6">Efficient Lifelong Learning</h2>
+            <p className="mb-6">
+              The university offers flexible and accessible learning formats that cater to the evolving
+              needs of individuals throughout their careers.
             </p>
 
             <h2 className="text-3xl font-bold mb-6">Micro Degree Programs</h2>
@@ -90,7 +90,7 @@ const AboutUniversitySection = () => {
           </div>
         </div>
 
-        {/* User Journey */}
+        {/* Student Journey */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="flex justify-center order-last md:order-first">
             <Image
@@ -110,7 +110,7 @@ const AboutUniversitySection = () => {
           </div>
         </div>
 
-        {/* CloudHouse Highlight */}
+        {/* CloudHouse Innovation Hub */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-3xl font-bold mb-6">The CloudHouse: Our Innovation Hub</h2>
