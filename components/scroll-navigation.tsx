@@ -63,10 +63,10 @@ const ScrollNavigation = () => {
   return (
     <>
       {showScrollButton && (
-        <div className="fixed bottom-8 right-8 z-50 flex flex-col gap-2">
+        <div className="fixed bottom-8 right-8 z-50 flex flex-col items-end gap-2">
           <button
             onClick={scrollToPreviousSection}
-            className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-blue-600 text-white w-10 h-10 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
             aria-label="Scroll to previous section"
             disabled={!currentSection || currentSection === 'hero'}
           >
@@ -82,7 +82,7 @@ const ScrollNavigation = () => {
           </button>
           <button
             onClick={scrollToNextSection}
-            className="bg-blue-600 text-white p-3 rounded-full shadow-lg hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+            className="bg-blue-600 text-white w-10 h-10 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
             aria-label="Scroll to next section"
             disabled={!currentSection || currentSection === 'contact'}
           >
