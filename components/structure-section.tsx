@@ -170,7 +170,6 @@ const StructureSection: React.FC = () => {
                       </div>
                       <div>
                         <p className="text-sm font-medium text-gray-900">{prof.name}</p>
-                        <p className="text-xs text-gray-500">Department Head</p>
                       </div>
                     </a>
                   ))}
