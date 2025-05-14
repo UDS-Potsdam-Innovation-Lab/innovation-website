@@ -56,6 +56,8 @@ jobs:
           
       - name: Build with Next.js
         run: pnpm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://innovation.german-uds.de
         
       - name: Copy images to output directory
         run: |
