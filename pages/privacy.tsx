@@ -48,6 +48,9 @@ const Privacy: React.FC = () => {
                 <li>{String(t('privacy.dataCollection.categories.item4'))}</li>
               </ul>
               
+              <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('privacy.hosting.title'))}</h2>
+              <p>{String(t('privacy.hosting.content'))}</p>
+              
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('privacy.cookies.title'))}</h2>
               <p>{String(t('privacy.cookies.content'))}</p>
               
@@ -76,11 +79,7 @@ const Privacy: React.FC = () => {
               
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('privacy.dataProtectionOfficer.title'))}</h2>
               <p>
-                {String(t('privacy.dataProtectionOfficer.name'))}<br />
-                German UDS Innovation GmbH<br />
-                Musterstrasse 123<br />
-                10115 Berlin<br />
-                {String(t('privacy.dataProtectionOfficer.email'))}: privacy@germanudsinnovation.com
+                {String(t('privacy.dataController.content'))}
               </p>
               
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('privacy.changes.title'))}</h2>
