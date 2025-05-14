@@ -31,7 +31,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-4">
           <a
-            href="#"
+            href="/"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: 'smooth' });
