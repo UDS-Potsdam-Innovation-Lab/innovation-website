@@ -158,18 +158,22 @@
     "metaDescription": "Legal information about German UDS Innovation GmbH, including contact details and company registration information.",
     "title": "Imprint",
     "companyInfo": "Company Information",
+    "companyInfoText": "German UDS Innovation GmbH\nInnovation Campus\nMarlene-Dietrich-Allee 14\n14482 Potsdam\nGermany",
     "contact": "Contact Information",
-    "phone": "Phone",
-    "email": "Email",
+    "phone": "+49 (0) 331 968 920 20",
+    "email": "contact@innovation.german-uds.de",
     "legalDetails": "Legal Details",
-    "management": "Management",
-    "registrationCourt": "Registration Court",
-    "registrationNumber": "Registration Number",
-    "vatId": "VAT ID",
+    "management": "Prof. Dr. Mike Friedrichsen & Prof. Dr. Christoph Meinel",
+    "registrationCourt": "Amtsgericht Potsdam",
+    "registrationNumber": "HRB 35458",
     "responsibility": "Responsibility for Content",
-    "responsibilityText": "The content of this website has been prepared with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the information provided. As a service provider, we are responsible for our own content on these pages in accordance with general laws. However, we are not obligated to monitor transferred or stored third-party information or to investigate circumstances that indicate illegal activity.",
+    "responsibilityText": "The content of this website has been prepared with the utmost care. However, we cannot guarantee the accuracy, completeness, or timeliness of the information provided. As a service provider, we are responsible for our own content on these pages in accordance with general laws (§ 7 Abs.1 TMG). However, according to §§ 8 to 10 TMG, we are not obligated to monitor third-party information transmitted or stored or to investigate circumstances that indicate unlawful activity.",
     "disputeResolution": "EU Dispute Resolution",
-    "disputeResolutionText": "The European Commission provides a platform for online dispute resolution (OS) which is available at https://ec.europa.eu/consumers/odr/. We are not obliged and not willing to participate in a dispute settlement procedure before a consumer arbitration board."
+    "disputeResolutionText": "The European Commission provides a platform for online dispute resolution (OS) at https://ec.europa.eu/consumers/odr/. We are neither obligated nor willing to participate in dispute resolution proceedings before a consumer arbitration board.",
+    "copyright": "All texts, images, and other content published on this website are protected by German copyright law. Reproduction, distribution, or public reproduction is only permitted with prior written consent.",
+    "externalLinksDisclaimer": "We are not responsible for the content of external websites linked to ours. At the time of linking, no illegal content was detected. Responsibility for the content of linked pages lies solely with their operators. If we become aware of any legal violations, we will remove such links immediately.",
+    "mediaCredits": "All images and media used on this site were created by our team and are fully licensed.",
+    "designCredits": "Design & Realization: German UDS Innovation Team"
   },
   "privacy": {
     "pageTitle": "Privacy Policy",
@@ -182,7 +186,7 @@
     },
     "dataController": {
       "title": "Controller and Contact Information",
-      "content": "German UDS Innovation GmbH\nMarlene-Dietrich-Allee 14,\n14482 Potsdam, Germany\nEmail: privacy@germanudsinnovation.com"
+      "content": "German UDS Innovation GmbH \nMarlene-Dietrich-Allee 14, \n14482 Potsdam, Germany \nEmail: privacy@germanudsinnovation.com"
     },
     "dataCollection": {
       "title": "What Data We Collect",
