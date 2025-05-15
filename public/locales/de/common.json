@@ -137,7 +137,7 @@
       "title": "Verbinden Sie sich mit uns",
       "email": {
         "title": "E-Mail",
-        "value": "kontakt@germanudsinnovation.com"
+        "value": "kontakt@innovation.german-uds.de"
       },
       "phone": {
         "title": "Telefon",
@@ -186,7 +186,7 @@
     },
     "dataController": {
       "title": "Verantwortliche Stelle und Kontaktinformationen",
-      "content": "German UDS Innovation GmbH \nMarlene-Dietrich-Allee 14 \n14482 Potsdam, Germany \nEmail: privacy@germanudsinnovation.com"
+      "content": "German UDS Innovation GmbH \nMarlene-Dietrich-Allee 14 \n14482 Potsdam, Germany \nEmail: privacy@innovation.german-uds.de"
     },
     "dataCollection": {
       "title": "Welche Daten wir erheben",
@@ -254,7 +254,7 @@
     "dataProtectionOfficer": {
       "title": "Datenschutzbeauftragter",
       "name": "Datenschutzbeauftragter",
-      "email": "privacy@germanudsinnovation.com"
+      "email": "privacy@innovation.german-uds.de"
     },
     "changes": {
       "title": "Änderungen dieser Datenschutzerklärung",

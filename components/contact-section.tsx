@@ -73,7 +73,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 
                 <a 
-                  href="mailto:contact@germanudsinnovation.com" 
+                  href="mailto:contact@innovation.german-uds.de" 
                   className="mt-6 w-full bg-orange-500 text-white py-3 rounded-br-md shadow-md hover:bg-orange-600 transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>{String(t('contact.connect.emailButton'))}</span>

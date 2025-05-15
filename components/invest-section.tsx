@@ -111,7 +111,7 @@ const InvestSection: React.FC = () => {
 
             <div className="mt-8 md:mt-12 text-center">
               <a
-                href="mailto:contact@germanudsinnovation.com"
+                href="mailto:contact@innovation.german-uds.de"
                 className="inline-flex items-center space-x-2 bg-orange-500 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-br-xl hover:bg-orange-600 transition-colors text-sm md:text-base"
               >
                 <span>{t('invest.contactButton')}</span>

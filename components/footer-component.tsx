@@ -117,7 +117,7 @@ const Footer: React.FC = () => {
               {String(t('footer.stayUpdated'))}
             </p>
             <a 
-              href="mailto:invest@germanudsinnovation.com" 
+              href="mailto:invest@innovation.german-uds.de" 
               className="block w-full bg-orange-500 text-white py-2 px-4 rounded-br-md hover:bg-orange-600 transition-colors text-center"
             >
               {String(t('footer.contactUs'))}
