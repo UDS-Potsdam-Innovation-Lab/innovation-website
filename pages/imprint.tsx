@@ -33,23 +33,23 @@ const Imprint: React.FC = () => {
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('imprint.companyInfo'))}</h2>
               <p><strong>German UDS Innovation GmbH</strong></p>
               <p>Innovation Campus</p>
-              <p>Musterstrasse 123</p>
-              <p>10115 Berlin</p>
+              <p>Marlene-Dietrich-Allee 14</p>
+              <p>14482 Potsdam</p>
               <p>Germany</p>
               
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('imprint.contact'))}</h2>
-              <p><strong>{String(t('imprint.phone'))}</strong>: +49 30 1234 5678</p>
-              <p><strong>{String(t('imprint.email'))}</strong>: contact@germanudsinnovation.com</p>
+              <p><strong>{String(t('imprint.phone'))}</strong>: +49 (0) 331 968 920 20</p>
+              <p><strong>{String(t('imprint.email'))}</strong>: contact@innovation.german-uds.de</p>
               
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('imprint.legalDetails'))}</h2>
               <p>
-                <strong>{String(t('imprint.management'))}</strong>: Dr. Max Mustermann, Dr. Erika Musterfrau
+                <strong>{String(t('imprint.management'))}</strong>: Prof. Dr. Mike Friedrichsen & Prof. Dr. Christoph Meinel
               </p>
               <p>
-                <strong>{String(t('imprint.registrationCourt'))}</strong>: Amtsgericht Berlin-Charlottenburg
+                <strong>{String(t('imprint.registrationCourt'))}</strong>: Amtsgericht Potsdam
               </p>
               <p>
-                <strong>{String(t('imprint.registrationNumber'))}</strong>: HRB 123456
+                <strong>{String(t('imprint.registrationNumber'))}</strong>: HRB 35458
               </p>
               <p>
                 <strong>{String(t('imprint.vatId'))}</strong>: DE123456789

@@ -79,7 +79,14 @@ const Privacy: React.FC = () => {
               
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('privacy.dataProtectionOfficer.title'))}</h2>
               <p>
-                {String(t('privacy.dataController.content'))}
+                {String(t('privacy.dataController.content'))
+                  .split('\n')
+                  .map((line, idx) => (
+                    <React.Fragment key={idx}>
+                      {line}
+                      <br />
+                    </React.Fragment>
+                  ))}
               </p>
               
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('privacy.changes.title'))}</h2>
