@@ -7,6 +7,7 @@ import Link from 'next/link';
 
 const Imprint: React.FC = () => {
   const { locale, t } = useLocale();
+  const isGerman = locale === 'de';
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -38,21 +39,18 @@ const Imprint: React.FC = () => {
               <p>Germany</p>
               
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('imprint.contact'))}</h2>
-              <p><strong>{String(t('imprint.phone'))}</strong>: +49 (0) 331 968 920 20</p>
-              <p><strong>{String(t('imprint.email'))}</strong>: contact@innovation.german-uds.de</p>
+              <p><strong>{isGerman ? 'Telefon' : 'Phone'}:</strong> {String(t('imprint.phone'))}</p>
+              <p><strong>{isGerman ? 'E-Mail' : 'Email'}:</strong> {String(t('imprint.email'))}</p>
               
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('imprint.legalDetails'))}</h2>
               <p>
-                <strong>{String(t('imprint.management'))}</strong>: Prof. Dr. Mike Friedrichsen & Prof. Dr. Christoph Meinel
+                <strong>{isGerman ? 'Geschäftsführung' : 'Management'}:</strong> {String(t('imprint.management'))}
               </p>
               <p>
-                <strong>{String(t('imprint.registrationCourt'))}</strong>: Amtsgericht Potsdam
+                <strong>{isGerman ? 'Registergericht' : 'Registration Court'}:</strong> {String(t('imprint.registrationCourt'))}
               </p>
               <p>
-                <strong>{String(t('imprint.registrationNumber'))}</strong>: HRB 35458
-              </p>
-              <p>
-                <strong>{String(t('imprint.vatId'))}</strong>: DE123456789
+                <strong>{isGerman ? 'Handelsregisternummer' : 'Registration Number'}:</strong> {String(t('imprint.registrationNumber'))}
               </p>
               
               <h2 className="text-xl font-semibold mt-6 mb-3">{String(t('imprint.responsibility'))}</h2>
