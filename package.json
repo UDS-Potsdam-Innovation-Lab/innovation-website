@@ -6,7 +6,7 @@
   "dev": "next dev",
   "prebuild": "mkdir -p public/images && cp -r images/* public/images/ || true",
   "create-locale-dirs": "node scripts/create-locale-directories.js",
-  "build": "npm run create-locale-dirs && next build && next export",
+  "build": "npm run create-locale-dirs && next build",
   "start": "next start",
   "lint": "next lint"
 }
