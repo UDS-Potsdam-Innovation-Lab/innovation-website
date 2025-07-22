@@ -6,119 +6,97 @@ const InvestSection: React.FC = () => {
   const { t } = useLocale();
 
   return (
-    <section id="invest" className="py-16 md:py-20 px-4 md:px-6">
-      <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
-            {t('invest.title')}
-          </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
-            {t('invest.subtitle')}
-          </h2>
-          <p className="text-gray-600 text-sm md:text-base">
-            {t('invest.description')}
-          </p>
+    <section id="invest" className="py-20 px-6 bg-white text-[#0a2342]">
+      <div className="max-w-6xl mx-auto space-y-16">
+        {/* Banner Image at Top */}
+        <div className="w-full">
+          <img
+            src="/images/invest-1.png"
+            alt="Investment Banner"
+            className="w-full max-h-[400px] object-cover rounded-2xl shadow-md"
+          />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          <div className="bg-white p-6 md:p-8 rounded-br-xl shadow-md hover:shadow-xl transition-shadow">
-            <div className="flex items-start mb-4 md:mb-6">
-              <div className="bg-orange-100 w-10 h-10 md:w-12 md:h-12 rounded-br-lg flex items-center justify-center text-orange-600 mr-3 md:mr-4">
-                <Building size={20} className="md:w-6 md:h-6" />
+        {/* Heading */}
+        <div className="text-center max-w-4xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+  {String(t('invest.headline.part1'))}{" "}
+  <span className="text-orange-500">{String(t('invest.headline.part2'))}</span>
+</h2>
+
+
+          <p className="text-gray-600 text-base">{String(t('invest.description'))}</p>
+        </div>
+
+        {/* Feature Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {/* Left Column */}
+          <div className="bg-orange-50 border border-orange-200 rounded-2xl shadow p-6 space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="bg-orange-100 w-12 h-12 rounded-xl flex items-center justify-center text-orange-600">
+                <Building size={24} />
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-orange-500 mb-1 md:mb-2">{t('invest.feature1.title')}</h3>
-                <p className="text-gray-600 text-sm md:text-base">{t('invest.feature1.description')}</p>
+                <h3 className="text-xl font-bold text-orange-500">{String(t('invest.feature1.title'))}</h3>
+                <p className="text-gray-700 text-base">{String(t('invest.feature1.description'))}</p>
               </div>
             </div>
-            <div className="flex items-start">
-              <div className="bg-orange-100 w-10 h-10 md:w-12 md:h-12 rounded-br-lg flex items-center justify-center text-orange-600 mr-3 md:mr-4">
-                <Globe size={20} className="md:w-6 md:h-6" />
+
+            <div className="flex items-start gap-4">
+              <div className="bg-orange-100 w-12 h-12 rounded-xl flex items-center justify-center text-orange-600">
+                <Globe size={24} />
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-orange-500 mb-1 md:mb-2">{t('invest.feature2.title')}</h3>
-                <p className="text-gray-600 text-sm md:text-base">{t('invest.feature2.description')}</p>
+                <h3 className="text-xl font-bold text-orange-500">{String(t('invest.feature2.title'))}</h3>
+                <p className="text-gray-700 text-base">{String(t('invest.feature2.description'))}</p>
               </div>
             </div>
           </div>
 
-          <div className="bg-white p-6 md:p-8 rounded-br-xl shadow-md hover:shadow-xl transition-shadow">
-            <div className="flex items-start mb-4 md:mb-6">
-              <div className="bg-orange-100 w-10 h-10 md:w-12 md:h-12 rounded-br-lg flex items-center justify-center text-orange-600 mr-3 md:mr-4">
-                <Users size={20} className="md:w-6 md:h-6" />
+          {/* Right Column */}
+          <div className="bg-orange-50 border border-orange-200 rounded-2xl shadow p-6 space-y-6">
+            <div className="flex items-start gap-4">
+              <div className="bg-orange-100 w-12 h-12 rounded-xl flex items-center justify-center text-orange-600">
+                <Users size={24} />
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-orange-500 mb-1 md:mb-2">{t('invest.feature3.title')}</h3>
-                <p className="text-gray-600 text-sm md:text-base">{t('invest.feature3.description')}</p>
+                <h3 className="text-xl font-bold text-orange-500">{String(t('invest.feature3.title'))}</h3>
+                <p className="text-gray-700 text-base">{String(t('invest.feature3.description'))}</p>
               </div>
             </div>
-            <div className="flex items-start">
-              <div className="bg-orange-100 w-10 h-10 md:w-12 md:h-12 rounded-br-lg flex items-center justify-center text-orange-600 mr-3 md:mr-4">
-                <BarChart4 size={20} className="md:w-6 md:h-6" />
+
+            <div className="flex items-start gap-4">
+              <div className="bg-orange-100 w-12 h-12 rounded-xl flex items-center justify-center text-orange-600">
+                <BarChart4 size={24} />
               </div>
               <div>
-                <h3 className="text-lg md:text-xl font-bold text-orange-500 mb-1 md:mb-2">{t('invest.feature4.title')}</h3>
-                <p className="text-gray-600 text-sm md:text-base">{t('invest.feature4.description')}</p>
+                <h3 className="text-xl font-bold text-orange-500">{String(t('invest.feature4.title'))}</h3>
+                <p className="text-gray-700 text-base">{String(t('invest.feature4.description'))}</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="mt-12 md:mt-16 max-w-4xl mx-auto">
-          <div className="bg-white p-6 md:p-8 rounded-br-xl shadow-lg growth-bg">
-            <h3 className="text-xl md:text-2xl font-bold text-center text-orange-500 mb-6 md:mb-8 relative z-10">{t('invest.opportunities.title')}</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 relative z-10">
-              <div className="bg-gray-50 p-4 md:p-6 rounded-br-xl" style={{
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-              }} onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.03)';
-                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-              }} onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}>
-                <div className="flex items-center mb-3 md:mb-4">
-                  <div className="bg-orange-100 w-8 h-8 md:w-10 md:h-10 rounded-br-lg flex items-center justify-center text-orange-600 mr-3">
-                    <Building size={16} className="md:w-5 md:h-5" />
-                  </div>
-                  <h4 className="text-base md:text-lg font-bold text-gray-900">{t('invest.opportunities.option1.title')}</h4>
-                </div>
-                <p className="text-gray-700 text-sm md:text-base">
-                  {t('invest.opportunities.option1.description')}
-                </p>
-              </div>
-
-              <div className="bg-gray-50 p-4 md:p-6 rounded-br-xl" style={{
-                transition: 'transform 0.3s ease, box-shadow 0.3s ease',
-              }} onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'scale(1.03)';
-                e.currentTarget.style.boxShadow = '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)';
-              }} onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'scale(1)';
-                e.currentTarget.style.boxShadow = 'none';
-              }}>
-                <div className="flex items-center mb-3 md:mb-4">
-                  <div className="bg-orange-100 w-8 h-8 md:w-10 md:h-10 rounded-br-lg flex items-center justify-center text-orange-600 mr-3">
-                    <Sparkles size={16} className="md:w-5 md:h-5" />
-                  </div>
-                  <h4 className="text-base md:text-lg font-bold text-gray-900">{t('invest.opportunities.option2.title')}</h4>
-                </div>
-                <p className="text-gray-700 text-sm md:text-base">
-                  {t('invest.opportunities.option2.description')}
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-8 md:mt-12 text-center">
-              <a
-                href="mailto:contact@innovation.german-uds.de"
-                className="inline-flex items-center space-x-2 bg-orange-500 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-br-xl hover:bg-orange-600 transition-colors text-sm md:text-base"
-              >
-                <span>{t('invest.contactButton')}</span>
-                <ChevronRight size={18} />
-              </a>
-            </div>
+        {/* Standalone Image Block */}
+        <div className="mt-12 flex justify-center">
+          <div className="max-w-xl w-full bg-white border border-gray-200 rounded-2xl shadow-md overflow-hidden">
+            <img
+              src="/invest-2.png"
+              alt="Investment Insights"
+              className="w-full object-cover rounded-t-2xl"
+            />
           </div>
+        </div>
+
+        {/* Contact Button */}
+        <div className="text-center mt-12">
+          <a
+            href="mailto:contact@innovation.german-uds.de"
+            className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-xl hover:bg-orange-600 transition-colors text-base font-medium"
+          >
+            {String(t('invest.contactButton'))}
+            <ChevronRight size={18} />
+          </a>
         </div>
       </div>
     </section>

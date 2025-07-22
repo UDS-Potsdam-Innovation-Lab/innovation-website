@@ -1,79 +1,110 @@
 import React from 'react';
 import { Building, Globe, Award } from 'lucide-react';
-import EnhancedImage from './enhanced-image';
 import { useLocale } from '../contexts/LocaleContext';
 
 const PortfolioSection: React.FC = () => {
   const { t } = useLocale();
 
   return (
-    <section id="portfolio" className="py-16 md:py-20 px-4 md:px-6 bg-gray-50">
-      <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
-            {t('portfolio.title')}
-          </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6">
-            {t('portfolio.subtitle')}
+    <section id="portfolio" className="py-20 px-6 bg-white text-[#0a2342]">
+      <div className="max-w-6xl mx-auto space-y-16">
+        {/* Heading */}
+        <div className="text-center max-w-4xl mx-auto">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-center">
+            {t('portfolio.headline.part1')}{" "}
+            <span className="text-orange-500">{t('portfolio.headline.part2')}</span>
           </h2>
-          <p className="text-gray-600 text-sm md:text-base">
-            {t('portfolio.description')}
+          <p className="text-gray-600 text-base">
+            {String(t('portfolio.description'))}
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          <div className="bg-white p-6 md:p-8 rounded-br-xl shadow-md hover:shadow-xl transition-shadow">
-            <div className="bg-orange-100 w-10 h-10 md:w-12 md:h-12 rounded-br-lg flex items-center justify-center text-orange-600 mb-4 md:mb-6">
-              <Building size={20} className="md:w-6 md:h-6" />
+        {/* Investment Cards */}
+        <div className="grid md:grid-cols-3 gap-6 text-center">
+          {[{
+            icon: <Building size={24} />,
+            title: t('portfolio.service.title'),
+            desc: t('portfolio.service.description'),
+            color: 'orange',
+          }, {
+            icon: <Globe size={24} />,
+            title: t('portfolio.cloudhouse.title'),
+            desc: t('portfolio.cloudhouse.description'),
+            color: 'orange',
+          }, {
+            icon: <Award size={24} />,
+            title: t('portfolio.university.title'),
+            desc: t('portfolio.university.description'),
+            color: 'blue',
+          }].map((item, i) => (
+            <div
+              key={i}
+              className={`rounded-2xl shadow-md border border-${item.color}-300 bg-${item.color}-50 p-6 space-y-4`}
+            >
+              <div className={`flex justify-center text-${item.color}-500 mb-2`}>{item.icon}</div>
+              <h3 className={`text-lg font-bold text-${item.color}-500`}>{String(item.title)}</h3>
+              <p className="text-sm text-gray-700">{String(item.desc)}</p>
             </div>
-            <h3 className="text-lg md:text-xl font-bold text-orange-500 mb-2 md:mb-3">{t('portfolio.service.title')}</h3>
-            <p className="text-gray-600 text-sm md:text-base">
-              {t('portfolio.service.description')}
-            </p>
-          </div>
-
-          <div className="bg-white p-6 md:p-8 rounded-br-xl shadow-md hover:shadow-xl transition-shadow">
-            <div className="bg-orange-100 w-10 h-10 md:w-12 md:h-12 rounded-br-lg flex items-center justify-center text-orange-600 mb-4 md:mb-6">
-              <Globe size={20} className="md:w-6 md:h-6" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold text-orange-500 mb-2 md:mb-3">{t('portfolio.cloudhouse.title')}</h3>
-            <p className="text-gray-600 text-sm md:text-base">
-              {t('portfolio.cloudhouse.description')}
-            </p>
-          </div>
-
-          <div className="bg-white p-6 md:p-8 rounded-br-xl shadow-md hover:shadow-xl transition-shadow">
-            <div className="bg-orange-100 w-10 h-10 md:w-12 md:h-12 rounded-br-lg flex items-center justify-center text-orange-600 mb-4 md:mb-6">
-              <Award size={20} className="md:w-6 md:h-6" />
-            </div>
-            <h3 className="text-lg md:text-xl font-bold text-orange-500 mb-2 md:mb-3">{t('portfolio.university.title')}</h3>
-            <p className="text-gray-600 text-sm md:text-base">
-              {t('portfolio.university.description')}
-            </p>
-          </div>
+          ))}
         </div>
 
-        {/* New images below the main portfolio grid */}
-        <div className="flex flex-col gap-6 md:gap-8 mt-12 md:mt-16">
+        {/* Visual Structure */}
+        <div className="space-y-10 relative">
+          {/* Top Entity */}
           <div className="flex justify-center">
-            <EnhancedImage
-              src="/images/financial-support-commercial/investment_portfolio.png"
-              alt="Investment Portfolio"
-              width={500}
-              height={400}
-              className="rounded-xl shadow-md w-full max-w-[500px]"
-              sizes="(max-width: 768px) 100vw, 500px"
-            />
+            <div className="rounded-2xl shadow-md border border-orange-300 bg-orange-50 p-6 w-full max-w-md text-center">
+              <h3 className="text-lg font-bold text-orange-500 mb-2">
+                {t('portfolio.structure.innovation')}
+              </h3>
+            </div>
           </div>
+
+          {/* Arrow */}
           <div className="flex justify-center">
-            <EnhancedImage
-              src="/images/financial-support-commercial/usp.png"
-              alt="USP Vertical Structure"
-              width={500}
-              height={400}
-              className="rounded-xl shadow-md w-full max-w-[500px]"
-              sizes="(max-width: 768px) 100vw, 500px"
-            />
+            <div className="w-1 h-6 border-l-2 border-orange-400"></div>
+          </div>
+
+          {/* Subsidiaries Row */}
+          <div className="flex flex-col md:flex-row gap-6 justify-center items-start">
+            {/* Cloudhouse */}
+            <div className="rounded-2xl shadow-md border border-orange-300 bg-orange-50 p-6 w-full max-w-sm min-h-[160px] flex flex-col justify-center text-center">
+              <h3 className="text-lg font-bold text-orange-500 min-h-[48px] flex items-center justify-center">
+                {t('portfolio.structure.cloudhouse.name')}
+              </h3>
+              <p className="text-sm text-gray-700">
+                {t('portfolio.structure.cloudhouse.ownership')}
+              </p>
+            </div>
+
+            {/* Service */}
+            <div className="rounded-2xl shadow-md border border-orange-300 bg-orange-50 p-6 w-full max-w-sm min-h-[160px] flex flex-col justify-center text-center">
+              <h3 className="text-lg font-bold text-orange-500 min-h-[48px] flex items-center justify-center">
+                {t('portfolio.structure.service.name')}
+              </h3>
+              <p className="text-sm text-gray-700">
+                {t('portfolio.structure.service.ownership')}
+              </p>
+            </div>
+
+            {/* AI Research Institute GmbH */}
+            <div className="rounded-2xl shadow-md border border-orange-300 bg-orange-50 p-6 w-full max-w-sm min-h-[160px] flex flex-col justify-center text-center">
+              <h3 className="text-lg font-bold text-orange-500 min-h-[48px] flex items-center justify-center">
+                {t('portfolio.structure.ai.name')}
+              </h3>
+              <p className="text-sm text-gray-700">
+                {t('portfolio.structure.ai.ownership')}
+              </p>
+            </div>
+
+            {/* University */}
+            <div className="rounded-2xl shadow-md border border-blue-300 bg-blue-50 p-6 w-full max-w-sm min-h-[160px] flex flex-col justify-center text-center">
+              <h3 className="text-lg font-bold text-blue-500 min-h-[48px] flex items-center justify-center">
+                {t('portfolio.structure.university.name')}
+              </h3>
+              <p className="text-sm text-gray-700">
+                {t('portfolio.structure.university.ownership')}
+              </p>
+            </div>
           </div>
         </div>
       </div>

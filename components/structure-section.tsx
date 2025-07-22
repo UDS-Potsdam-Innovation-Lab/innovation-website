@@ -1,23 +1,36 @@
 import React from 'react';
 import Image from 'next/image';
-import { ChevronDown, Users, Building2 } from 'lucide-react';
+import { Users } from 'lucide-react';
 import { useLocale } from '../contexts/LocaleContext';
+
+type Professor = {
+  name: string;
+  img: string;
+  link: string;
+};
+
+type Department = {
+  department: string;
+  professors: Professor[];
+};
 
 const StructureSection: React.FC = () => {
   const { t } = useLocale();
 
   const getDepartmentKey = (department: string) => {
-    if (department === "Digital Entrepreneurship College") return "entrepreneurship";
-    if (department === "Digital Education and Internet Technologies") return "education";
-    if (department === "Virtual Education and Digital Reality") return "virtual";
-    if (department === "Multimodal Learning Technologies") return "multimodal";
-    if (department === "Artificial Intelligence") return "ai";
-    if (department === "Cybersecurity") return "security";
-    if (department === "Digital Management and Work") return "management";
-    return "";
+    const map: Record<string, string> = {
+      "Digital Entrepreneurship College": "entrepreneurship",
+      "Digital Education and Internet Technologies": "education",
+      "Virtual Education and Digital Reality": "virtual",
+      "Multimodal Learning Technologies": "multimodal",
+      "Artificial Intelligence": "ai",
+      "Cybersecurity": "security",
+      "Digital Management and Work": "management"
+    };
+    return map[department] || "";
   };
 
-  const departments = [
+  const departments: Department[] = [
     {
       department: "Digital Entrepreneurship College",
       professors: [
@@ -26,21 +39,6 @@ const StructureSection: React.FC = () => {
           img: "/images/financial-support-commercial/marco_bade.jpeg",
           link: "https://german-uds.de/marco_bade"
         }
-      ]
-    },
-    {
-      department: "Digital Education and Internet Technologies",
-      professors: [
-        {
-          name: "Prof. Dr. Christoph Meinel",
-          img: "/images/financial-support-commercial/meinel.jpeg",
-          link: "https://german-uds.de/christoph_meinel"
-        },
-        {
-          name: "Prof. Dr. Thomas Staubitz",
-          img: "/images/financial-support-commercial/tom.webp",
-          link: "https://german-uds.de/thomas_staubitz"
-        },
       ]
     },
     {
@@ -64,21 +62,6 @@ const StructureSection: React.FC = () => {
       ]
     },
     {
-      department: "Artificial Intelligence",
-      professors: [
-        {
-          name: "Prof. Dr. Feiyu Xu",
-          img: "/images/financial-support-commercial/Feiyu_Xu.webp",
-          link: "https://german-uds.de/feiyu_xu"
-        },
-        {
-          name: "Prof. Dr. Felix Weitkämper",
-          img: "/images/financial-support-commercial/Felix.jpeg",
-          link: "https://german-uds.de/felix_weitkaemper"
-        }
-      ]
-    },
-    {
       department: "Cybersecurity",
       professors: [
         {
@@ -97,89 +80,128 @@ const StructureSection: React.FC = () => {
           link: "https://german-uds.de/georg_loscher"
         }
       ]
+    },
+    {
+      department: "Digital Education and Internet Technologies",
+      professors: [
+        {
+          name: "Prof. Dr. Christoph Meinel",
+          img: "/images/financial-support-commercial/meinel.jpeg",
+          link: "https://german-uds.de/christoph_meinel"
+        },
+        {
+          name: "Prof. Dr. Thomas Staubitz",
+          img: "/images/financial-support-commercial/tom.webp",
+          link: "https://german-uds.de/thomas_staubitz"
+        }
+      ]
+    },
+    {
+      department: "Artificial Intelligence",
+      professors: [
+        {
+          name: "Prof. Dr. Feiyu Xu",
+          img: "/images/financial-support-commercial/Feiyu_Xu.webp",
+          link: "https://german-uds.de/feiyu_xu"
+        },
+        {
+          name: "Prof. Dr. Felix Weitkämper",
+          img: "/images/financial-support-commercial/Felix.jpeg",
+          link: "https://german-uds.de/felix_weitkaemper"
+        }
+      ]
     }
   ];
+
+  const singleProfDepartments = departments.filter(d => d.professors.length === 1);
+  const multiProfDepartments = departments.filter(d => d.professors.length > 1);
 
   return (
     <section id="structure" className="py-20 px-6 bg-gradient-to-b from-white to-blue-50">
       <div className="container mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-block px-4 py-1 bg-orange-100 text-orange-500 rounded-br-xl text-sm font-medium mb-4">
-            {String(t('structure.title'))}
-          </div>
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-            {String(t('structure.subtitle'))}
+        {/* Header */}
+        <div className="text-center max-w-3xl mx-auto mb-10">
+          <h2 className="text-3xl lg:text-4xl font-bold mb-2">
+            {t("structure.title.part1")}{" "}
+            <span className="text-orange-500">{t("structure.title.part2")}</span>
           </h2>
-          <p className="text-gray-700 text-lg">
+          <div className="inline-block mt-4 bg-orange-100 text-orange-500 px-4 py-2 rounded-full text-sm font-medium shadow-sm">
+            {t("structure.subtitle")}
+          </div>
+
+          <p className="text-gray-700 text-lg mt-6 mb-6">
             {String(t('structure.description'))}
           </p>
+          <div className="w-20 h-1 bg-orange-500 mx-auto mb-12 rounded-full" />
         </div>
 
-        {/* Main Structure */}
-        <div className="max-w-6xl mx-auto relative">
-          {/* Root Node */}
-          <div className="flex justify-center mb-16">
-            <div className="bg-blue-600 text-white px-8 py-4 rounded-xl shadow-lg flex items-center space-x-3 relative z-10">
-              <Building2 size={24} />
-              <span className="text-xl font-bold">{String(t('structure.departments.title'))}</span>
-            </div>
+        {/* Root Node */}
+        <div className="flex justify-center mb-16">
+          <div className="border border-[#0a2342] text-[#0a2342] px-8 py-4 rounded-xl shadow-sm flex items-center space-x-3">
+            <Image
+              src="/images/favicon.png"
+              alt="German UDS Logo"
+              width={24}
+              height={24}
+            />
+            <span className="text-xl font-bold">German University of Digital Science</span>
           </div>
+        </div>
 
-          {/* Connecting Lines */}
-          <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
-            <svg className="w-full h-full" style={{ minHeight: '800px' }}>
-              <defs>
-                <marker
-                  id="arrowhead"
-                  markerWidth="10"
-                  markerHeight="7"
-                  refX="9"
-                  refY="3.5"
-                  orient="auto"
-                >
-                  <polygon points="0 0, 10 3.5, 0 7" fill="#3B82F6" />
-                </marker>
-              </defs>
-              {/* Lines will be added dynamically */}
-            </svg>
-          </div>
+        {/* First Row: 3 single-professor departments */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
+          {singleProfDepartments.slice(0, 3).map((dept) => {
+            const departmentKey = getDepartmentKey(dept.department);
+            const translationKey = departmentKey ? `structure.departments.${departmentKey}` : '';
 
-          {/* Departments Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
-            {departments.map((dept, index) => {
-              const departmentKey = getDepartmentKey(dept.department);
-              const translationKey = departmentKey ? `structure.departments.${departmentKey}` : '';
+            return (
+              <DepartmentCard key={dept.department} dept={dept} translationKey={translationKey} />
+            );
+          })}
+        </div>
 
-              return (
-                <div
-                  key={dept.department}
-                  className="bg-white rounded-xl shadow-lg p-6 transform transition-all duration-300 hover:scale-105 hover:shadow-xl relative"
-                  style={{
-                    marginTop: '2rem',
-                    borderTop: '3px solid #3B82F6',
-                  }}
-                >
-                  {/* Department Header */}
-                  <div className="flex items-center space-x-3 mb-4">
-                    <div className="bg-blue-100 p-2 rounded-lg">
-                      <Users className="text-blue-600" size={20} />
-                    </div>
-                    <h3 className="text-lg font-semibold text-gray-800">
-                      {translationKey ? String(t(translationKey)) : dept.department}
-                    </h3>
+        {/* Second Row: 2 single-professor departments */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
+          {singleProfDepartments.slice(3).map((dept) => {
+            const departmentKey = getDepartmentKey(dept.department);
+            const translationKey = departmentKey ? `structure.departments.${departmentKey}` : '';
+
+            return (
+              <DepartmentCard key={dept.department} dept={dept} translationKey={translationKey} />
+            );
+          })}
+        </div>
+
+        {/* Third Row: 2 multi-professor departments */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          {multiProfDepartments.map((dept) => {
+            const departmentKey = getDepartmentKey(dept.department);
+            const translationKey = departmentKey ? `structure.departments.${departmentKey}` : '';
+
+            return (
+              <div
+                key={dept.department}
+                className="bg-white border border-gray-200 rounded-xl shadow-md p-6 flex flex-col justify-between h-full transition-all duration-300 hover:shadow-lg"
+              >
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="bg-blue-100 p-2 rounded-lg">
+                    <Users className="text-blue-600" size={20} />
                   </div>
+                  <h3 className="text-lg font-semibold text-gray-800">
+                    {translationKey ? String(t(translationKey)) : dept.department}
+                  </h3>
+                </div>
 
-                {/* Professors */}
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {dept.professors.map((prof) => (
                     <a
                       key={prof.name}
                       href={prof.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center space-x-3 p-2 rounded-lg hover:bg-blue-50 transition-colors"
+                      className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-md transition"
                     >
-                      <div className="relative w-12 h-12">
+                      <div className="relative w-20 h-20">
                         <Image
                           src={prof.img}
                           alt={prof.name}
@@ -187,27 +209,63 @@ const StructureSection: React.FC = () => {
                           className="rounded-full object-cover"
                         />
                       </div>
-                      <div>
-                        <p className="text-sm font-medium text-gray-900">{prof.name}</p>
-                      </div>
+                      <p className="text-sm font-medium text-gray-900">{prof.name}</p>
                     </a>
                   ))}
                 </div>
-
-                  {/* Connection Indicator */}
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
-                      <ChevronDown className="text-white" size={16} />
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 };
+
+// Reusable Card Component
+const DepartmentCard = ({
+  dept,
+  translationKey,
+}: {
+  dept: Department;
+  translationKey: string;
+}) => (
+  <div
+    className="bg-white border border-gray-200 rounded-xl shadow-md p-6 flex flex-col justify-between h-full transition-all duration-300 hover:shadow-lg"
+  >
+    <div className="flex items-center space-x-3 mb-4">
+      <div className="bg-blue-100 p-2 rounded-lg">
+        <Users className="text-blue-600" size={20} />
+      </div>
+      <h3 className="text-lg font-semibold text-gray-800">
+        {translationKey ? String(useLocale().t(translationKey)) : dept.department}
+      </h3>
+    </div>
+
+    <div className="flex-1 flex items-center">
+      <div className="w-full">
+        {dept.professors.map((prof) => (
+          <a
+            key={prof.name}
+            href={prof.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-md transition"
+          >
+            <div className="relative w-20 h-20">
+              <Image
+                src={prof.img}
+                alt={prof.name}
+                fill
+                className="rounded-full object-cover"
+              />
+            </div>
+            <p className="text-sm font-medium text-gray-900">{prof.name}</p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </div>
+);
 
 export default StructureSection;

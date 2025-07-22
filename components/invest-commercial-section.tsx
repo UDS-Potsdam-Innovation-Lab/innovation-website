@@ -1,65 +1,93 @@
 import React from "react";
 import EnhancedImage from "./enhanced-image";
-import { useLocale } from '../contexts/LocaleContext';
-import { getLocalizedImagePath } from '../utils/localization';
+import { useLocale } from "../contexts/LocaleContext";
 
 const InvestCommercialSection: React.FC = () => {
-  const { locale, t } = useLocale();
-  
+  const { t } = useLocale();
+
   return (
-    <section className="px-6 py-16 md:px-16 lg:px-24 bg-gray-50 text-gray-900 space-y-20">
-      {/* Investment Portfolio */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 className="text-3xl font-bold mb-4">{t('investCommercial.title')}</h2>
-          <p className="mb-2">{t('investCommercial.company')}</p>
-          <ul className="list-disc list-inside space-y-2">
-            <li>{t('investCommercial.stakeholders.service')}</li>
-            <li>{t('investCommercial.stakeholders.cloudhouse')}</li>
-            <li>{t('investCommercial.stakeholders.university')}</li>
-          </ul>
+    <section className="bg-white py-20 px-6 md:px-16 text-[#0a2342]">
+      <div className="max-w-7xl mx-auto space-y-24">
+        {/* Title Block */}
+        <div className="text-center">
+          <h2 className="text-4xl font-bold mb-4">
+            <span className="text-orange-500">{String(t('investCommercial.title'))}</span>
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            {String(t('investCommercial.company'))}
+          </p>
         </div>
-        <div className="flex justify-center">
-          <EnhancedImage
-            src="/images/financial-support-commercial/investment_portfolio.png"
-            alt="Investment Portfolio"
-            width={500}
-            height={400}
-            className="rounded-xl shadow-md"
-          />
-        </div>
-      </div>
 
-      {/* USP Section */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 className="text-3xl font-bold mb-4">{t('investCommercial.uspTitle')}</h2>
-          <p>{t('investCommercial.uspDescription')}</p>
+        {/* Investment Portfolio Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-orange-50 border border-orange-200 p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-bold text-orange-500 mb-2">
+              German UDS Service GmbH
+            </h3>
+            <p className="text-gray-700">
+              {String(t('investCommercial.stakeholders.service'))}
+            </p>
+          </div>
+          <div className="bg-orange-50 border border-orange-200 p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-bold text-orange-500 mb-2">FB Cloudhouse GmbH</h3>
+            <p className="text-gray-700">
+              {String(t('investCommercial.stakeholders.cloudhouse'))}
+            </p>
+          </div>
+          <div className="bg-orange-50 border border-orange-200 p-6 rounded-2xl shadow hover:shadow-lg transition">
+            <h3 className="text-xl font-bold text-orange-500 mb-2">
+              German UDS gGmbH
+            </h3>
+            <p className="text-gray-700">
+              {String(t('investCommercial.stakeholders.university'))}
+            </p>
+          </div>
         </div>
-        <div className="flex justify-center">
-          <EnhancedImage
-            src="/images/financial-support-commercial/usp.png"
-            alt="USP Vertical Structure"
-            width={500}
-            height={400}
-            className="rounded-xl shadow-md"
-          />
-        </div>
-      </div>
 
-      {/* Key People */}
-      <div>
-        <h2 className="text-3xl font-bold mb-6">{t('investCommercial.keyPeopleTitle')}</h2>
-        <p className="mb-4">{t('investCommercial.keyPeopleDescription')}</p>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <EnhancedImage src="/images/financial-support-commercial/mike.webp" alt="Prof. Dr. Mike Friedrichsen" width={200} height={200} className="rounded-full shadow" />
-          <EnhancedImage src="/images/financial-support-commercial/tom.webp" alt="Prof. Dr. Thomas Staubitz" width={200} height={200} className="rounded-full shadow" />
-          <EnhancedImage src="/images/financial-support-commercial/DiMitri.webp" alt="Prof. Dr. Daniele Di Mitri" width={200} height={200} className="rounded-full shadow" />
-          <EnhancedImage src="/images/financial-support-commercial/Feiyu_Xu.webp" alt="Prof. Dr. Feiyu Xu" width={200} height={200} className="rounded-full shadow" />
-          <EnhancedImage src="/images/financial-support-commercial/Felix.jpeg" alt="Prof. Dr. Felix Weitkämper" width={200} height={200} className="rounded-full shadow" />
-          <EnhancedImage src="/images/financial-support-commercial/TimStuchtey.webp" alt="Prof. Dr. Tim Stuchtey" width={200} height={200} className="rounded-full shadow" />
-          <EnhancedImage src="/images/financial-support-commercial/Georg.webp" alt="Prof. Dr. Georg Loscher" width={200} height={200} className="rounded-full shadow" />
-          <EnhancedImage src="/images/financial-support-commercial/marco_bade.jpeg" alt="Prof. Dr. Marco Bade" width={200} height={200} className="rounded-full shadow" />
+        {/* Divider */}
+        <div className="border-t border-dashed border-orange-300 my-12"></div>
+
+        {/* USP Visual & Text Block */}
+        <div className="grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <EnhancedImage
+              src="/images/financial-support-commercial/investment_portfolio.png"
+              alt="Investment Portfolio"
+              width={600}
+              height={400}
+              className="rounded-2xl shadow-md w-full"
+            />
+          </div>
+          <div>
+            <h3 className="text-3xl font-bold text-orange-500 mb-4">
+              {String(t('investCommercial.uspTitle'))}
+            </h3>
+            <p className="text-gray-700 text-base">
+              {String(t('investCommercial.uspDescription'))}
+            </p>
+          </div>
+        </div>
+
+        {/* Key People Grid */}
+        <div className="text-center space-y-6">
+          <h3 className="text-3xl font-bold text-orange-500">
+            {String(t('investCommercial.keyPeopleTitle'))}
+          </h3>
+          <p className="text-gray-600 max-w-3xl mx-auto">
+            {String(t('investCommercial.keyPeopleDescription'))}
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+            {["mike", "tom", "DiMitri", "Feiyu_Xu", "Felix", "TimStuchtey", "Georg", "marco_bade"].map((person, idx) => (
+              <EnhancedImage
+                key={idx}
+                src={`/images/financial-support-commercial/${person}.webp`}
+                alt={person}
+                width={200}
+                height={200}
+                className="rounded-full shadow hover:scale-105 transition-transform"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
