@@ -49,24 +49,12 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
-        
-      - name: Ensure images are in public directory
-        run: |
-          mkdir -p public/images
-          cp -r images/* public/images/ || true
-          echo "Images copied to public directory"
-          
-      - name: Build with Next.js
+
+      - name: Build and export static site
         run: pnpm run build
         env:
           NEXT_PUBLIC_SITE_URL: https://innovation.german-uds.de
-        
-      - name: Copy images to output directory
-        run: |
-          # Make sure images are properly included in the output
-          mkdir -p ./out/images
-          cp -r ./public/images/* ./out/images/
-          
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
