@@ -7,13 +7,17 @@
     "invest": "Invest",
     "investCommercial": "Commercial Investment",
     "investNonprofit": "Nonprofit Investment",
-    "aboutUniversity": "About UDS",
+    "aboutUniversity": "About German UDS",
     "language": "Language",
     "investmentOpportunities": "Investment Opportunities"
   },
   "invest": {
-    "title": "Investment Opportunities",
-    "subtitle": "Investor Value Proposition",
+  "headline": {
+    "part1": "Investment",
+    "part2": "Opportunities"
+  },
+  "title": "Investment Opportunities",
+  "subtitle": "Investor Value Proposition",
     "description": "Join us in shaping the digital future through strategic investments in innovation.",
     "feature1": {
       "title": "Digital University Investment",
@@ -45,14 +49,20 @@
     "contactButton": "Contact Our Investment Team"
   },
   "heroSection": {
-    "title": "German UDS Innovation GmbH: Digital Innovation Ecosystem",
-    "subtitle": "Our integrated ecosystem connects academic excellence with entrepreneurial practice through strategic investments and services.",
-    "exploreButton": "Explore Investment Options",
-    "learnMoreButton": "Learn More",
-    "nextGeneration": "Next-Generation Learning",
-    "withoutBorders": "Without Borders",
-    "quote": "Transforming university research into marketable digital products and business models through our vertical participation structure."
-  },
+  "title": "German UDS Innovation GmbH: Digital Innovation Ecosystem",
+  "subtitle": "Our integrated ecosystem connects academic excellence with entrepreneurial practice through strategic investments and services.",
+  "exploreButton": "Explore Investment Options",
+  "learnMoreButton": "Learn More",
+  "nextGeneration": "Next-Generation Learning",
+  "withoutBorders": "Without Borders",
+  "quote": "Transforming university research into marketable digital products and business models through our vertical participation structure.",
+  "footer": {
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy"
+  }
+}
+,
   "investCommercial": {
     "title": "Our Investment Portfolio",
     "company": "German UDS Innovation GmbH",
@@ -86,41 +96,45 @@
     "imprint": "Imprint"
   },
   "business": {
-    "title": "Business Model",
-    "subtitle": "Our Approach",
-    "description": "Our core business combines strategic investments with consulting services and innovation utilization.",
-    "card1": {
-      "title": "1. Investments",
-      "description": "Strategic development of companies in collaboration with the German University of Digital Science"
-    },
-    "card2": {
-      "title": "2. Consulting and Services",
-      "description": "IT, Marketing, Sales, Personnel and Project Development"
-    },
-    "card3": {
-      "title": "3. Innovation",
-      "description": "Research to market transfer, Open source"
-    },
-    "card4": {
-      "title": "4. Planned Vertical Shareholding",
-      "description": "Professor and Research Center involvement structure"
-    },
-    "financialStrategy": {
-      "title": "Financial Strategy",
-      "point1": {
-        "title": "Investment Requirements",
-        "description": "Initial phase: Build administrative infrastructure. Further development: Finance new investments and verticals."
-      },
-      "point2": {
-        "title": "Income Sources",
-        "description": "Dividends from investments. Consulting fees. Government grants for innovation projects."
-      },
-      "point3": {
-        "title": "Risk Management",
-        "description": "Diversified portfolio across technology sectors. Transparent reporting to investors."
-      }
-    }
+  "title": {
+    "part1": "Business",
+    "part2": "Model"
   },
+  "subtitle": "Our Approach",
+  "description": "Our core business combines strategic investments with consulting services and innovation utilization.",
+  "card1": {
+    "title": "1. Investments",
+    "description": "Strategic development of companies in collaboration with the German University of Digital Science"
+  },
+  "card2": {
+    "title": "2. Consulting and Services",
+    "description": "IT, Marketing, Sales, Personnel and Project Development"
+  },
+  "card3": {
+    "title": "3. Innovation",
+    "description": "Research to market transfer, Open source"
+  },
+  "card4": {
+    "title": "4. Planned Vertical Shareholding",
+    "description": "Professor and Research Center involvement structure"
+  },
+  "financialStrategy": {
+    "title": "Financial Strategy",
+    "point1": {
+      "title": "Investment Requirements",
+      "description": "Initial phase: Build administrative infrastructure. Further development: Finance new investments and verticals."
+    },
+    "point2": {
+      "title": "Income Sources",
+      "description": "Dividends from investments. Consulting fees. Government grants for innovation projects."
+    },
+    "point3": {
+      "title": "Risk Management",
+      "description": "Diversified portfolio across technology sectors. Transparent reporting to investors."
+    }
+  }
+}
+,
   "contact": {
     "title": "Interested in Investing?",
     "subtitle": "Get In Touch",
@@ -262,38 +276,95 @@
     }
   },
   "ecosystem": {
-    "title": "Our Digital Innovation Ecosystem",
-    "subtitle": "Integrated Structure",
-    "description": "Our unique vertical participation model connects research, education, and business.",
-    "purpose": {
-      "title": "Purpose",
-      "description": "As a catalyst, German UDS Innovation GmbH promotes sustainable technology transfer between science and industry and achieves attractive returns on investment. Our integrated ecosystem connects academic excellence with entrepreneurial practice."
+  "title": {
+    "part1": "Our",
+    "part2": "Digital Innovation Ecosystem"
+  },
+  "purpose": {
+    "title": "Purpose",
+    "description": "As a catalyst, German UDS Innovation GmbH promotes sustainable technology transfer between science and industry and achieves attractive returns on investment. Our ecosystem connects academic excellence with entrepreneurial practice."
+  },
+  "vision": {
+    "title": "Vision",
+    "description": "Establish a successful investment company in digital innovations. Act as a catalyst for technology transfer between science and industry."
+  },
+  "org1": {
+    "entity1": {
+      "name": "German UDS Innovation GmbH",
+      "detail": "CEOs: Prof. Dr. Mike Friedrichsen, Prof. Dr. Christoph Meinel"
     },
-    "vision": {
-      "title": "Vision",
-      "description": "Establish a successful investment company in digital innovations. Act as a catalyst for technology transfer between science and industry."
+    "entity2": {
+      "name": "German UDS Service GmbH",
+      "detail": "CEO: Prof. Dr. Mike Friedrichsen"
+    },
+    "entity3": {
+      "name": "FB CloudHouse GmbH",
+      "detail": "CEOs: Prof. Dr. Mike Friedrichsen, Syster Friedrichsen"
     }
   },
-  "portfolio": {
-    "title": "Our Portfolio",
-    "subtitle": "Strategic Investments",
-    "description": "Our diverse portfolio of investments reflects our commitment to innovation and growth in the digital education sector.",
-    "service": {
-      "title": "German UDS Service GmbH",
-      "description": "100% stake responsible for the IT infrastructure - both for the university and for external business partners."
+  "org2": {
+    "entity1": {
+      "name": "German UDS Foundation",
+      "detail": "Chairman: Prof. Dr. Mike Friedrichsen"
     },
-    "cloudhouse": {
-      "title": "FB Cloudhouse GmbH",
-      "description": "20% stake in FB Cloudhouse GmbH handling administrative tasks and rental of space for the university and third parties."
-    },
-    "university": {
-      "title": "German UDS gGmbH",
-      "description": "20% participation in German UDS gGmbH (guarantee of creative involvement in the German University of Digital Science)"
+    "entity2": {
+      "name": "German UDS gGmbH",
+      "detail": "CEOs: Prof. Dr. Mike Friedrichsen, Prof. Dr. Christoph Meinel"
     }
+  },
+  "finalBox": {
+    "name": "German UDS",
+    "sub": "(German University of Digital Science)",
+    "presidents": "Presidents:",
+    "names": "Prof. Dr. Mike Friedrichsen, Prof. Dr. Christoph Meinel"
+  }
+}
+,
+  "portfolio": {
+  "headline": {
+    "part1": "Strategic",
+    "part2": "Investments"
+  },
+  "description": "Strategic investments across key digital sectors within our portfolio.",
+  "service": {
+    "title": "German UDS Service GmbH",
+    "description": "Comprehensive services for digital transformation."
+  },
+  "cloudhouse": {
+    "title": "FB CloudHouse GmbH",
+    "description": "Cloud infrastructure and virtual platform solutions."
+  },
+  "university": {
+    "title": "German University of Digital Science",
+    "description": "Pioneering academic partner driving innovation and research."
   },
   "structure": {
-    "title": "Our Unique Approach",
-    "subtitle": "Vertical Participation Structure",
+    "innovation": "German UDS Innovation GmbH",
+    "cloudhouse": {
+      "name": "FB Cloudhouse GmbH",
+      "ownership": "Ownership: 20%"
+    },
+    "service": {
+      "name": "German UDS Service GmbH",
+      "ownership": "Ownership: 100%"
+    },
+    "ai": {
+      "name": "AI Research Institute GmbH",
+      "ownership": "Ownership: 5%"
+    },
+    "university": {
+      "name": "German University of Digital Science",
+      "ownership": "Ownership: 15%"
+    }
+  }
+}
+,
+  "structure": {
+  "title": {
+    "part1": "Vertical Participation",
+    "part2": "Structure"
+  },
+  "subtitle": "Our Unique Approach",
     "description": "Our vertical structure directly involves professors and research centers in newly founded verticals, transforming university research into marketable digital products and business models.",
     "departments": {
       "title": "German University of Digital Science",
@@ -360,82 +431,84 @@
     }
   },
   "university": {
-    "title": "German University of Digital Science",
-    "subtitle": "Future Education Model",
-    "description": "Our innovative approach to higher education in the digital age.",
-    "empowering": {
-      "title": "Empowering Global Talents",
-      "description": "The German UDS is dedicated to empowering individuals to achieve their full potential by providing access to world-class education and resources."
-    },
-    "degrees": {
-      "title": "World-Class University Degrees",
-      "description": "The German UDS offers high-quality, digitally innovative degrees that are recognized globally and provide graduates with a competitive advantage."
-    },
-    "learning": {
-      "title": "Efficient Lifelong Learning",
-      "description": "The university offers flexible and accessible learning formats that cater to the evolving needs of individuals throughout their careers."
-    },
-    "micro": {
-      "title": "Micro Degree Programs",
-      "description": "A range of micro-degree programs designed to meet the specific needs of individuals seeking specialization in areas of digitalization."
-    },
-    "transforming": {
-      "title": "Transforming Higher Education",
-      "points": [
-        "Higher education lags behind other industries in technological adoption.",
-        "Online education market is projected to reach $1 trillion by 2027.",
-        "Synchronous and asynchronous learning formats are increasingly preferred.",
-        "Personalized, competency-based learning is essential for future readiness."
-      ]
-    },
-    "ecosystem": {
-      "title": "The Learning Ecosystem",
-      "description": "The German UDS supports diverse learners through formal and informal formats, including online, blended, and in-person options — all aligned with the Common Micro Credential Framework.",
-      "points": [
-        "Compatible with the European MOOC Consortium (EMC-CMF)",
-        "Designed for lifelong learners and professionals",
-        "Supports modular micro-credentials across disciplines"
-      ]
-    },
-    "journey": {
-      "title": "Student Journey with UDS",
-      "description": "From initial contact to campus management and evaluation, German UDS streamlines digital learning through LMS, LTI integration, proctoring, and modular degrees."
-    },
-    "cloudhouse": {
-      "title": "The CloudHouse: Our Innovation Hub",
-      "description": "Located in Media City Babelsberg, CloudHouse is a high-tech campus featuring labs, a data center, and state-of-the-art event spaces designed for collaboration and hybrid learning.",
-      "additional": "It represents our commitment to creating an ecosystem that fosters innovation, community, and next-generation education."
-    },
-    "model": {
-      "title": "Higher Education Model",
-      "description": "A future-oriented education model combining academic excellence with practical application."
-    }
+  "headline": {
+    "title": "Future-Focused Learning, Today.",
+    "description": "Discover how UDS empowers students to lead in a rapidly evolving digital world."
   },
-  "investNonprofit": {
-    "title": "Nonprofit Investment Opportunities",
-    "subtitle": "Supporting Education and Research",
-    "description": "Support our foundation and help promote digital education and research.",
-    "overview": {
-      "title": "German University of Digital Science: An Overview",
-      "points": [
-        "State recognition by the Brandenburg Ministry of Science, Research, and Culture",
-        "Six accredited Master's/MBA programs and extensive micro-degree offerings",
-        "Virtual classrooms, real-time collaboration, and hands-on project learning",
-        "100% digital, English-medium, location-independent education",
-        "Affordable tuition: €7,500 per year",
-        "A driver of innovation and competitiveness for Germany's digital economy"
-      ]
-    },
-    "media": {
-      "brochure": "Brochure",
-      "reports": "Scientific Reports",
-      "podcasts": "Podcasts"
-    },
-    "options": {
-      "title": "Investment Options",
-      "description": "Various ways to support our nonprofit initiatives."
-    }
+  "title": "German University of Digital Science",
+  "subtitle": "Future Education Model",
+  "description": "Our innovative approach to higher education in the digital age.",
+  "empowering": {
+    "title": "Empowering Global Talents",
+    "description": "The German UDS is dedicated to empowering individuals to achieve their full potential by providing access to world-class education and resources."
   },
+  "degrees": {
+    "title": "World-Class University Degrees",
+    "description": "The German UDS offers high-quality, digitally innovative degrees that are recognized globally and provide graduates with a competitive advantage."
+  },
+  "learning": {
+    "title": "Efficient Lifelong Learning",
+    "description": "The university offers flexible and accessible learning formats that cater to the evolving needs of individuals throughout their careers."
+  },
+  "micro": {
+    "title": "Micro Degree Programs",
+    "description": "A range of micro-degree programs designed to meet the specific needs of individuals seeking specialization in areas of digitalization."
+  },
+  "transforming": {
+    "title": "Transforming Higher Education",
+    "points": [
+      "Higher education lags behind other industries in technological adoption.",
+      "Online education market is projected to reach $1 trillion by 2027.",
+      "Synchronous and asynchronous learning formats are increasingly preferred.",
+      "Personalized, competency-based learning is essential for future readiness."
+    ]
+  },
+  "ecosystem": {
+    "title": "The Learning Ecosystem",
+    "description": "The German UDS supports diverse learners through formal and informal formats, including online, blended, and in-person options — all aligned with the Common Micro Credential Framework.",
+    "points": [
+      "Compatible with the European MOOC Consortium (EMC-CMF)",
+      "Designed for lifelong learners and professionals",
+      "Supports modular micro-credentials across disciplines"
+    ]
+  },
+  "journey": {
+    "title": "Student Journey with UDS",
+    "description": "From initial contact to campus management and evaluation, German UDS streamlines digital learning through LMS, LTI integration, proctoring, and modular degrees."
+  },
+  "cloudhouse": {
+    "title": "The CloudHouse: Our Innovation Hub",
+    "description": "Located in Media City Babelsberg, CloudHouse is a high-tech campus featuring labs, a data center, and state-of-the-art event spaces designed for collaboration and hybrid learning.",
+    "additional": "It represents our commitment to creating an ecosystem that fosters innovation, community, and next-generation education."
+  },
+  "model": {
+    "title": "Higher Education Model",
+    "description": "A future-oriented education model combining academic excellence with practical application."
+  }
+}
+,
+"investNonprofit": {
+  "overview": {
+    "title": "German University of Digital Science:",
+    "orange": "An Overview",
+    "pointsCondensed": [
+      "State-recognized and fully accredited Master's and MBA programs.",
+      "Digital-first education: virtual classrooms and real-time collaboration.",
+      "Affordable, English-medium learning from anywhere in the world.",
+      "Driving innovation for Germany’s digital economy through flexible study formats."
+    ]
+  },
+  "media": {
+    "brochure": "Brochure",
+    "reports": "Scientific Reports",
+    "podcasts": "Podcasts"
+  },
+  "websiteLink": {
+    "title": "Explore More at German UDS",
+    "description": "Visit our official website to discover programs, research, and digital innovation."
+  }
+}
+,
   "error": {
     "title": "Error",
     "description": "An error has occurred.",

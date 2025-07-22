@@ -7,10 +7,13 @@ const ScrollNavigation = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
+
     const handleScroll = () => {
       setShowScrollButton(window.scrollY > 300);
 
-      // Determine current section
       const sections = document.querySelectorAll('section');
       let current: string | null = null;
 
@@ -28,9 +31,11 @@ const ScrollNavigation = () => {
       setIsMobile(window.innerWidth < 768);
     };
 
-    handleResize(); // Initial check
+    handleResize();
     window.addEventListener('scroll', handleScroll);
     window.addEventListener('resize', handleResize);
+    window.addEventListener('load', () => window.scrollTo(0, 0));
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       window.removeEventListener('resize', handleResize);
@@ -39,7 +44,7 @@ const ScrollNavigation = () => {
 
   const scrollToPreviousSection = () => {
     const sections = Array.from(document.querySelectorAll('section'));
-    const currentIndex = sections.findIndex(section => section.id === currentSection);
+    const currentIndex = sections.findIndex((section) => section.id === currentSection);
     if (currentIndex > 0) {
       sections[currentIndex - 1].scrollIntoView({ behavior: 'smooth' });
     }
@@ -47,7 +52,7 @@ const ScrollNavigation = () => {
 
   const scrollToNextSection = () => {
     const sections = Array.from(document.querySelectorAll('section'));
-    const currentIndex = sections.findIndex(section => section.id === currentSection);
+    const currentIndex = sections.findIndex((section) => section.id === currentSection);
     if (currentIndex < sections.length - 1) {
       sections[currentIndex + 1].scrollIntoView({ behavior: 'smooth' });
     }
@@ -60,9 +65,11 @@ const ScrollNavigation = () => {
   return (
     <>
       {showScrollButton && (
-        <div className={`fixed z-50 flex flex-col items-end gap-2 transition-all duration-300 ${
-          isMobile ? 'bottom-4 right-4' : 'bottom-8 right-8'
-        }`}>
+        <div
+          className={`fixed z-50 flex flex-col items-end gap-2 transition-all duration-300 ${
+            isMobile ? 'bottom-4 right-4' : 'bottom-8 right-8'
+          }`}
+        >
           <button
             onClick={scrollToPreviousSection}
             className="bg-blue-600 text-white w-10 h-10 rounded-lg shadow-lg hover:bg-blue-700 transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
@@ -93,4 +100,4 @@ const ScrollNavigation = () => {
   );
 };
 
-export default ScrollNavigation; 
+export default ScrollNavigation;
