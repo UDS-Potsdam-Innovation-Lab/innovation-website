@@ -5,6 +5,17 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'min-h-[48px]',
+    'min-h-[160px]',
+    'whitespace-pre-line',
+    'border-orange-300',
+    'bg-orange-50',
+    'text-orange-500',
+    'border-blue-300',
+    'bg-blue-50',
+    'text-blue-500',
+  ],
   darkMode: 'media',
   theme: {
     extend: {
@@ -29,4 +40,4 @@ module.exports = {
     extend: {},
   },
   plugins: [],
-} 
+}
