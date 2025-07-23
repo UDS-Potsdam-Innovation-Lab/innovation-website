@@ -11,16 +11,16 @@ const AboutUniversitySection = () => {
   return (
     <section
       id="about-university"
-      className="px-6 py-20 md:px-16 lg:px-24 bg-white text-gray-900"
+      className="pt-[80px] px-6 py-20 md:px-16 lg:px-24 bg-white text-gray-900"
     >
       <div className="max-w-6xl mx-auto space-y-24">
         {/* ===== Section Header ===== */}
         <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a2342] tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a2342] tracking-tight break-words">
             <span className="text-orange-500">{t("university.headline.title").split(",")[0]}</span>,{" "}
             {t("university.headline.title").split(",")[1]}
           </h2>
-          <p>{String(t("university.headline.description"))}</p>
+          <p className="break-words">{String(t("university.headline.description"))}</p>
         </div>
 
         {/* ===== Feature Cards ===== */}
@@ -28,19 +28,19 @@ const AboutUniversitySection = () => {
           {[
             {
               title: String(t("university.empowering.title")),
-              description: "We empower learners with access to global knowledge and mentorship.",
+              description: String(t("university.empowering.description")),
             },
             {
               title: String(t("university.degrees.title")),
-              description: "Internationally recognized digital degrees that stand out.",
+              description: String(t("university.degrees.description")),
             },
             {
               title: String(t("university.learning.title")),
-              description: "Learn at your pace with flexible, career-aligned programs.",
+              description: String(t("university.learning.description")),
             },
             {
               title: String(t("university.micro.title")),
-              description: "Specialized micro-programs for emerging tech domains.",
+              description: String(t("university.micro.description")),
             },
           ].map((item, idx) => (
             <div
@@ -48,20 +48,19 @@ const AboutUniversitySection = () => {
               className="bg-orange-50 hover:shadow-orange-400/50 hover:shadow-xl rounded-2xl transition-all duration-300 shadow-md p-6 sm:p-8 flex flex-col justify-between border border-orange-100"
             >
               <h3 className="text-xl font-bold mb-3 text-[#0a2342]">{item.title}</h3>
-              <p className="text-gray-700 text-sm">{item.description}</p>
+              <p className="text-gray-700 text-sm break-words whitespace-normal">{item.description}</p>
             </div>
           ))}
         </div>
 
         {/* ===== Transforming Higher Education ===== */}
         <div
-  className="relative rounded-2xl overflow-hidden shadow-xl ring-2 ring-orange-200 max-w-6xl mx-auto bg-cover bg-center"
-  style={{
-    backgroundImage: "url('/transforming-higher-education.png')",
-    boxShadow: "0 0 30px rgba(255, 140, 0, 0.25)" // subtle orange glow
-  }}
->
-
+          className="relative rounded-2xl overflow-hidden shadow-xl ring-2 ring-orange-200 max-w-6xl mx-auto bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/transforming-higher-education.png')",
+            boxShadow: "0 0 30px rgba(255, 140, 0, 0.25)"
+          }}
+        >
           <div className="bg-white/50 backdrop-blur-sm px-8 py-16 text-center">
             <h3 className="text-3xl font-extrabold text-[#0a2342] mb-10">
               {String(t("university.transforming.title"))}
@@ -71,7 +70,7 @@ const AboutUniversitySection = () => {
               {transformingPoints.map((point, idx) => (
                 <div
                   key={idx}
-                  className="bg-white/90 text-sm text-[#0a2342] border border-orange-100 rounded-xl p-5 shadow-md hover:shadow-orange-200 transition-all duration-300 text-left"
+                  className="bg-white/90 text-sm text-[#0a2342] border border-orange-100 rounded-xl p-5 shadow-md hover:shadow-orange-200 transition-all duration-300 text-left break-words"
                 >
                   <span className="font-medium leading-snug">
                     {point.includes("$1T") ? (
@@ -105,7 +104,7 @@ const AboutUniversitySection = () => {
             {ecosystemPoints.map((point, idx) => (
               <div
                 key={idx}
-                className="bg-white/90 border border-[#0a2342]/20 text-sm text-[#0a2342] rounded-xl p-5 shadow-md hover:shadow-orange-200 hover:border-orange-300 transition-all duration-300 text-center"
+                className="bg-white/90 border border-[#0a2342]/20 text-sm text-[#0a2342] rounded-xl p-5 shadow-md hover:shadow-orange-200 hover:border-orange-300 transition-all duration-300 text-center break-words"
               >
                 <span className="font-semibold leading-snug">{point}</span>
               </div>

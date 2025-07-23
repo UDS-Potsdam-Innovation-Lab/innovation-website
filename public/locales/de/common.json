@@ -102,7 +102,7 @@
   "description": "Unser Kerngeschäft kombiniert strategische Investitionen mit Beratungsdienstleistungen und Innovationsnutzung.",
   "card1": {
     "title": "1. Investitionen",
-    "description": "Strategische Entwicklung von Unternehmen in Zusammenarbeit mit der Deutschen Universität für Digitale Wissenschaften"
+    "description": "Strategische Entwicklung von Unternehmen in Zusammenarbeit mit der German University of Digital Science."
   },
   "card2": {
     "title": "2. Beratung und Dienstleistungen",
@@ -437,21 +437,22 @@
   "subtitle": "Bildungsmodell der Zukunft",
   "description": "Unser innovativer Ansatz für Hochschulbildung im digitalen Zeitalter.",
   "empowering": {
-    "title": "Förderung globaler Talente",
-    "description": "Die German UDS widmet sich der Förderung von Einzelpersonen, damit diese ihr volles Potenzial entfalten können, indem sie Zugang zu erstklassiger Bildung und Ressourcen erhalten."
-  },
-  "degrees": {
-    "title": "Erstklassige Universitätsabschlüsse",
-    "description": "Die German UDS bietet hochwertige, digital innovative Abschlüsse an, die weltweit anerkannt sind und den Absolventen einen Wettbewerbsvorteil verschaffen."
-  },
-  "learning": {
-    "title": "Effizientes lebenslanges Lernen",
-    "description": "Die Universität bietet flexible und zugängliche Lernformate an, die auf die sich ändernden Bedürfnisse von Einzelpersonen während ihrer gesamten Karriere zugeschnitten sind."
-  },
-  "micro": {
-    "title": "Mikro-Studienprogramme",
-    "description": "Eine Reihe von Mikro-Studienprogrammen, die auf die speziellen Bedürfnisse von Personen zugeschnitten sind, die eine Spezialisierung in Bereichen der Digitalisierung anstreben."
-  },
+  "title": "Globale Talente fördern",
+  "description": "Die German UDS hilft Menschen, ihr Potenzial mit Zugang zu exzellenter Bildung zu entfalten."
+},
+"degrees": {
+  "title": "Internationale Abschlüsse",
+  "description": "Hochwertige, digitale Studienabschlüsse mit weltweiter Anerkennung und Karrierevorteilen."
+},
+"learning": {
+  "title": "Flexibles Lernen",
+  "description": "Individuelle Lernformate für verschiedene Karrierephasen."
+},
+"micro": {
+  "title": "Mikroprogramme",
+  "description": "Gezielte Programme für Spezialisierungen in digitalen Bereichen."
+}
+,
   "transforming": {
     "title": "Transformation der Hochschulbildung",
     "points": [

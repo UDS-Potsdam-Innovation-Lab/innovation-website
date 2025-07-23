@@ -122,23 +122,27 @@ const BusinessSection: React.FC = () => {
 
       <div className="container mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-  {t("business.title.part1")}{" "}
-  <span className="text-orange-400">{t("business.title.part2")}</span>
-</h2>
-
-          <p className="text-gray-300">
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 break-words">
+            {t("business.title.part1")}{" "}
+            <span className="text-orange-400">{t("business.title.part2")}</span>
+          </h2>
+          <p className="text-gray-300 text-sm sm:text-base break-words whitespace-normal">
             {String(t('business.description'))}
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[1, 2, 3, 4].map((n) => (
-            <div key={n} className="bg-white bg-opacity-5 p-6 rounded-br-xl border border-gray-700 hover:shadow-lg hover:bg-opacity-10 transition-all duration-300">
+            <div
+              key={n}
+              className="bg-white bg-opacity-5 p-6 rounded-br-xl border border-gray-700 hover:shadow-lg hover:bg-opacity-10 transition-all duration-300"
+            >
               <div className="text-orange-400 mb-4">
                 <h3 className="text-xl font-bold mb-1">{String(t(`business.card${n}.title`))}</h3>
               </div>
-              <p className="text-gray-300">{String(t(`business.card${n}.description`))}</p>
+              <p className="text-gray-300 text-sm sm:text-base break-words whitespace-normal">
+                {String(t(`business.card${n}.description`))}
+              </p>
             </div>
           ))}
         </div>
@@ -155,8 +159,12 @@ const BusinessSection: React.FC = () => {
                     {n}
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-orange-400 mb-2">{String(t(`business.financialStrategy.point${n}.title`))}</h4>
-                    <p className="text-gray-300">{String(t(`business.financialStrategy.point${n}.description`))}</p>
+                    <h4 className="text-lg font-semibold text-orange-400 mb-2">
+                      {String(t(`business.financialStrategy.point${n}.title`))}
+                    </h4>
+                    <p className="text-gray-300 text-sm sm:text-base break-words whitespace-normal">
+                      {String(t(`business.financialStrategy.point${n}.description`))}
+                    </p>
                   </div>
                 </div>
               ))}

@@ -439,21 +439,22 @@
   "subtitle": "Future Education Model",
   "description": "Our innovative approach to higher education in the digital age.",
   "empowering": {
-    "title": "Empowering Global Talents",
-    "description": "The German UDS is dedicated to empowering individuals to achieve their full potential by providing access to world-class education and resources."
-  },
-  "degrees": {
-    "title": "World-Class University Degrees",
-    "description": "The German UDS offers high-quality, digitally innovative degrees that are recognized globally and provide graduates with a competitive advantage."
-  },
-  "learning": {
-    "title": "Efficient Lifelong Learning",
-    "description": "The university offers flexible and accessible learning formats that cater to the evolving needs of individuals throughout their careers."
-  },
-  "micro": {
-    "title": "Micro Degree Programs",
-    "description": "A range of micro-degree programs designed to meet the specific needs of individuals seeking specialization in areas of digitalization."
-  },
+  "title": "Empowering Global Talents",
+  "description": "We empower learners with access to global knowledge and mentorship."
+},
+"degrees": {
+  "title": "World-Class University Degrees",
+  "description": "Internationally recognized digital degrees that stand out."
+},
+"learning": {
+  "title": "Efficient Lifelong Learning",
+  "description": "Learn at your pace with flexible, career-aligned programs."
+},
+"micro": {
+  "title": "Micro Degree Programs",
+  "description": "Specialized micro-programs for emerging tech domains."
+}
+,
   "transforming": {
     "title": "Transforming Higher Education",
     "points": [
