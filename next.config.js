@@ -10,25 +10,23 @@ try {
     const data = JSON.parse(fs.readFileSync(sizesPath, 'utf8'));
     if (Array.isArray(data.sizes) && data.sizes.length > 0) {
       imageSizes = data.sizes;
-      console.log(`✅ Loaded ${data.sizes.length} custom image sizes from manifest`);
     }
   }
 } catch (error) {
-  console.warn('⚠️ Error loading image sizes:', error.message);
+  console.warn('Error loading image sizes:', error.message);
 }
 
 const nextConfig = {
   output: 'export',
-  basePath: '',               // ✅ no subpath
-  assetPrefix: '/',           // ✅ assets from root
+  basePath: '',
+  assetPrefix: '/',
   trailingSlash: true,
   reactStrictMode: true,
   images: {
     unoptimized: true,
     formats: ['image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
-    imageSizes: imageSizes,
-    domains: ['localhost'],
+    imageSizes,
   },
   webpack(config) {
     return config;
