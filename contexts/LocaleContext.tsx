@@ -6,17 +6,10 @@ import React, {
   ReactNode,
 } from 'react';
 
-// English translations (default)
 import en from '../public/locales/en/common.json';
-
-// German translations
 import de from '../public/locales/de/common.json';
 
-const translations = {
-  en,
-  de,
-};
-
+const translations = { en, de };
 export const locales = ['en', 'de'];
 export type Locale = 'en' | 'de';
 
@@ -40,17 +33,17 @@ interface LocaleProviderProps {
 
 export const LocaleProvider: React.FC<LocaleProviderProps> = ({ children }) => {
   const [locale, setLocaleState] = useState<Locale>('en');
+  const [isHydrated, setIsHydrated] = useState(false);
 
   useEffect(() => {
-    const savedLocale = localStorage.getItem('locale') as Locale;
-    if (savedLocale && locales.includes(savedLocale)) {
-      setLocaleState(savedLocale);
+    const saved = localStorage.getItem('locale') as Locale;
+    if (saved && locales.includes(saved)) {
+      setLocaleState(saved);
     } else {
       const browserLang = navigator.language.split('-')[0];
-      if (browserLang === 'de') {
-        setLocaleState('de');
-      }
+      if (browserLang === 'de') setLocaleState('de');
     }
+    setIsHydrated(true);
   }, []);
 
   const setLocale = (newLocale: Locale) => {
@@ -59,7 +52,6 @@ export const LocaleProvider: React.FC<LocaleProviderProps> = ({ children }) => {
     document.documentElement.lang = newLocale;
   };
 
-  // Translation function: always returns a string (safe for JSX)
   const t = (key: string, options?: any): string => {
     const currentTranslations = translations[locale] || translations.en;
 
@@ -83,10 +75,8 @@ export const LocaleProvider: React.FC<LocaleProviderProps> = ({ children }) => {
     return typeof value === 'string' ? value : JSON.stringify(value ?? key);
   };
 
-  // Object/array accessor (used with .map, etc.)
   const tObject = (key: string): any => {
     const currentTranslations = translations[locale] || translations.en;
-
     const keys = key.split('.');
     let value = currentTranslations as any;
 
@@ -105,6 +95,8 @@ export const LocaleProvider: React.FC<LocaleProviderProps> = ({ children }) => {
   useEffect(() => {
     document.documentElement.lang = locale;
   }, [locale]);
+
+  if (!isHydrated) return null;
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale, t, tObject }}>

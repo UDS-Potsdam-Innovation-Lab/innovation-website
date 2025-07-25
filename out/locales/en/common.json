@@ -499,13 +499,13 @@
       "Driving innovation for Germany’s digital economy through flexible study formats."
     ]
   },
-  "media": {
-    "brochure": "Brochure",
-    "brochureDesc": "Download our latest program brochure with in-depth insights.",
-    "reports": "Scientific Reports",
-    "reportsDesc": "Explore our scientific research and academic publications.",
-    "podcasts": "Podcasts",
-    "podcastsDesc": "Listen to expert discussions on digital education and innovation."
+   "media": {
+    "brochure": "Your Brochure Label",
+    "brochureDesc": "Your Brochure Description",
+    "reports": "Your Reports Label",
+    "reportsDesc": "Your Reports Description",
+    "podcasts": "Your Podcasts Label",
+    "podcastsDesc": "Your Podcasts Description"
   },
   "websiteLink": {
     "title": "Explore More at German UDS",
