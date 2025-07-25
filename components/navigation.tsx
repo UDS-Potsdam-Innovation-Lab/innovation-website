@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useLocale, Locale } from '../contexts/LocaleContext';
 import Image from 'next/image';
-import { useRouter } from 'next/router';
 
 interface NavigationProps {
   activeSection: string;
@@ -10,7 +9,6 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
   const { locale, setLocale, t } = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const router = useRouter();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -24,10 +22,10 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
     }, 0);
   };
 
-  const handleLocaleChange = (lang: string) => {
+  const handleLocaleChange = (lang: Locale) => {
     if (lang !== locale) {
-      const currentPath = router.asPath;
-      router.push(currentPath, currentPath, { locale: lang });
+      setLocale(lang);
+      window.scrollTo(0, 0);
     }
   };
 
