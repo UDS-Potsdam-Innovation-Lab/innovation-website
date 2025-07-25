@@ -17,7 +17,7 @@ try {
 const nextConfig = {
   output: 'export',
   basePath: '',
-  assetPrefix: '.', // ✅ Fix for GitHub Pages
+  assetPrefix: '/', // ✅ Fix for GitHub Pages
   trailingSlash: true,
   reactStrictMode: true,
   images: {
