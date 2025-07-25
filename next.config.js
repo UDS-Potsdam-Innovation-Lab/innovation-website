@@ -17,7 +17,7 @@ try {
 const nextConfig = {
   output: 'export',
   basePath: '',
-  assetPrefix: '/', // ✅ Fix for GitHub Pages
+  assetPrefix: '/',
   trailingSlash: true,
   reactStrictMode: true,
   images: {
@@ -25,6 +25,11 @@ const nextConfig = {
     formats: ['image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes,
+  },
+  i18n: {
+    locales: ['en', 'de'],
+    defaultLocale: 'en',
+    localeDetection: false
   },
   webpack(config) {
     return config;

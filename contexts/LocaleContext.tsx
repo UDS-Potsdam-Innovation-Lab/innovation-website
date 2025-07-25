@@ -100,7 +100,7 @@ export const LocaleProvider: React.FC<LocaleProviderProps> = ({ children }) => {
 
   return (
     <LocaleContext.Provider value={{ locale, setLocale, t, tObject }}>
-      {children}
+      <div key={locale}>{children}</div>
     </LocaleContext.Provider>
   );
 };

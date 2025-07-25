@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocale, Locale } from '../contexts/LocaleContext';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 
 interface NavigationProps {
   activeSection: string;
@@ -9,6 +10,7 @@ interface NavigationProps {
 const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
   const { locale, setLocale, t } = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const router = useRouter();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
@@ -24,9 +26,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
 
   const handleLocaleChange = (lang: string) => {
     if (lang !== locale) {
-      const currentScrollY = window.scrollY;
-      setLocale(lang as Locale);
-      setTimeout(() => window.scrollTo(0, currentScrollY), 0);
+      const currentPath = router.asPath;
+      router.push(currentPath, currentPath, { locale: lang });
     }
   };
 
@@ -65,9 +66,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
           </a>
         </div>
 
-        {/* Right: Navigation & toggles */}
+        {/* Right: Desktop navigation */}
         <div className="flex items-center justify-end flex-1">
-          {/* Desktop navigation */}
           <div className="hidden lg:flex items-center space-x-8 text-[#0a2342]">
             {navLinks.map(({ id, label }) => (
               <a
@@ -81,8 +81,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
                 {label}
               </a>
             ))}
-
-            {/* EN | DE toggle */}
+            {/* Language Toggle */}
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => handleLocaleChange('en')}
@@ -132,8 +131,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
                 {label}
               </a>
             ))}
-
-            {/* Mobile EN | DE toggle */}
+            {/* Mobile Language Toggle */}
             <div className="flex items-center space-x-2 pt-4 border-t border-white/30">
               <button
                 onClick={() => handleLocaleChange('en')}
