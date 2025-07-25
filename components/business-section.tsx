@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useLocale } from '../contexts/LocaleContext';
 
 const BusinessSection: React.FC = () => {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -122,10 +122,19 @@ const BusinessSection: React.FC = () => {
 
       <div className="container mx-auto relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6 break-words">
-            {t("business.title.part1")}{" "}
-            <span className="text-orange-400">{t("business.title.part2")}</span>
-          </h2>
+          <h2 className="text-4xl lg:text-5xl font-bold mb-6 text-center break-words">
+  {locale === 'de' ? (
+    <>
+      Geschäfts<span className="text-orange-400">modell</span>
+    </>
+  ) : (
+    <>
+      {t("business.title.part1")}{" "}
+      <span className="text-orange-400">{t("business.title.part2")}</span>
+    </>
+  )}
+</h2>
+
           <p className="text-gray-300 text-sm sm:text-base break-words whitespace-normal">
             {String(t('business.description'))}
           </p>
