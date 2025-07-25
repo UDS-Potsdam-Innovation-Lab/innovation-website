@@ -4,6 +4,7 @@
   "description": "Landing page for German UDS Innovation GmbH",
   "scripts": {
     "dev": "next dev",
+    "export": "next export",
     "prebuild": "mkdir -p public/images && cp -r images/* public/images/ || true",
     "create-locale-dirs": "node scripts/create-locale-directories.js",
     "build": "npm run create-locale-dirs && next build",
