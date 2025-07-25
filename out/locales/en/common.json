@@ -501,8 +501,11 @@
   },
   "media": {
     "brochure": "Brochure",
+    "brochureDesc": "Download our latest program brochure with in-depth insights.",
     "reports": "Scientific Reports",
-    "podcasts": "Podcasts"
+    "reportsDesc": "Explore our scientific research and academic publications.",
+    "podcasts": "Podcasts",
+    "podcastsDesc": "Listen to expert discussions on digital education and innovation."
   },
   "websiteLink": {
     "title": "Explore More at German UDS",

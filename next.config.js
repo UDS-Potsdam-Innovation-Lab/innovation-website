@@ -1,5 +1,3 @@
-/** @type {import('next').NextConfig} */
-
 const fs = require('fs');
 const path = require('path');
 
@@ -19,7 +17,7 @@ try {
 const nextConfig = {
   output: 'export',
   basePath: '',
-  assetPrefix: '/',
+  assetPrefix: '.', // ✅ Fix for GitHub Pages
   trailingSlash: true,
   reactStrictMode: true,
   images: {
