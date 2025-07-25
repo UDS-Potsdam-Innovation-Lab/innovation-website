@@ -3,7 +3,8 @@ import { Building, Globe, Users, BarChart4, Sparkles, ChevronRight } from 'lucid
 import { useLocale } from '../contexts/LocaleContext';
 
 const InvestSection: React.FC = () => {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
+
 
   return (
     <section id="invest" className="py-20 px-6 bg-white text-[#0a2342]">
@@ -17,16 +18,25 @@ const InvestSection: React.FC = () => {
           />
         </div>
 
-        {/* Heading */}
-        <div className="text-center max-w-4xl mx-auto">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-  {String(t('invest.headline.part1'))}{" "}
-  <span className="text-orange-500">{String(t('invest.headline.part2'))}</span>
-</h2>
+      <div className="flex justify-center">
+  <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-center">
+    {locale === 'de' ? (
+      <>
+        Investitions
+        <span className="text-orange-500">möglichkeiten</span>
+      </>
+    ) : (
+      <>
+        {t('invest.headline.part1')}{" "}
+        <span className="text-orange-500">{t('invest.headline.part2')}</span>
+      </>
+    )}
+  </h2>
+</div>
 
 
-          <p className="text-gray-600 text-base">{String(t('invest.description'))}</p>
-        </div>
+
+
 
         {/* Feature Grid */}
         <div className="grid md:grid-cols-2 gap-8">

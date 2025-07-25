@@ -2,24 +2,24 @@ import React from "react";
 import { useLocale } from "../contexts/LocaleContext";
 import { ArrowRight } from "lucide-react";
 
-const InvestNonprofitSection = () => {
-  const { t, tObject } = useLocale();
+const InvestNonprofitSection: React.FC = () => {
+  const { t, tObject, locale } = useLocale();
   const condensedPoints = tObject("investNonprofit.overview.pointsCondensed") as string[];
 
   const mediaLinks = [
     {
       label: t("investNonprofit.media.brochure"),
-      description: "Download our latest program brochure with in-depth insights.",
+      description: t("investNonprofit.media.brochureDesc"),
       href: "https://german-uds.de/cta",
     },
     {
       label: t("investNonprofit.media.reports"),
-      description: "Explore our scientific research and academic publications.",
+      description: t("investNonprofit.media.reportsDesc"),
       href: "https://german-uds.de/scientific-reports",
     },
     {
       label: t("investNonprofit.media.podcasts"),
-      description: "Listen to expert discussions on digital education and innovation.",
+      description: t("investNonprofit.media.podcastsDesc"),
       href: "https://german-uds.de/podcasts",
     },
   ];
@@ -30,8 +30,8 @@ const InvestNonprofitSection = () => {
         {/* Heading */}
         <div className="text-center max-w-4xl mx-auto">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            {String(t("investNonprofit.overview.title"))}{" "}
-            <span className="text-orange-500">{String(t("investNonprofit.overview.orange"))}</span>
+            {t("investNonprofit.overview.title")}{" "}
+            <span className="text-orange-500">{t("investNonprofit.overview.orange")}</span>
           </h2>
         </div>
 
@@ -58,10 +58,10 @@ const InvestNonprofitSection = () => {
           >
             <div className="text-left">
               <h3 className="text-xl font-bold text-orange-600 mb-1">
-                {String(t("investNonprofit.websiteLink.title"))}
+                {t("investNonprofit.websiteLink.title")}
               </h3>
               <p className="text-gray-700 text-sm">
-                {String(t("investNonprofit.websiteLink.description"))}
+                {t("investNonprofit.websiteLink.description")}
               </p>
             </div>
             <div className="text-orange-600 group-hover:translate-x-1 transition-transform">
@@ -70,7 +70,7 @@ const InvestNonprofitSection = () => {
           </a>
         </div>
 
-        {/* Media Links as CTA Cards */}
+        {/* Media Links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {mediaLinks.map((item, index) => (
             <a

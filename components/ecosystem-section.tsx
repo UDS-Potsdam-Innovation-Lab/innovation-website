@@ -31,47 +31,6 @@ const EcosystemSection: React.FC = () => {
             </p>
           </div>
         </div>
-
-        {/* ===== Organization Boxes ===== */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {/* Group 1 */}
-          <div className="rounded-2xl shadow-md border border-blue-300 bg-blue-50 p-6 space-y-4">
-            <div>
-              <h3 className="text-lg font-bold">{t('ecosystem.org1.entity1.name')}</h3>
-              <p className="text-sm text-gray-700">{t('ecosystem.org1.entity1.detail')}</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold">{t('ecosystem.org1.entity2.name')}</h3>
-              <p className="text-sm text-gray-700">{t('ecosystem.org1.entity2.detail')}</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold">{t('ecosystem.org1.entity3.name')}</h3>
-              <p className="text-sm text-gray-700">{t('ecosystem.org1.entity3.detail')}</p>
-            </div>
-          </div>
-
-          {/* Group 2 */}
-          <div className="rounded-2xl shadow-md border border-blue-300 bg-blue-50 p-6 space-y-4">
-            <div>
-              <h3 className="text-lg font-bold">{t('ecosystem.org2.entity1.name')}</h3>
-              <p className="text-sm text-gray-700">{t('ecosystem.org2.entity1.detail')}</p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold">{t('ecosystem.org2.entity2.name')}</h3>
-              <p className="text-sm text-gray-700">{t('ecosystem.org2.entity2.detail')}</p>
-            </div>
-          </div>
-
-          {/* Group 3 */}
-          <div className="rounded-2xl shadow-md border-2 border-dashed border-blue-400 bg-blue-50 p-6 text-center">
-            <h3 className="text-xl font-bold">{t('ecosystem.finalBox.name')}</h3>
-            <p className="text-sm italic mb-2">{t('ecosystem.finalBox.sub')}</p>
-            <p className="text-sm font-medium mb-1">{t('ecosystem.finalBox.presidents')}</p>
-            <p className="text-sm text-gray-700">
-              {t('ecosystem.finalBox.names')}
-            </p>
-          </div>
-        </div>
       </div>
     </section>
   );

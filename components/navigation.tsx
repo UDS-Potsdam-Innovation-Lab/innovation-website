@@ -12,18 +12,20 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
     e.preventDefault();
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
+    setIsMenuOpen(false);
+
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 0);
   };
 
-  const handleLocaleChange = (lang: string) => {
+  const handleLocaleChange = (lang: Locale) => {
     if (lang !== locale) {
-      const currentScrollY = window.scrollY;
-      setLocale(lang as Locale);
-      setTimeout(() => window.scrollTo(0, currentScrollY), 0);
+      setLocale(lang);
+      window.scrollTo(0, 0);
     }
   };
 
@@ -62,9 +64,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
           </a>
         </div>
 
-        {/* Right: Navigation & toggles */}
+        {/* Right: Desktop navigation */}
         <div className="flex items-center justify-end flex-1">
-          {/* Desktop navigation */}
           <div className="hidden lg:flex items-center space-x-8 text-[#0a2342]">
             {navLinks.map(({ id, label }) => (
               <a
@@ -78,8 +79,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
                 {label}
               </a>
             ))}
-
-            {/* EN | DE toggle */}
+            {/* Language Toggle */}
             <div className="flex items-center space-x-2">
               <button
                 onClick={() => handleLocaleChange('en')}
@@ -129,8 +129,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
                 {label}
               </a>
             ))}
-
-            {/* Mobile EN | DE toggle */}
+            {/* Mobile Language Toggle */}
             <div className="flex items-center space-x-2 pt-4 border-t border-white/30">
               <button
                 onClick={() => handleLocaleChange('en')}
