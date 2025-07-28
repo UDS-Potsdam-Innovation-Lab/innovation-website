@@ -9,22 +9,18 @@ const AboutUniversitySection = () => {
   const ecosystemPoints = tObject("university.ecosystem.points") as string[];
 
   return (
-    <section
-      id="about-university"
-      className="scroll-mt-28 sm:scroll-mt-36 lg:scroll-mt-44 pt-36 sm:pt-40 lg:pt-48 px-6 py-20 md:px-16 lg:px-24 bg-white text-gray-900"
-    >
+<section
+  id="about-university"
+  className="scroll-mt-60 sm:scroll-mt-40 pt-36 sm:pt-44 px-6 py-20 md:px-16 lg:px-24 bg-white text-gray-900"
+>
       <div className="relative z-10 max-w-6xl mx-auto space-y-24">
         {/* ===== Section Header ===== */}
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a2342] tracking-tight break-words">
-            <span className="text-orange-500">
-              {t("university.headline.title").split(",")[0]}
-            </span>
-            , {t("university.headline.title").split(",")[1]}
+            <span className="text-orange-500">{t("university.headline.title").split(",")[0]}</span>,{" "}
+            {t("university.headline.title").split(",")[1]}
           </h2>
-          <p className="break-words">
-            {String(t("university.headline.description"))}
-          </p>
+          <p className="break-words">{String(t("university.headline.description"))}</p>
         </div>
 
         {/* ===== Feature Cards ===== */}
@@ -51,12 +47,8 @@ const AboutUniversitySection = () => {
               key={idx}
               className="bg-orange-50 hover:shadow-orange-400/50 hover:shadow-xl rounded-2xl transition-all duration-300 shadow-md p-6 sm:p-8 flex flex-col justify-between border border-orange-100"
             >
-              <h3 className="text-xl font-bold mb-3 text-[#0a2342]">
-                {item.title}
-              </h3>
-              <p className="text-gray-700 text-sm break-words whitespace-normal">
-                {item.description}
-              </p>
+              <h3 className="text-xl font-bold mb-3 text-[#0a2342]">{item.title}</h3>
+              <p className="text-gray-700 text-sm break-words whitespace-normal">{item.description}</p>
             </div>
           ))}
         </div>
@@ -66,7 +58,7 @@ const AboutUniversitySection = () => {
           className="relative rounded-2xl overflow-hidden shadow-xl ring-2 ring-orange-200 max-w-6xl mx-auto bg-cover bg-center"
           style={{
             backgroundImage: "url('/transforming-higher-education.png')",
-            boxShadow: "0 0 30px rgba(255, 140, 0, 0.25)",
+            boxShadow: "0 0 30px rgba(255, 140, 0, 0.25)"
           }}
         >
           <div className="bg-white/50 backdrop-blur-sm px-8 py-16 text-center">
@@ -84,9 +76,7 @@ const AboutUniversitySection = () => {
                     {point.includes("$1T") ? (
                       <>
                         {point.split("$1T")[0]}
-                        <span className="text-orange-600 font-semibold">
-                          $1T
-                        </span>
+                        <span className="text-orange-600 font-semibold">$1T</span>
                         {point.split("$1T")[1]}
                       </>
                     ) : (
