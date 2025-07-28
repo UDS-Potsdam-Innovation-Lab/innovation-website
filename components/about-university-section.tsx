@@ -11,9 +11,9 @@ const AboutUniversitySection = () => {
   return (
 <section
   id="about-university"
-  className="scroll-mt-60 sm:scroll-mt-40 pt-36 sm:pt-44 px-6 py-20 md:px-16 lg:px-24 bg-white text-gray-900"
+  className="pt-32 sm:pt-36 lg:pt-44 scroll-mt-[96px] sm:scroll-mt-[112px] lg:scroll-mt-[128px] px-6 py-20 md:px-16 lg:px-24 bg-white text-gray-900"
 >
-      <div className="relative z-10 max-w-6xl mx-auto space-y-24">
+      <div className="max-w-6xl mx-auto space-y-24">
         {/* ===== Section Header ===== */}
         <div className="text-center space-y-4">
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#0a2342] tracking-tight break-words">
