@@ -18,7 +18,7 @@ try {
 const nextConfig = {
   output: 'export',
   basePath: '',
-  assetPrefix: '/',
+  assetPrefix: './',
   trailingSlash: true,
   reactStrictMode: true,
   images: {
