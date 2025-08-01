@@ -11,7 +11,7 @@ const AboutUniversitySection = () => {
   return (
     <section
       id="about-university"
-      className="scroll-mt-32 pt-32 px-6 py-20 md:px-16 lg:px-24 bg-white text-gray-900"
+      className="scroll-mt-36 pt-36 px-6 py-20 md:scroll-mt-32 md:pt-32 md:px-16 lg:px-24 bg-white text-gray-900"
     >
       <div className="max-w-6xl mx-auto space-y-24">
         {/* ===== Section Header ===== */}
