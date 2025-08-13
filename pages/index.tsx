@@ -52,14 +52,16 @@ const Home: NextPage = () => {
 
   return (
     <div>
-      <Head>
+      <div className='w-full h-16 bg-orange-500'>
+        <Head>
         <title>German UDS Innovation GmbH</title>
         <meta name="description" content="German UDS Innovation GmbH - Innovation and Technology Solutions" />
         <meta name="language" content={locale} />
         <meta httpEquiv="Content-Language" content={locale} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
+      </div>
+      
       <main>
         <ScrollProgress progress={progress} />
         <Navigation activeSection={activeSection} />
