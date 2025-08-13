@@ -42,7 +42,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[#f3f4f6]/70 backdrop-blur-md border-b border-white/20 shadow-md">
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between min-h-[80px]">
+      <div className="container mx-auto px-6 py-2 flex items-center justify-between min-h-[80px]">
         {/* Left: Logo */}
         <div className="flex items-center justify-start flex-1">
           <a
