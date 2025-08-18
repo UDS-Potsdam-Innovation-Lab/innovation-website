@@ -341,7 +341,7 @@
   "structure": {
     "innovation": "German UDS Innovation GmbH",
     "cloudhouse": {
-      "name": "FB Cloudhouse GmbH",
+      "name": "FB CloudHouse GmbH",
       "ownership": "Ownership: 20%"
     },
     "service": {
@@ -509,7 +509,7 @@
   }
   ,
   "websiteLink": {
-    "title": "Explore More at German UDS",
+    "title": "Explore More About German UDS",
     "description": "Visit our official website to discover programs, research, and digital innovation."
   }
 }

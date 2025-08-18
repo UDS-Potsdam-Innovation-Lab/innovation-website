@@ -351,7 +351,7 @@
     },
     "university": {
       "name": "German University of Digital Science",
-      "ownership": "Anteil: 20%"
+      "ownership": "Anteil: 15%"
     }
   }
 }
@@ -505,7 +505,7 @@
     "podcastsDesc": "Hören Sie Expertenrunden zu digitaler Bildung und Innovation."
   },
   "websiteLink": {
-    "title": "Mehr erfahren bei German UDS",
+    "title": "Mehr erfahren über German UDS",
     "description": "Besuchen Sie unsere Website, um Programme, Forschung und digitale Innovationen zu entdecken."
   }
 }
