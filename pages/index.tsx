@@ -14,6 +14,7 @@ import Footer from '../components/footer-component'
 import Navigation from '../components/navigation'
 import ScrollProgress from '../components/scroll-progress'
 import InvestNonprofitSection from '../components/invest-nonprofit-section'; 
+import CookieBanner from '../components/CookieBanner'
 
 
 const Home: NextPage = () => {
@@ -60,6 +61,7 @@ const Home: NextPage = () => {
         <meta httpEquiv="Content-Language" content={locale} />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <CookieBanner />
       </div>
       
       <main>
