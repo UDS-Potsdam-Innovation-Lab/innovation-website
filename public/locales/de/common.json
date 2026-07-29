@@ -148,11 +148,11 @@
       "title": "Verbinden Sie sich mit uns",
       "email": {
         "title": "E-Mail",
-        "value": "contact@innovation.german-uds.de"
+        "value": "office@innovation.german-uds.de"
       },
       "phone": {
         "title": "Telefon",
-        "value": "+49 (0) 331 968 920 20"
+        "value": "+49 (0) 1520 166 79 24"
       },
       "address": {
         "title": "Adresse",
@@ -171,8 +171,8 @@
     "companyInfo": "Unternehmensangaben",
     "companyInfoText": "German UDS Innovation GmbH\nInnovation Campus\nMarlene-Dietrich-Allee 14\n14482 Potsdam\nDeutschland",
     "contact": "Kontaktinformationen",
-    "phone": "+49 (0) 331 968 920 20",
-    "email": "contact@innovation.german-uds.de",
+    "phone": "+49 (0) 1520 166 79 24",
+    "email": "office@innovation.german-uds.de",
     "legalDetails": "Rechtliche Angaben",
     "management": "Prof. Dr. Mike Friedrichsen & Prof. Dr. Christoph Meinel",
     "registrationCourt": "Amtsgericht Potsdam",
