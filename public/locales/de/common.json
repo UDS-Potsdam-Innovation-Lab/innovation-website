@@ -373,7 +373,8 @@
       "education": "Digital Education and Internet Technologies",
       "virtual": "Virtual Education and Digital Reality",
       "multimodal": "Multimodal Learning Technologies",
-      "aiQuantum": "AI and Quantum Computing",
+      "ai": "Artificial Intelligence",
+      "quantumComputing": "Quantum Computing",
       "security": "Cybersecurity",
       "management": "Digital Management and Work",
       "departmentHead": "Abteilungsleiter"

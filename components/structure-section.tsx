@@ -19,7 +19,17 @@ const StructureSection: React.FC = () => {
 
   const row1: Department[] = [
     {
-      department: "AI and Quantum Computing",
+      department: "Artificial Intelligence",
+      professors: [
+        {
+          name: "Prof. Dr. Felix Weitkämper",
+          img: "/images/financial-support-commercial/Felix.jpeg",
+          link: "https://german-uds.de/felix_weitkaemper"
+        }
+      ]
+    },
+    {
+      department: "Quantum Computing",
       professors: [
         {
           name: "Prof. Dr. Frank Leymann",
@@ -150,7 +160,7 @@ const StructureSection: React.FC = () => {
           </div>
         </div>
 
-        {renderDepartmentRow(row1, 1)}
+        {renderDepartmentRow(row1, 2)}
         {renderDepartmentRow(row2, 3)}
         {renderDepartmentRow(row3, 3, true)}
       </div>
