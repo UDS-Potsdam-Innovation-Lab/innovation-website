@@ -17,20 +17,20 @@ type Department = {
 const StructureSection: React.FC = () => {
   const { t } = useLocale();
 
-  const getDepartmentKey = (department: string) => {
-    const map: Record<string, string> = {
-      "Digital Entrepreneurship College": "entrepreneurship",
-      "Digital Education and Internet Technologies": "education",
-      "Virtual Education and Digital Reality": "virtual",
-      "Multimodal Learning Technologies": "multimodal",
-      "Artificial Intelligence": "ai",
-      "Cybersecurity": "security",
-      "Digital Management and Work": "management"
-    };
-    return map[department] || "";
-  };
+  const row1: Department[] = [
+    {
+      department: "AI and Quantum Computing",
+      professors: [
+        {
+          name: "Prof. Dr. Frank Leymann",
+          img: "/Frank Leymann.png",
+          link: "https://german-uds.de/frank_leymann"
+        }
+      ]
+    }
+  ];
 
-  const departments: Department[] = [
+  const row2: Department[] = [
     {
       department: "Digital Entrepreneurship College",
       professors: [
@@ -60,7 +60,10 @@ const StructureSection: React.FC = () => {
           link: "https://german-uds.de/daniele_di_mitri"
         }
       ]
-    },
+    }
+  ];
+
+  const row3: Department[] = [
     {
       department: "Cybersecurity",
       professors: [
@@ -95,26 +98,25 @@ const StructureSection: React.FC = () => {
           link: "https://german-uds.de/thomas_staubitz"
         }
       ]
-    },
-    {
-      department: "Artificial Intelligence",
-      professors: [
-        {
-          name: "Prof. Dr. Feiyu Xu",
-          img: "/images/financial-support-commercial/Feiyu_Xu.webp",
-          link: "https://german-uds.de/feiyu_xu"
-        },
-        {
-          name: "Prof. Dr. Felix Weitkämper",
-          img: "/images/financial-support-commercial/Felix.jpeg",
-          link: "https://german-uds.de/felix_weitkaemper"
-        }
-      ]
     }
   ];
 
-  const singleProfDepartments = departments.filter(d => d.professors.length === 1);
-  const multiProfDepartments = departments.filter(d => d.professors.length > 1);
+  const renderDepartmentRow = (departments: Department[], columns: 1 | 2 | 3, isLast = false) => {
+    const gridClass =
+      columns === 1
+        ? "grid grid-cols-1 max-w-md mx-auto"
+        : columns === 2
+          ? "grid grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto"
+          : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto";
+
+    return (
+      <div className={`${gridClass} gap-6 ${isLast ? "" : "mb-12"}`}>
+        {departments.map((dept) => (
+            <DepartmentCard key={dept.department} dept={dept} />
+          ))}
+      </div>
+    );
+  };
 
   return (
     <section id="structure" className="py-20 px-6 bg-gradient-to-b from-white to-blue-50">
@@ -148,75 +150,9 @@ const StructureSection: React.FC = () => {
           </div>
         </div>
 
-        {/* First Row: 3 single-professor departments */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto mb-12">
-          {singleProfDepartments.slice(0, 3).map((dept) => {
-            const departmentKey = getDepartmentKey(dept.department);
-            const translationKey = departmentKey ? `structure.departments.${departmentKey}` : '';
-
-            return (
-              <DepartmentCard key={dept.department} dept={dept} translationKey={translationKey} />
-            );
-          })}
-        </div>
-
-        {/* Second Row: 2 single-professor departments */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-4xl mx-auto mb-12">
-          {singleProfDepartments.slice(3).map((dept) => {
-            const departmentKey = getDepartmentKey(dept.department);
-            const translationKey = departmentKey ? `structure.departments.${departmentKey}` : '';
-
-            return (
-              <DepartmentCard key={dept.department} dept={dept} translationKey={translationKey} />
-            );
-          })}
-        </div>
-
-        {/* Third Row: 2 multi-professor departments */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-          {multiProfDepartments.map((dept) => {
-            const departmentKey = getDepartmentKey(dept.department);
-            const translationKey = departmentKey ? `structure.departments.${departmentKey}` : '';
-
-            return (
-              <div
-                key={dept.department}
-                className="bg-white border border-gray-200 rounded-xl shadow-md p-6 flex flex-col justify-between h-full transition-all duration-300 hover:shadow-lg"
-              >
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="bg-blue-100 p-2 rounded-lg">
-                    <Users className="text-blue-600" size={20} />
-                  </div>
-                  <h3 className="text-lg font-semibold text-gray-800">
-                    {translationKey ? String(t(translationKey)) : dept.department}
-                  </h3>
-                </div>
-
-                <div className="space-y-3">
-                  {dept.professors.map((prof) => (
-                    <a
-                      key={prof.name}
-                      href={prof.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-4 hover:bg-blue-50 p-2 rounded-md transition"
-                    >
-                      <div className="relative w-20 h-20">
-                        <Image
-                          src={prof.img}
-                          alt={prof.name}
-                          fill
-                          className="rounded-full object-cover"
-                        />
-                      </div>
-                      <p className="text-sm font-medium text-gray-900">{prof.name}</p>
-                    </a>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        {renderDepartmentRow(row1, 1)}
+        {renderDepartmentRow(row2, 3)}
+        {renderDepartmentRow(row3, 3, true)}
       </div>
     </section>
   );
@@ -225,10 +161,8 @@ const StructureSection: React.FC = () => {
 // Reusable Card Component
 const DepartmentCard = ({
   dept,
-  translationKey,
 }: {
   dept: Department;
-  translationKey: string;
 }) => (
   <div
     className="bg-white border border-gray-200 rounded-xl shadow-md p-6 flex flex-col justify-between h-full transition-all duration-300 hover:shadow-lg"
@@ -238,11 +172,11 @@ const DepartmentCard = ({
         <Users className="text-blue-600" size={20} />
       </div>
       <h3 className="text-lg font-semibold text-gray-800">
-        {translationKey ? String(useLocale().t(translationKey)) : dept.department}
+        {dept.department}
       </h3>
     </div>
 
-    <div className="flex-1 flex items-center">
+    <div className={`flex-1 ${dept.professors.length > 1 ? "space-y-3" : "flex items-center"}`}>
       <div className="w-full">
         {dept.professors.map((prof) => (
           <a

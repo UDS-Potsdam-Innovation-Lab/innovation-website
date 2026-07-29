@@ -328,8 +328,8 @@
     "description": "Umfassende Dienstleistungen für digitale Transformation."
   },
   "cloudhouse": {
-    "title": "FB CloudHouse GmbH",
-    "description": "Cloud-Infrastruktur und virtuelle Plattformlösungen."
+    "title": "COVE academia GmbH",
+    "description": "Virtuelle Infrastruktur für digitale Bildung."
   },
   "university": {
     "title": "German University of Digital Science",
@@ -338,8 +338,8 @@
   "structure": {
     "innovation": "German UDS Innovation GmbH",
     "cloudhouse": {
-      "name": "FB Cloudhouse GmbH",
-      "ownership": "Anteil: 20%"
+      "name": "COVE academia GmbH",
+      "ownership": "Anteil: 30%"
     },
     "service": {
       "name": "German UDS Service GmbH",
@@ -351,7 +351,11 @@
     },
     "university": {
       "name": "German University of Digital Science",
-      "ownership": "Anteil: 15%"
+      "ownership": "Anteil: 20%"
+    },
+    "sinoGerman": {
+      "name": "Center of Sino-German Education GmbH",
+      "ownership": "Anteil: 20%"
     }
   }
 }
@@ -366,12 +370,12 @@
     "departments": {
       "title": "German University of Digital Science",
       "entrepreneurship": "Digital Entrepreneurship College",
-      "education": "Digitale Bildung und Internet-Technologien",
-      "virtual": "Virtuelle Bildung und digitale Realität",
-      "multimodal": "Multimodale Lerntechnologien",
-      "ai": "Künstliche Intelligenz",
-      "security": "Cybersicherheit",
-      "management": "Digitales Management und Arbeit",
+      "education": "Digital Education and Internet Technologies",
+      "virtual": "Virtual Education and Digital Reality",
+      "multimodal": "Multimodal Learning Technologies",
+      "aiQuantum": "AI and Quantum Computing",
+      "security": "Cybersecurity",
+      "management": "Digital Management and Work",
       "departmentHead": "Abteilungsleiter"
     }
   },

@@ -331,8 +331,8 @@
     "description": "Comprehensive services for digital transformation."
   },
   "cloudhouse": {
-    "title": "FB CloudHouse GmbH",
-    "description": "Cloud infrastructure and virtual platform solutions."
+    "title": "COVE academia GmbH",
+    "description": "Virtual infrastructure for digital education."
   },
   "university": {
     "title": "German University of Digital Science",
@@ -341,8 +341,8 @@
   "structure": {
     "innovation": "German UDS Innovation GmbH",
     "cloudhouse": {
-      "name": "FB CloudHouse GmbH",
-      "ownership": "Ownership: 20%"
+      "name": "COVE academia GmbH",
+      "ownership": "Ownership: 30%"
     },
     "service": {
       "name": "German UDS Service GmbH",
@@ -354,7 +354,11 @@
     },
     "university": {
       "name": "German University of Digital Science",
-      "ownership": "Ownership: 15%"
+      "ownership": "Ownership: 20%"
+    },
+    "sinoGerman": {
+      "name": "Center of Sino-German Education GmbH",
+      "ownership": "Ownership: 20%"
     }
   }
 }
@@ -372,7 +376,7 @@
       "education": "Digital Education and Internet Technologies",
       "virtual": "Virtual Education and Digital Reality",
       "multimodal": "Multimodal Learning Technologies",
-      "ai": "Artificial Intelligence",
+      "aiQuantum": "AI and Quantum Computing",
       "security": "Cybersecurity",
       "management": "Digital Management and Work",
       "departmentHead": "Department Head"

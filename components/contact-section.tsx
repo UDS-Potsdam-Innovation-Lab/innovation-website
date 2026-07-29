@@ -4,6 +4,7 @@ import { useLocale } from '../contexts/LocaleContext';
 
 const ContactSection: React.FC = () => {
   const { t } = useLocale();
+  const contactEmail = String(t('contact.connect.email.value'));
   
   return (
     <section id="contact" className="py-20 px-6 bg-gray-100">
@@ -73,7 +74,7 @@ const ContactSection: React.FC = () => {
                 </div>
                 
                 <a 
-                  href="mailto:contact@innovation.german-uds.de" 
+                  href={`mailto:${contactEmail}`} 
                   className="mt-6 w-full bg-orange-500 text-white py-3 rounded-br-md shadow-md hover:bg-orange-600 transition-colors flex items-center justify-center space-x-2"
                 >
                   <span>{String(t('contact.connect.emailButton'))}</span>

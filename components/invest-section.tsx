@@ -4,6 +4,7 @@ import { useLocale } from '../contexts/LocaleContext';
 
 const InvestSection: React.FC = () => {
   const { t, locale } = useLocale();
+  const contactEmail = String(t('contact.connect.email.value'));
 
 
   return (
@@ -101,7 +102,7 @@ const InvestSection: React.FC = () => {
         {/* Contact Button */}
         <div className="text-center mt-12">
           <a
-            href="mailto:contact@innovation.german-uds.de"
+            href={`mailto:${contactEmail}`}
             className="inline-flex items-center gap-2 bg-orange-500 text-white px-6 py-3 rounded-xl hover:bg-orange-600 transition-colors text-base font-medium"
           >
             {String(t('invest.contactButton'))}

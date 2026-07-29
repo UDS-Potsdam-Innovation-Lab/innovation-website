@@ -27,15 +27,15 @@ const PortfolioSection: React.FC = () => {
             desc: t('portfolio.service.description'),
             color: 'orange',
           }, {
-            icon: <Globe size={24} />,
-            title: t('portfolio.cloudhouse.title'),
-            desc: t('portfolio.cloudhouse.description'),
-            color: 'orange',
-          }, {
             icon: <Award size={24} />,
             title: t('portfolio.university.title'),
             desc: t('portfolio.university.description'),
             color: 'blue',
+          }, {
+            icon: <Globe size={24} />,
+            title: t('portfolio.cloudhouse.title'),
+            desc: t('portfolio.cloudhouse.description'),
+            color: 'orange',
           }].map((item, i) => (
             <div
               key={i}
@@ -65,46 +65,34 @@ const PortfolioSection: React.FC = () => {
           </div>
 
           {/* Subsidiaries Row */}
-          <div className="flex flex-col md:flex-row gap-6 justify-center items-start">
-            {/* Cloudhouse */}
-            <div className="rounded-2xl shadow-md border border-orange-300 bg-orange-50 p-6 w-full max-w-sm min-h-[160px] flex flex-col justify-center text-center">
-              <h3 className="text-lg font-bold text-orange-500 min-h-[48px] flex items-center justify-center">
-                {t('portfolio.structure.cloudhouse.name')}
-              </h3>
-              <p className="text-sm text-gray-700">
-                {t('portfolio.structure.cloudhouse.ownership')}
-              </p>
-            </div>
-
-            {/* Service */}
-            <div className="rounded-2xl shadow-md border border-orange-300 bg-orange-50 p-6 w-full max-w-sm min-h-[160px] flex flex-col justify-center text-center">
-              <h3 className="text-lg font-bold text-orange-500 min-h-[48px] flex items-center justify-center">
-                {t('portfolio.structure.service.name')}
-              </h3>
-              <p className="text-sm text-gray-700">
-                {t('portfolio.structure.service.ownership')}
-              </p>
-            </div>
-
-            {/* AI Research Institute GmbH */}
-            <div className="rounded-2xl shadow-md border border-orange-300 bg-orange-50 p-6 w-full max-w-sm min-h-[160px] flex flex-col justify-center text-center">
-              <h3 className="text-lg font-bold text-orange-500 min-h-[48px] flex items-center justify-center">
-                {t('portfolio.structure.ai.name')}
-              </h3>
-              <p className="text-sm text-gray-700">
-                {t('portfolio.structure.ai.ownership')}
-              </p>
-            </div>
-
-            {/* University */}
-            <div className="rounded-2xl shadow-md border border-blue-300 bg-blue-50 p-6 w-full max-w-sm min-h-[160px] flex flex-col justify-center text-center">
-              <h3 className="text-lg font-bold text-blue-500 min-h-[48px] flex items-center justify-center">
-                {t('portfolio.structure.university.name')}
-              </h3>
-              <p className="text-sm text-gray-700">
-                {t('portfolio.structure.university.ownership')}
-              </p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 items-start">
+            {([
+              { key: 'service', color: 'orange' },
+              { key: 'ai', color: 'orange' },
+              { key: 'university', color: 'blue' },
+              { key: 'cloudhouse', color: 'orange' },
+              { key: 'sinoGerman', color: 'orange' },
+            ] as const).map(({ key, color }) => (
+              <div
+                key={key}
+                className={`rounded-2xl shadow-md border p-6 w-full min-h-[160px] flex flex-col justify-center text-center ${
+                  color === 'blue'
+                    ? 'border-blue-300 bg-blue-50'
+                    : 'border-orange-300 bg-orange-50'
+                }`}
+              >
+                <h3
+                  className={`text-lg font-bold min-h-[48px] flex items-center justify-center ${
+                    color === 'blue' ? 'text-blue-500' : 'text-orange-500'
+                  }`}
+                >
+                  {t(`portfolio.structure.${key}.name`)}
+                </h3>
+                <p className="text-sm text-gray-700">
+                  {t(`portfolio.structure.${key}.ownership`)}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
