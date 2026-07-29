@@ -8,6 +8,7 @@
     "prebuild": "mkdir -p public/images && cp -r images/* public/images/ || true",
     "create-locale-dirs": "node scripts/create-locale-directories.js",
     "build": "npm run create-locale-dirs && next build",
+    "postbuild": "cp public/.nojekyll out/.nojekyll 2>/dev/null || touch out/.nojekyll",
     "start": "next start",
     "lint": "next lint"
   },

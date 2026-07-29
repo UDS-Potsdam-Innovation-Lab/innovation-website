@@ -55,6 +55,13 @@ jobs:
         env:
           NEXT_PUBLIC_SITE_URL: https://innovation.german-uds.de
 
+      - name: Verify static export output
+        run: |
+          test -f out/index.html
+          test -f out/.nojekyll
+          test -f out/_next/static/chunks/pages/_app-*.js
+          test -f out/_next/static/*/_buildManifest.js
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
